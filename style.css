@@ -47,7 +47,6 @@ h4 {
     font-family: Helvetica, sans-serif;
     font-weight: bold;
     font-size: 1.4em;
-    color: #fff;
 }
 
 h5 {
@@ -231,10 +230,6 @@ PAGE: CONTACT ME
 /******************************
 PAGE: HISTORY, PROFESSIONAL, ACADEMIC
 ******************************/
-
-/*#history, #professional, #academic {
-    background-color: #64B743;
-}*/
 
 #milestones {
     margin-top: 10px;
@@ -530,8 +525,7 @@ footer a img {
   #professional img, #academic img {
       clear: both;
       display: block;
-      margin: 10px auto;
-      max-height: 200px;
+      margin: auto;
   }
 
 
@@ -726,8 +720,8 @@ footer a img {
 
   #professional h4, #professional h5, #professional h6, #academic h4, #academic h5, #academic h6 {
       position: relative;
-      left: 50%;
-      max-width: 50%;
+      /*left: 50%;
+      max-width: 50%;*/
   }
 
   #professional div div, #academic div div {
@@ -739,8 +733,7 @@ footer a img {
   #professional img, #academic img {
       max-width: 48%;
       float: left;
-      max-height: 500px;
-      margin-top: -95px;
+      /*margin-top: -95px;*/
   }
 
 
