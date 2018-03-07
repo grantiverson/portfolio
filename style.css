@@ -12,193 +12,173 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, li, footer, header
     font: inherit;
 }
 
-body {
-    background-image: url(img/bg-img.png);
-    background-color: #FCF8EB;
-    background-repeat: repeat repeat;
-}
-
 img {
     max-width: 100%;
 }
 
-/* creates drop shadows */
-#mainNav ul ul li, nav {
-    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.5);
+/******************************
+TEXT
+******************************/
+
+h1 {
+    margin: 0 0 10px;
+    padding-top: 20px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 2.8em;
+    color: #555;
 }
-header, .page, .page img, .button, #milestones, #facts, #mySkillsList {
-    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+h2 {
+    font-family: Helvetica, "Lucida Sans Unicode", sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #2A2A2A;
+}
+
+h3 {
+    font-size: 1.6em;
+    font-family: "Enriqueta", "Courier New", monospace;
+    text-indent: .65em;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #fff;
+}
+
+h5 {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #2A2A2A;
+}
+
+h6 {
+    font-family: Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 1em;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family:"Enriqueta", "Courier New", monospace;
+    font-size: 1.4em;
+}
+
+a {
+    color: inherit;
+}
+
+ul {
+    margin-left: 30px;
 }
 
 
 
-    /******************************
-    TEXT
-    ******************************/
+/******************************
+BUTTONS
+******************************/
+.button {
+    display: block;
+    margin: 0 auto;
 
-    h1 {
-        margin: 0 0 10px;
-        padding-top: 20px;
-        font-family: Helvetica, sans-serif;
-        font-weight: 100;
-        font-size: 2.8em;
-        color: #555;
-    }
+    color: #fff;
+    font-family: helvetica, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5em;
 
-    h2 {
-        font-family: Helvetica, "Lucida Sans Unicode", sans-serif;
-        font-weight: bold;
-        font-size: 1.25em;
-        color: #2A2A2A;
-    }
+    padding: 15px 10px;
+    max-width: 400px;
 
-    h3 {
-        font-size: 1.6em;
-        font-family: "Enriqueta", "Courier New", monospace;
-        text-indent: .65em;
-        margin-bottom: 10px;
-    }
-
-    h4 {
-        font-family: Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: 1.4em;
-        color: #fff;
-    }
-
-    h5 {
-        font-family: Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: 1.25em;
-        color: #2A2A2A;
-    }
-
-    h6 {
-        font-family: Helvetica, sans-serif;
-        font-weight: 100;
-        font-size: 1em;
-        color: #000;
-        margin-bottom: 10px;
-    }
-
-    p {
-        font-family:"Enriqueta", "Courier New", monospace;
-        font-size: 1.4em;
-    }
-
-    a {
-        color: inherit;
-    }
-
-    ul {
-        margin-left: 30px;
-    }
+    background-color: #3866AA;
+}
 
 
 
-    /******************************
-    BUTTONS
-    ******************************/
-    .button {
-        display: block;
-        margin: 0 auto;
+/******************************
+HEADING
+******************************/
 
-        color: #fff;
-        font-family: helvetica, sans-serif;
-        font-weight: 100;
-        text-align: center;
-        font-size: 1.5em;
+/* header that includes the banner */
+header {
+    background-color: #FCF5E7;
+    position: relative;
+    z-index: 1;
+}
 
-        padding: 15px 10px;
-        max-width: 400px;
+header a img {
+    height: 120px;
+}
 
-        background-color: #3866AA;
-    }
+#navButton {
+    margin: 10px;
+}
 
+/* banner that includes title and nav menus */
+#banner {
+    padding: 0 10px;
+}
 
-
-    /******************************
-    HEADING
-    ******************************/
-
-    /* header that includes the banner */
-    header {
-        background-color: #FCF8EB;
-        position: relative;
-        z-index: 1;
-    }
-
-    header a img {
-        height: 120px;
-    }
-
-    #navButton {
-        margin: 10px;
-    }
-
-    /* banner that includes title and nav menus */
-    #banner {
-        padding: 0px 10px;
-    }
-
-    #banner a img {
-        float:right;
-    }
+#banner a img {
+    float:right;
+}
 
 
 
-        /******************************
-        NAVIGATION
+/******************************
+NAVIGATION
 
-            #mainNav is the nav menu for window resolutions above 480
-            #miniNav is the nav menu for window resolutions below 480
-        ******************************/
+    #mainNav is the nav menu for window resolutions above 480
+    #miniNav is the nav menu for window resolutions below 480
+******************************/
 
-        #mainNav, #miniNav {
-            display: none;
-        }
+#mainNav, #miniNav {
+    display: none;
+}
 
-        nav {
-            background-color: #FDEDC1;
-            font-size: 1.5em;
-            padding-bottom: 20px;
-        }
+nav {
+    background-color: #FDEDC1;
+    font-size: 1.5em;
+    padding-bottom: 20px;
+}
 
-        nav ul {
-            list-style-type: none;
-            margin-left: 0;
-        }
+nav ul {
+    list-style-type: none;
+    margin-left: 0;
+}
 
-        nav li {
-            padding: 20px 20px 0 20px;
-        }
+nav li {
+    padding: 20px 20px 0 20px;
+}
 
-        nav a {
-            display: block;
-        }
+nav a {
+    display: block;
+}
 
 
 
-            /******************************
-            miniNav
+/******************************
+miniNav
 
-                #mainNav is the nav menu for window resolutions above 480
-                #miniNav is the nav menu for window resolutions below 480
-            ******************************/
+    #mainNav is the nav menu for window resolutions above 480
+    #miniNav is the nav menu for window resolutions below 480
+******************************/
 
-            #miniNav {
-                position: relative; /* necessary for drop shadow to be on top of <section> */
-            }
+#miniNav a.active {
+    border-bottom: 3px solid #8D6334;
+    margin-bottom: -3px;
+}
 
-            #miniNav a.active {
-                border-bottom: 3px solid #8D6334;
-                margin-bottom: -3px;
-            }
-
-            #miniNav a:hover {
-                border-bottom: 3px solid #544300;
-                margin-bottom: -3px;
-            }
+#miniNav a:hover {
+    border-bottom: 3px solid #544300;
+    margin-bottom: -3px;
+}
 
 
 
@@ -220,45 +200,45 @@ section {
 
 
 
-    /******************************
-    PAGE: ABOUT
-    ******************************/
+/******************************
+PAGE: ABOUT
+******************************/
 
 
-    /*#about {
-        background-color: #5498FF;
-    }*/
+/*#about {
+    background-color: #5498FF;
+}*/
 
-    #about img {
-        max-height: 250px;
-            display: block;
-            margin: auto;
-            margin-bottom: 10px;
-    }
+#about img {
+    max-height: 250px;
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+}
 
-    #about p {
-         margin-bottom: 10px;
-    }
+#about p {
+     margin-bottom: 10px;
+}
 
-    /*.contactButton {
-        background-color: #3866AA;
-    }*/
-
-
+/*.contactButton {
+    background-color: #3866AA;
+}*/
 
 
 
-        /******************************
-        PAGE: CONTACT ME
-        ******************************/
 
-        /*#contact {
-            background-color: #5498FF;
-        }*/
 
-        #contact span {
-            color: #fff;
-        }
+/******************************
+PAGE: CONTACT ME
+******************************/
+
+/*#contact {
+    background-color: #5498FF;
+}*/
+
+#contact span {
+    color: #fff;
+}
 
 
 
@@ -390,9 +370,7 @@ footer {
 
 #returnToTopButtonDiv {
     background-color: #999;
-    margin-top: 10px;
     padding: 10px;
-    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 footer a img {
@@ -405,445 +383,444 @@ footer a img {
 
 
 /*########################################################################################################################################################################*/
-        /************************************************************
-        Screens with higher resolution than an iPhone 4s in landscape
-        ************************************************************/
+        /****************************************
+        Screens with higher resolution than 480px
+        ****************************************/
 /*########################################################################################################################################################################*/
 
 @media screen and (min-width: 481px) {
 
-/******************************
-GENERAL
-******************************/
+  /******************************
+  GENERAL
+  ******************************/
 
-/* banner that includes title and nav menus */
-#banner {
-    padding: 0px 5%;
-}
+  /* banner that includes title and nav menus */
+  #banner {
+      padding: 0px 5%;
+  }
 
 
 
-    /******************************
-    TEXT
-    ******************************/
+  /******************************
+  TEXT
+  ******************************/
 
-    p {
-        font-size: 1.1em;
-    }
+  p {
+      font-size: 1.1em;
+  }
 
-    h3 {
-        font-size: 1.9em;
-    }
+  h3 {
+      font-size: 1.9em;
+  }
 
 
 
-    /******************************
-    BUTTONS
-    ******************************/
+  /******************************
+  BUTTONS
+  ******************************/
 
-    .button {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+  .button {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
 
-        font-size: 1em;
+      font-size: 1em;
 
-        padding: 10px 10px;
-        width: 200px;
-    }
+      padding: 10px 10px;
+      width: 200px;
+  }
 
 
 
-    /******************************
-    NAVIGATION
-    ******************************/
+  /******************************
+  NAVIGATION
+  ******************************/
 
-    #navButton {
-        display: none;
-    }
+  #navButton {
+      display: none;
+  }
 
 
 
-        /******************************
-        mainNav
+  /******************************
+  mainNav
 
-            #mainNav is the nav menu for window resolutions above 480
-            #miniNav is the nav menu for window resolutions below 480
-        ******************************/
+      #mainNav is the nav menu for window resolutions above 480
+      #miniNav is the nav menu for window resolutions below 480
+  ******************************/
 
-        #mainNav {
-            font-size: 1em;
-            display: block;
-            clear: both;
-            padding: 0;
-            position: relative; /* necessary for drop shadow to be on top of <section> */
-            top: 3px;
-            z-index: 1;
-        }
+  #mainNav {
+      font-size: 1em;
+      display: block;
+      clear: both;
+      padding: 0;
+      position: relative; /* necessary for drop shadow to be on top of <section> */
+      top: 3px;
+      z-index: 1;
+  }
 
-        #mainNav ul li a:hover {
-            background-color: #8D6334;
-            color: #fff;
-        }
+  #mainNav ul li a:hover {
+      background-color: #8D6334;
+      color: #fff;
+  }
 
-        #mainNav ul li:hover > ul {
-            display: block;
-        }
+  #mainNav ul li:hover > ul {
+      display: block;
+  }
 
-        #mainNav ul li {
-            display: inline-block;
-            margin-right: -4px;
-            padding: 0;
-            width: 25%;
-            text-align: center;
-        }
+  #mainNav ul li {
+      display: inline-block;
+      margin-right: -4px;
+      padding: 0;
+      width: 25%;
+      text-align: center;
+  }
 
-        #mainNav ul li a {
-            padding: 7px 4px 4px;
-        }
+  #mainNav ul li a {
+      padding: 7px 4px 4px;
+  }
 
-        #mainNav a.active:not(:hover) {
-            background-color: #544300;
-            color: #FDEDC1;
-        }
+  #mainNav a.active:not(:hover) {
+      background-color: #544300;
+      color: #FDEDC1;
+  }
 
-        #mainNav ul ul {
-/*            display: none;*/
-            position: absolute;
-            width: 25%;
-        }
+  #mainNav ul ul {
+      /*display: none;*/
+      position: absolute;
+      width: 25%;
+      background-color: #FDEDC1;
+  }
 
-        #mainNav ul ul li {
-            display: block;
-            width: auto;
-            margin: 8px 0 8px;
-            background: #FDEDC1;
-        }
+  #mainNav ul ul li {
+      display: block;
+      width: auto;
+      margin: 8px 0 8px;
+  }
 
-        #mainNav ul ul li a {
-            color: #544300;
-        }
+  #mainNav ul ul li a {
+      color: #544300;
+  }
 
-        #mainNav ul ul li:hover > a {
-            color: #fff;
-        }
+  #mainNav ul ul li:hover > a {
+      color: #fff;
+  }
 
 
 
-/******************************
-PAGES
-******************************/
+  /******************************
+  PAGES
+  ******************************/
 
-section {
-    padding: 0px 5%;
-}
+  section {
+      padding: 0px 5%;
+  }
 
-.page {
-    min-height: 400px;
-    padding: 10px 20px;
-    clear: both;
-}
+  .page {
+      min-height: 400px;
+      padding: 10px 20px;
+      clear: both;
+  }
 
 
 
-    /******************************
-    PAGE: ABOUT
-    ******************************/
+  /******************************
+  PAGE: ABOUT
+  ******************************/
 
-    #about {
-        position: relative;
-    }
+  #about {
+      position: relative;
+  }
 
-    #about p {
-        text-indent: 1em;
-        overflow: hidden
-    }
+  #about p {
+      text-indent: 1em;
+      overflow: hidden
+  }
 
 
 
-/******************************
-PAGE: HISTORY, PROFESSIONAL, ACADEMIC
-******************************/
+  /******************************
+  PAGE: HISTORY, PROFESSIONAL, ACADEMIC
+  ******************************/
 
-#professional div, #academic div {
-    overflow: hidden;
-}
+  #professional div, #academic div {
+      overflow: hidden;
+  }
 
-#professional img, #academic img {
-    clear: both;
-    display: block;
-    margin: 10px auto;
-    max-height: 200px;
-}
+  #professional img, #academic img {
+      clear: both;
+      display: block;
+      margin: 10px auto;
+      max-height: 200px;
+  }
 
 
 
-/******************************
-PAGE: SKILLS
-******************************/
+  /******************************
+  PAGE: SKILLS
+  ******************************/
 
-#skills ul:nth-of-type(2) {
-    margin-left: 0px;
-}
+  #skills ul:nth-of-type(2) {
+      margin-left: 0px;
+  }
 
-#skills ul {
-    list-style-type: none;
-    float: left;
-    margin-left: 30px;
-    padding: 0 10px 10px 10px;
-}
+  #skills ul {
+      list-style-type: none;
+      float: left;
+      margin-left: 30px;
+      padding: 0 10px 10px 10px;
+  }
 
-#mySkillsList {
-    overflow: hidden;
-}
+  #mySkillsList {
+      overflow: hidden;
+  }
 
-#mySkillsList ul {
-    font-size: 1em;
-}
+  #mySkillsList ul {
+      font-size: 1em;
+  }
 
-#skills img {
-    display: block;
-    margin: 0 auto;
-}
+  #skills img {
+      display: block;
+      margin: 0 auto;
+  }
 
 
 
-/******************************
-PAGE: REFERENCES
-******************************/
+  /******************************
+  PAGE: REFERENCES
+  ******************************/
 
-    #references div {
-        overflow: hidden;
-        position: relative;
-    }
+  #references div {
+      overflow: hidden;
+      position: relative;
+  }
 
-    #references div div:nth-child(2) {
-        max-width: 50%;
-        position: absolute;
-        top: 15%;
-        right: 50%;
-    }
+  #references div div:nth-child(2) {
+      max-width: 50%;
+      position: absolute;
+      top: 15%;
+      right: 50%;
+  }
 
-    #references img {
-        max-width: 48%;
-        float: right;
-        clear: right;
-        margin: 0 0 30px;
-    }
+  #references img {
+      max-width: 48%;
+      float: right;
+      clear: right;
+      margin: 0 0 30px;
+  }
 
-    #references div:nth-of-type(3) {
-        margin-bottom: -30px;
-    }
+  #references div:nth-of-type(3) {
+      margin-bottom: -30px;
+  }
 
 
 
-/******************************
-FOOTER
-******************************/
+  /******************************
+  FOOTER
+  ******************************/
 
-    footer p {
-        font-size: .9em;
-    }
+  footer p {
+    font-size: .9em;
+  }
 
-    footer a img {
+  footer a img {
     height: 20px;
-        margin: 0 1px;
-}
+    margin: 0 1px;
+  }
 
-    #returnToTopButtonDiv {
-        display: none;
+  #returnToTopButtonDiv {
+    display: none;
     }
 
-}
+} /******** End of @media screen and (min-width: 481px) ********/
 
 
 
 /*########################################################################################################################################################################*/
-        /************************************************************
-        Screens with higher resolution than an iPhone 5s in landscape
-        ************************************************************/
+        /*****************************************
+        Screens with higher resolution than 701 px
+        *****************************************/
 /*########################################################################################################################################################################*/
 
 @media screen and (min-width: 701px) {
 
-/******************************
-HEADING
-******************************/
+  /******************************
+  HEADING
+  ******************************/
 
-#banner {
-    max-width: 920px;
-    margin: 0px auto;
-}
-
-
-
-/******************************
-PAGES
-******************************/
-
-section {
-    max-width: 960px;
-    margin: 0 auto;
-
-}
-
-    /******************************
-    PAGE: ABOUT
-    ******************************/
-
-    #about img {
-        margin-right: 10px;
-        float: left;
-    }
-
-    .contactButton {
-        position: absolute;
-        left: 22.5px;
-        top: 320px;
-        display: block;
-    }
+  #banner {
+      max-width: 920px;
+      margin: 0px auto;
+  }
 
 
 
-/******************************
-PAGE: HISTORY, PROFESSIONAL, ACADEMIC
-******************************/
+  /******************************
+  PAGES
+  ******************************/
 
-#history .button {
-    display: inline-block;
-    position: relative;
-    top: -10px;
-}
+  section {
+      max-width: 960px;
+      margin: 0 auto;
 
-#history .button:first-of-type {
-    float: right;
-    right: 51%;
-}
+  }
 
-#history .button + .button {
-    float: left;
-    left: 51%;
-}
+  /******************************
+  PAGE: ABOUT
+  ******************************/
 
-#milestones {
-    margin-top: 60px;
-}
+  #about img {
+      margin-right: 10px;
+      float: left;
+  }
 
-#milestones {
-    padding-bottom: 10px;
-}
-
-#milestones p {
-    background-color: #3866AA;
-    color: #fff;
-    padding: 0 0 3px 10px;
-}
-
-#milestones p:first-of-type {
-    margin: 10px 0 10px 47.5%;
-}
-
-#milestones p:nth-of-type(2) {
-    margin: 10px 0 10px 40%;
-}
-
-#milestones p:nth-of-type(3) {
-    margin: 10px 0 10px 32.5%;
-}
-
-#milestones p:nth-of-type(4) {
-    margin: 10px 0 10px 25%;
-}
-
-#milestones p:nth-of-type(5) {
-    margin: 10px 0 10px 17.5%;
-}
-
-#milestones p:nth-of-type(6) {
-    margin: 10px 0 10px 10%;
-}
-
-#milestones p:nth-of-type(7) {
-    margin: 10px 0 10px 2.5%;
-}
-
-#professional h4, #professional h5, #professional h6, #academic h4, #academic h5, #academic h6 {
-    position: relative;
-    left: 50%;
-    max-width: 50%;
-}
-
-#professional div div, #academic div div {
-    position: relative;
-    left: 2%;
-    max-width: 50%;
-}
-
-#professional img, #academic img {
-    max-width: 48%;
-    float: left;
-    max-height: 500px;
-    margin-top: -95px;
-}
+  .contactButton {
+      position: absolute;
+      left: 35px;
+      top: 320px;
+  }
 
 
 
-/******************************
-PAGE: SKILLS
-******************************/
+  /******************************
+  PAGE: HISTORY, PROFESSIONAL, ACADEMIC
+  ******************************/
 
-#skills h3 + h4 {
-    float: left;
-}
+  #history .button {
+      display: inline-block;
+      position: relative;
+      top: -10px;
+  }
 
-#skills h4 + ul {
-    clear: left;
-}
+  #history .button:first-of-type {
+      float: right;
+      right: 51%;
+  }
 
-div#skills > ul li p {
-    font-size: 1.5em;
-}
+  #history .button + .button {
+      float: left;
+      left: 51%;
+  }
+
+  #milestones {
+      margin-top: 60px;
+  }
+
+  #milestones {
+      padding-bottom: 10px;
+  }
+
+  #milestones p {
+      background-color: #3866AA;
+      color: #fff;
+      padding: 0 0 3px 10px;
+  }
+
+  #milestones p:first-of-type {
+      margin: 10px 0 10px 47.5%;
+  }
+
+  #milestones p:nth-of-type(2) {
+      margin: 10px 0 10px 40%;
+  }
+
+  #milestones p:nth-of-type(3) {
+      margin: 10px 0 10px 32.5%;
+  }
+
+  #milestones p:nth-of-type(4) {
+      margin: 10px 0 10px 25%;
+  }
+
+  #milestones p:nth-of-type(5) {
+      margin: 10px 0 10px 17.5%;
+  }
+
+  #milestones p:nth-of-type(6) {
+      margin: 10px 0 10px 10%;
+  }
+
+  #milestones p:nth-of-type(7) {
+      margin: 10px 0 10px 2.5%;
+  }
+
+  #professional h4, #professional h5, #professional h6, #academic h4, #academic h5, #academic h6 {
+      position: relative;
+      left: 50%;
+      max-width: 50%;
+  }
+
+  #professional div div, #academic div div {
+      position: relative;
+      left: 2%;
+      max-width: 50%;
+  }
+
+  #professional img, #academic img {
+      max-width: 48%;
+      float: left;
+      max-height: 500px;
+      margin-top: -95px;
+  }
 
 
-#facts {
-    float: right;
-    clear: none;
-    margin-top: -30px;
-    margin-left: 10px;
-    max-width: calc(85% - 300px);
-}
 
-#mySkillsList {
-    clear: left;
-    float: left;
-    width: 41%;
-}
+  /******************************
+  PAGE: SKILLS
+  ******************************/
 
-#skills img {
-    float: right;
-    clear: right;
-    margin: 0 2%;
-    max-width: 47%;
-}
+  #skills h3 + h4 {
+      float: left;
+  }
+
+  #skills h4 + ul {
+      clear: left;
+  }
+
+  div#skills > ul li p {
+      font-size: 1.5em;
+  }
 
 
+  #facts {
+      float: right;
+      clear: none;
+      margin-top: -30px;
+      margin-left: 10px;
+      max-width: calc(85% - 300px);
+  }
 
-/******************************
-PAGE: REFERENCES
-******************************/
+  #mySkillsList {
+      clear: left;
+      float: left;
+      width: 41%;
+  }
 
-    #references div div:nth-child(2) {
-        top: 30%;
-    }
+  #skills img {
+      float: right;
+      clear: right;
+      margin: 0 2%;
+      max-width: 47%;
+  }
 
 
 
-/******************************
-FOOTERm
-******************************/
+  /******************************
+  PAGE: REFERENCES
+  ******************************/
 
-    footer {
-        max-width: 920px;
-    }
+  #references div div:nth-child(2) {
+      top: 30%;
+  }
 
-}
+
+
+  /******************************
+  FOOTERm
+  ******************************/
+
+  footer {
+      max-width: 920px;
+  }
+
+} /******** End of @media screen and (min-width: 701px) ********/
