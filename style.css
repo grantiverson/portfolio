@@ -54,7 +54,7 @@ h5 {
     font-family: Helvetica, sans-serif;
     font-weight: bold;
     font-size: 1.25em;
-    color: #2A2A2A;
+    color: #3866AA;
 }
 
 h6 {
@@ -192,7 +192,6 @@ section {
 
 .page {
     padding: 10px;
-    background-color: #5498FF;
 }
 
 .page img {
@@ -203,11 +202,6 @@ section {
 /******************************
 PAGE: ABOUT
 ******************************/
-
-
-/*#about {
-    background-color: #5498FF;
-}*/
 
 #about img {
     max-height: 250px;
@@ -220,10 +214,6 @@ PAGE: ABOUT
      margin-bottom: 10px;
 }
 
-/*.contactButton {
-    background-color: #3866AA;
-}*/
-
 
 
 
@@ -232,12 +222,8 @@ PAGE: ABOUT
 PAGE: CONTACT ME
 ******************************/
 
-/*#contact {
-    background-color: #5498FF;
-}*/
-
 #contact span {
-    color: #fff;
+    color: #3866AA;
 }
 
 
@@ -278,7 +264,6 @@ PAGE: HISTORY, PROFESSIONAL, ACADEMIC
 
 .professionalButton, .academicButton {
     margin-top: 10px;
-    /*background-color: #437A2D;*/
 }
 
 
@@ -288,7 +273,6 @@ PAGE: SKILLS
 ******************************/
 
 #skills {
-    /*background-color: #F66;*/
     overflow: hidden;
 }
 
@@ -308,7 +292,7 @@ PAGE: SKILLS
 
 #facts {
     padding: 10px;
-    background-color: #64CAE7;
+    background-color: #5498FF;
     border: 10px solid white;
     clear: both;
     margin-bottom: 10px;
@@ -343,10 +327,6 @@ and adds 5px space between them*/
 /******************************
 PAGE: REFERENCES
 ******************************/
-
-/*#references {
-    background-color: #FFA742;
-}*/
 
 #references div {
     text-align: right;
