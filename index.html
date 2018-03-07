@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="description" content="Grant Iverson's Résumé: Secondary Math & Technology Teacher">
+        <meta name="keywords" content="Grant, Iverson, Teacher, Math, Secondary, SDA, Adventist">
+        <meta name="author" content="Grant Iverson">
+        <title>Grant Iverson | Educator | Lifelong Learner</title>
+        <link href='http://fonts.googleapis.com/css?family=Enriqueta' rel='stylesheet' type='text/css'>
+        <link rel='stylesheet' type='text/css' href='normalize.css'>
+        <link rel='stylesheet' type='text/css' href='style.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script>
+
+            $(document).ready(function() {
+
+                /* Hide all pages */
+                $('#contact, #history, #professional, #academic, #skills, #references').hide();
+
+                /* Makes navButton work - clicking it opens/closes the #miniNav menu */
+                $('#navButton').click(function() {
+                    $('#miniNav').slideToggle()
+                });
+
+                /* Closes #miniNav if the browser window is resized */
+                $(window).resize(function() {
+                    $('#miniNav').hide();
+                });
+
+                /* #mainNav animations */
+                $('#mainNav ul ul').hide();                         /* Hides submenus */
+                $('#mainNav ul li').hover(function() {              /* Makes submenus fadeIn/fadeOut on hover */
+                    $(this).find('ul').stop(true,true).fadeIn();
+                }, function() {
+                    $(this).find('ul').stop(true,true).fadeOut();
+                });
+                $('#mainNav ul ul').click(function() {              /* Makes submenus fadeOut on click */
+                    $(this).fadeOut();
+                });
+
+                /* Decides what to do when clicking on a link */
+                $('a').click(function() {
+                    var clickedHref = $(this).attr('href');                                         /* Stores the href of clicked link in clickedHref                   */
+                    var hrefTest = /http/i.test(clickedHref)                                        /* does it include "http"                                           */
+                                || /mailto/i.test(clickedHref)                                      /* does it include "mailto"                                         */
+                                || /tel/i.test(clickedHref)                                         /* does it include "tel"                                            */
+                                || /sms/i.test(clickedHref)                                         /* does it include "sms"?                                        */
+                    if (hrefTest) {
+                        return;                                                                     /* if it does include any of these, do nothing                      */
+                    } else if ($(this).hasClass('returnToTopButton')) {                             /* is the link the .returnToTopButton at the bottom of each .page,  */
+                        event.preventDefault();
+                        $('#miniNav').slideUp();                                                    /* hide the #miniNav                                                */
+                    } else {
+                        event.preventDefault();                                                     /* otherwise, don't go to the link in the HTML                      */
+                        $('#miniNav').slideUp();                                                    /* hide the #miniNav                                                */
+                        $('section').fadeOut('', function() {
+                            $('.page').hide();                                                      /* hide the .page you were on                                       */
+                            $('#mainNav a.active').removeClass('active');                           /* remove the class .active from the #mainNav link                  */
+                            $('#miniNav a.active').removeClass('active');                           /* remove the class .active from the #miniNav link                  */
+                            $('#mainNav ' + clickedHref + 'MainNav').addClass('active').blur();     /* add the class .active from the #mainNav link                     */
+                            $('#miniNav ' + clickedHref + 'MiniNav').addClass('active').blur();     /* add the class .active from the #miniNav link                     */
+                            $(clickedHref).show();                                                  /* show the .page you are going to                                  */
+                            $('section').fadeIn();
+                        });
+                    }
+                    $("html, body").animate({scrollTop: "0px" });                                   /* scroll the window to the top of the page                         */
+                });
+
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <div id='banner'>
+                <a href='#about'>
+                    <img src='img/Grant-small.jpg' alt='Grant'>
+                    <h1>Grant Iverson</h1>
+                    <h2>Math Teacher</h2>
+                </a>
+                <img id='navButton' src='img/navButton.png' height=60 alt="Navigation Button">
+                <nav id='mainNav'>
+                    <ul>
+                        <li><a href='#about' id='aboutMainNav' class='active'>About Me</a>
+                            <ul>
+                                <li>
+                                    <a href='#contact' id='contactMainNav'>Contact Me</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href='#history' id='historyMainNav'>History</a>
+                            <ul>
+                                <li><a href='#professional' id='professionalMainNav'>Professional History</a></li>
+                                <li><a href='#academic' id='academicMainNav'>Academic History</a></li>
+                            </ul>
+                        </li>
+                        <li><a href='#skills' id='skillsMainNav'>Skills</a></li>
+                        <li><a href='#references' id='referencesMainNav'>References</a></li>
+                    </ul>
+                </nav>
+                <nav id='miniNav'>
+                    <ul>
+                        <li><a href='#about' id='aboutMiniNav' class='active'>About Me</a>
+                            <ul>
+                                <li>
+                                    <a href='#contact' id='contactMiniNav'>Contact Me</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href='#history' id='historyMiniNav'>History</a>
+                            <ul>
+                                <li><a href='#professional' id='professionalMiniNav'>Professional History</a></li>
+                                <li><a href='#academic' id='academicMiniNav'>Academic History</a></li>
+                            </ul>
+                        </li>
+                        <li><a href='#skills' id='skillsMiniNav'>Skills</a></li>
+                        <li><a href='#references' id='referencesMiniNav'>References</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section>
+            <div id='about' class='page'>
+                <h3>Who am I?</h3>
+                <img src='img/Grant.jpg' alt='Grant'>
+                <p>I have a passion for studying creation which is fueled by my desire to understand God's character. To me, Science–especially Math–proves His existence and demonstrates His creative powers.</p>
+                <p>My goal in life is to share the love that my Father in Heaven has shown to me. I want others to see Jesus in my life through my actions, words, character, and presence. Everything I do is to bring glory to my God and demonstrate His grace to others. I do everything to the best of my abilities for Him.</p>
+                <a href='#contact' class='button contactButton'>Contact Me</a>
+            </div>
+
+            <div id='contact' class='page'>
+                <h3>Contact me!</h3>
+                <h4>Grant Iverson</h4>
+                <a href='mailto:iversonga@gmail.com'><p>Email me: <span>iversonga@gmail.com</span></p></a>
+                <a href='tel:1-704-433-0293'><p>Call: <span>704.433.0293</span></p></a>
+                <a href='sms:1-704-433-0293'><p>Or, <span>send me a text</span></p></a>
+            </div>
+
+            <div id='history' class='page'>
+                <h3>My History</h3>
+                <a href='#professional' class='button professionalButton'>Professional History</a>
+                <a href='#academic' class='button academicButton'>Academic History</a>
+                <div id='milestones'>
+                    <h4>Milestones</h4>
+                    <p><b>2015</b> – IYM Director, Avon Park SDA Church</p>
+                    <p><b>2014</b> – Son, Elisha Avery Iverson, Born</p>
+                    <p><b>2012</b> – Elder of Fort Pierce SDA Church</p>
+                    <p><b>2011</b> – Married in Colorado Springs, CO</p>
+                    <p><b>2010</b> – Literature Evangelism in Knoxville, TN</p>
+                    <p><b>2009</b> – ShareHim Evangelistic Series in Nicaragua</p>
+                    <p><b>2009</b> – Camp Counselor at NOSOCA Pines Ranch in NC</p>
+                </div>
+            </div>
+
+            <div id='professional' class='page'>
+                <h3>Professional History</h3>
+                <div>
+                    <h4>July 2014 - 2018</h4>
+                    <a href='http://wmaeagles.org/' target='_blank'>
+                        <h5>Walker Memorial Academy</h5>
+                        <h6>7-12 Teacher</h6>
+                        <img src='img/WMA.jpg' alt='Walker Memorial Academy'>
+                    </a>
+                    <div>
+                        <p>✦ 7th-12th: General math, Geometry, Algebra 1, Algebra 2, Precalculus, Computer Programming</p>
+                        <p>✦ Mac server and iPad manager</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>July 2011 - June 2014</h4>
+                    <a href='http://jesampson.com/' target='_blank'>
+                        <h5>J. E. Sampson Memorial School</h5>
+                        <h6>5-8 Teacher</h6>
+                        <img src='img/JES.jpg' alt='James E Sampson Memorial School'>
+                    </a>
+                    <div>
+                        <p>✦ 5th-8th grades: Bible, Math, Language, Science, Social Studies, Computers, P.E.</p>
+                        <p>✦ K-4th grades: P.E.</p>
+                        <p>✦ School website creator and manager</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>July 2010 - June 2011</h4>
+                    <h5>Oglethorpe SDA School</h5>
+                    <h6>3-8 Teacher</h6>
+                    <img src='img/OSDA.jpg' alt='Oglethorpe SDA School'>
+                    <div>
+                        <p>✦ 4th-8th: Bible, Math, Language, Science,</p><p>Social Studies, Computers, P.E.</p>
+                        <p>✦ 3rd: Math</p>
+                        <p>✦ School technology coordinator</p>
+                    </div>
+                </div>
+                <a href='#academic' class='button academicButton'>Academic History</a>
+            </div>
+
+            <div id='academic' class='page'>
+                <h3>Academic History</h3>
+                <div>
+                  <h4>March 2018</h4>
+                  <a href='https://www.udacity.com/' target='_blank'>
+                      <h5>Udacity</h5>
+                      <h6>Front-End Web Developer Nanodegree</h6>
+                      <img src='img/Udacity.jpg' alt='Udacity'>
+                  </a>
+                  <div>
+                      <p>✦✦✦</p>
+                  </div>
+                </div>
+                <div>
+                  <h4>June - July 2015</h4>
+                  <a href='https://www.codecademy.com/' target='_blank'>
+                      <h5>Codecademy</h5>
+                      <h6>Web Development</h6>
+                      <img src='img/codecademy.jpg' alt='Codecademy'>
+                  </a>
+                  <div>
+                      <p>✦ HTML</p>
+                      <p>✦ CSS</p>
+                      <p>✦ JavaScript</p>
+                      <p>✦ jQuery</p>
+                  </div>
+                </div>
+                <div>
+                  <h4>August 2014 - March 2015</h4>
+                  <a href='https://www.khanacademy.org/' target='_blank'>
+                      <h5>Khan Academy</h5>
+                      <h6>Computer Programming</h6>
+                      <img src='img/KA.jpg' alt='Khan Academy'>
+                  </a>
+                  <div>
+                      <p>✦ Intro to JS: Drawing and Animation</p>
+                      <p>✦ Intro to HTML/CSS: Making Webpages</p>
+                      <p>✦ Intro to SQL: Querying and Managing Data</p>
+                      <p>✦ HTML/JS: Making Webpages Interactive</p>
+                  </div>
+                </div>
+                <div>
+                  <h4>May 2014 - 2015</h4>
+                  <a href='http://www.wgu.edu/' target='_blank'>
+                      <h5>Western Governors University</h5>
+                      <h6>M.A. Mathematics Education (7-12)</h6>
+                      <img src='img/WGU.jpg' alt='Western Governors University'>
+                  </a>
+                  <div>
+                      <p>✦ Online competency-based, independent study curriculum</p>
+                      <p>✦ Completed 8 of 32 units in less than two months</p>
+                      <p>✦ Completed 24 month program in 18 months</p>
+                  </div>
+                </div>
+                <div>
+                    <h4>July 2004 - May 2010</h4>
+                    <a href='http://www1.southern.edu/' target='_blank'>
+                        <h5>Southern Adventist University</h5>
+                        <h6>B.A. Mathematics</h6>
+                        <img src='img/SAU.jpg' alt='Southern Adventist University'>
+                    </a>
+                    <div>
+                        <p>✦ Secondary certification</p>
+                        <p>✦ Secondary endorsements: Mathematics, Religion, Spanish</p>
+                        <p>✦ Junior Academy endorsements: Computer Sicence, Health/PE, and Music</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>September 2005 - June 2006</h4>
+                    <a href='http://esdes.eu/en/' target='_blank'>
+                        <h5>Escuela Superior de Español: Sagunto</h5>
+                        <h6>D.E.L.E. Diploma</h6>
+                        <img src='img/ESDES.jpg' alt='Escuela Superior de Español: Sagunto'>
+                    </a>
+                    <div>
+                        <p>✦ Intermediate D.E.L.E. diploma from the University of Valencia, Spain</p>
+                        <p>✦ Enrolled in Adventist Colleges Abroad program through SAU</p>
+                        <p>✦ Studied language, culture, and history</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>August 2002 - May 2004</h4>
+                    <a href='http://www.pisgah.us/' target='_blank'>
+                        <h5>Mount Pisgah Academy</h5>
+                        <h6>College Preparatory Diploma</h6>
+                        <img src='img/MPA.jpg' alt='Mount Pisgah Academy'>
+                    </a>
+                    <div>
+                        <p>✦ Two years of Spanish</p>
+                        <p>✦ AP PreCalculus and AP Physics</p>
+                        <p>✦ National Honor Society member</p>
+                        <p>✦ Participant in concert band and Audio/Visual Media for two years</p>
+                    </div>
+                </div>
+                <a href='#professional' class='button professionalButton'>Professional History</a>
+            </div>
+
+            <div id='skills' class='page'>
+                <h3>What can I do?</h3>
+                <h4>Words that Describe Me</h4>
+                <ul>
+                    <li><p>Analytical</p></li>
+                    <li><p>Athletic</p></li>
+                    <li><p>Bilingual</p></li>
+                    <li><p>Curious</p></li>
+                    <li><p>Dependable</p></li>
+                    <li><p>Devoted</p></li>
+                    <li><p>Flexible</p></li>
+                </ul>
+                <ul>
+                    <li><p>Funny</p></li>
+                    <li><p>Knowledgable</p></li>
+                    <li><p>Respectful</p></li>
+                    <li><p>Responsible</p></li>
+                    <li><p>Spiritual</p></li>
+                    <li><p>Tech Savvy</p></li>
+                    <li><p>Trustworthy</p></li>
+                </ul>
+                <div id='facts'>
+                    <h4>Fast Facts</h4>
+                    <h5>Mathematics: Content Knowledge</h5>
+                    <p>Praxis II Score: 175</p>
+                    <p>85th Percentile</p>
+                    <h5>Trained and Informed</h5>
+                    <p>Principles of Learning and Teaching Score: 170</p>
+                    <h5>Passionate About</h5>
+                    <p>Math, Science, Music, and Theology</p>
+                    <h5>Experienced With Technology</h5>
+                    <p>MS Office, Adobe Photoshop &amp; Dreamweaver, HTML, CSS, JavaScript, jQuery, Ruby</p>
+                </div>
+                <div id='mySkillsList'>
+                    <h4>My Skills</h4>
+                    <ul>
+                        <li><p>Management</p></li>
+                        <li><p>Leadership</p></li>
+                        <li><p>People Skills</p></li>
+                        <li><p>Presentation</p></li>
+                        <li><p>Punctuality</p></li>
+                        <li><p>Organization</p></li>
+                        <li><p>Delivery</p></li>
+                        <li><p>Technical</p></li>
+                    </ul>
+                    <ul id='stars'>
+                        <li><p>✦✦✦✦</p></li>
+                        <li><p>✦✦✦✦✦</p></li>
+                        <li><p>✦✦✦✦✦</p></li>
+                        <li><p>✦✦✦✦✦</p></li>
+                        <li><p>✦✦✦</p></li>
+                        <li><p>✦✦✦✦</p></li>
+                        <li><p>✦✦✦✦</p></li>
+                        <li><p>✦✦✦✦✦</p></li>
+                    </ul>
+                </div>
+                <img src='img/skills_pic.jpg' alt='Iverson and studing working on toothpick bridge'>
+            </div>
+
+            <div id='references' class='page'>
+                <h3>What do others say?</h3>
+                <div>
+                    <img src='img/references_pic1.jpg' alt='Iverson and students'>
+                    <div>
+                        <h4><em>"Loves God, Inspires Youth"</em></h4>
+                        <h5>Deborah Dahl</h5>
+                        <h6>Former James E. Sampson Memorial School Principal</h6>
+                    </div>
+                </div>
+                <div>
+                    <img src='img/references_pic2.jpg' alt='Class project'>
+                    <div>
+                        <h4><em>"Knowledgeable, Applies Learning"</em></h4>
+                        <h5>Michelle Chase</h5>
+                        <h6>Oglethorpe SDA School Principal</h6>
+                    </div>
+                </div>
+                <div>
+                    <img src='img/references_pic3.jpg' alt='Student showing off drawing'>
+                    <div>
+                        <h4><em>"Strong in Math, Good Methods"</em></h4>
+                        <h5>Sandra Doran</h5>
+                        <h6>FL Conf. Associate Superintendent</h6>
+                    </div>
+                </div>
+            </div>
+            <div id='returnToTopButtonDiv'>
+                <a href='#banner' class='button returnToTopButton'>Back to top</a>
+            </div>
+        </section>
+
+        <footer>
+            <div>
+                <a href='https://www.linkedin.com/pub/grant-iverson/29/247/284' target='_blank'><img src='img/linkedin-pencil.png' alt='LinkedIn' height=30></a>
+                <a href='https://www.facebook.com/grant.iverson' target='_blank'><img src='img/facebook-pencil.png' alt='Facebook' height=30></a>
+            </div>
+            <p>&copy; 2018 | <a href='#contact'>Grant Iverson</a></p>
+        </footer>
+    </body>
+</html>
