@@ -21,8 +21,8 @@ TEXT
 ******************************/
 
 h1 {
-    margin: 0 0 .2em;
-    padding-top: .4em;
+    margin: 0 0 0.2em;
+    padding-top: 0.4em;
     font-family: Helvetica, sans-serif;
     font-weight: 100;
     font-size: 2.8em;
@@ -33,14 +33,14 @@ h2 {
     font-family: Helvetica, "Lucida Sans Unicode", sans-serif;
     font-weight: bold;
     font-size: 1.25em;
-    color: #2A2A2A;
+    color: #2a2a2a;
 }
 
 h3 {
     font-size: 1.6em;
     font-family: "Enriqueta", "Courier New", monospace;
-    text-indent: .65em;
-    margin-bottom: .2em;
+    text-indent: 0.65em;
+    margin-bottom: 0.2em;
 }
 
 h4 {
@@ -53,7 +53,7 @@ h5 {
     font-family: Helvetica, sans-serif;
     font-weight: bold;
     font-size: 1.25em;
-    color: #3866AA;
+    color: #3866aa;
 }
 
 h6 {
@@ -61,7 +61,7 @@ h6 {
     font-weight: 100;
     font-size: 1em;
     color: #000;
-    margin-bottom: .2em;
+    margin-bottom: 0.2em;
 }
 
 p {
@@ -74,7 +74,7 @@ a {
 }
 
 ul {
-    margin-left: .6em;
+    margin-left: 0.6em;
 }
 
 
@@ -90,8 +90,8 @@ BUTTONS
     font-weight: 100;
     text-align: center;
     font-size: 1.5em;
-    padding: .3em .2em;
-    background-color: #3866AA;
+    padding: 0.3em 0.2em;
+    background-color: #3866aa;
 }
 
 
@@ -102,20 +102,20 @@ HEADING
 
 /* header that includes the banner */
 header {
-    background-color: #FCF5E7;
+    background-color: #fcf5e7;
 }
 
 header a img {
     height: 120px;
 }
 
-#navButton {
-    margin: .2em;
+#nav-button {
+    margin: 0.2em;
 }
 
 /* banner that includes title and nav menus */
 #banner {
-    padding: 0 .2em;
+    padding: 0 0.2em;
 }
 
 #banner a img {
@@ -127,18 +127,18 @@ header a img {
 /******************************
 NAVIGATION
 
-    #miniNav is the nav menu for window resolutions below 480
-    #mainNav is the nav menu for window resolutions above 480
+    #mini-nav is the nav menu for window resolutions below 480
+    #main-nav is the nav menu for window resolutions above 480
 ******************************/
 
-#mainNav, #miniNav {
+#main-nav, #mini-nav {
     display: none;
 }
 
 nav {
-    background-color: #FDEDC1;
+    background-color: #fdedc1;
     font-size: 1.5em;
-    padding-bottom: .4em;
+    padding-bottom: 0.4em;
 }
 
 nav ul {
@@ -147,7 +147,7 @@ nav ul {
 }
 
 nav li {
-    padding: .4em .4em 0 .4em;
+    padding: 0.4em 0.4em 0 0.4em;
 }
 
 nav a {
@@ -157,18 +157,18 @@ nav a {
 
 
 /******************************
-miniNav
+mini-nav
 
-    #mainNav is the nav menu for window resolutions above 480
-    #miniNav is the nav menu for window resolutions below 480
+    #main-nav is the nav menu for window resolutions above 480
+    #mini-nav is the nav menu for window resolutions below 480
 ******************************/
 
-#miniNav a.active {
-    border-bottom: 3px solid #8D6334;
+#mini-nav a.active {
+    border-bottom: 3px solid #8d6334;
     margin-bottom: -3px;
 }
 
-#miniNav a:hover {
+#mini-nav a:hover {
     border-bottom: 3px solid #544300;
     margin-bottom: -3px;
 }
@@ -204,7 +204,7 @@ PAGE: ABOUT
 }
 
 #about p {
-     margin-bottom: .2em;
+     margin-bottom: 0.2em;
 }
 
 
@@ -216,7 +216,7 @@ PAGE: CONTACT ME
 ******************************/
 
 #contact span {
-    color: #3866AA;
+    color: #3866aa;
 }
 
 
@@ -231,28 +231,28 @@ PAGE: HISTORY, PROFESSIONAL, ACADEMIC
 }
 
 #milestones h6 {
-    background-color: #3866AA;
-    padding: .1em;
+    background-color: #3866aa;
+    padding: 0.1em;
     font-size: 1.5em;
 }
 
 #milestones p {
-    padding: .2em;
+    padding: 0.2em;
     font-family:"Enriqueta", "Courier New", monospace;
     font-size: 1.1em;
 }
 
 /* adds 30px space between divs on #professional and #academic pages */
 #professional div:not(:first-of-type), #academic div:not(:first-of-type) {
-    margin-top: .6em;
+    margin-top: 0.6em;
 }
 
-#history .professionalButton {
-    margin-bottom: .2em;
+#history .professional-button {
+    margin-bottom: 0.2em;
 }
 
-.professionalButton, .academicButton {
-    margin-top: .2em;
+.professional-button, .academic-button {
+    margin-top: 0.2em;
 }
 
 #professional div, #academic div, #skills div {
@@ -266,7 +266,7 @@ PAGE: SKILLS
 ******************************/
 
 #skills h4 {
-     margin-top: .2em;
+     margin-top: 0.2em;
 }
 
 #skills p {
@@ -295,12 +295,12 @@ footer {
     max-width: 920px;
 }
 
-.returnToTopButton {
+.return-to-top-button {
     background-color: #666;
     margin: 0 auto;
 }
 
-#returnToTopButtonDiv {
+#return-to-top-button-div {
     background-color: #999;
     padding: 10px;
 }
@@ -368,20 +368,20 @@ footer a img {
   NAVIGATION
   ******************************/
 
-  #navButton {
+  #nav-button {
       display: none;
   }
 
 
 
   /******************************
-  mainNav
+  main-nav
 
-      #mainNav is the nav menu for window resolutions above 480
-      #miniNav is the nav menu for window resolutions below 480
+      #main-nav is the nav menu for window resolutions above 480
+      #mini-nav is the nav menu for window resolutions below 480
   ******************************/
 
-  #mainNav {
+  #main-nav {
       font-size: 1em;
       display: block;
       clear: both;
@@ -391,16 +391,16 @@ footer a img {
       z-index: 1;
   }
 
-  #mainNav ul li a:hover {
-      background-color: #8D6334;
+  #main-nav ul li a:hover {
+      background-color: #8d6334;
       color: #fff;
   }
 
-  #mainNav ul li:hover > ul {
+  #main-nav ul li:hover > ul {
       display: block;
   }
 
-  #mainNav ul li {
+  #main-nav ul li {
       display: inline-block;
       margin-right: -4px;
       padding: 0;
@@ -408,33 +408,33 @@ footer a img {
       text-align: center;
   }
 
-  #mainNav ul li a {
+  #main-nav ul li a {
       padding: 7px 4px 4px;
   }
 
-  #mainNav a.active:not(:hover) {
+  #main-nav a.active:not(:hover) {
       background-color: #544300;
-      color: #FDEDC1;
+      color: #fdedc1;
   }
 
-  #mainNav ul ul {
+  #main-nav ul ul {
       /*display: none;*/
       position: absolute;
       width: 25%;
-      background-color: #FDEDC1;
+      background-color: #fdedc1;
   }
 
-  #mainNav ul ul li {
+  #main-nav ul ul li {
       display: block;
       width: auto;
       margin: 8px 0 8px;
   }
 
-  #mainNav ul ul li a {
+  #main-nav ul ul li a {
       color: #544300;
   }
 
-  #mainNav ul ul li:hover > a {
+  #main-nav ul ul li:hover > a {
       color: #fff;
   }
 
@@ -520,7 +520,7 @@ footer a img {
   ******************************/
 
   footer p {
-    font-size: .9em;
+    font-size: 0.9em;
   }
 
   footer a img {
@@ -528,7 +528,7 @@ footer a img {
     margin: 0 1px;
   }
 
-  #returnToTopButtonDiv {
+  #return-to-top-button-div {
     display: none;
   }
 
@@ -574,7 +574,7 @@ footer a img {
       float: left;
   }
 
-  .contactButton {
+  .contact-button {
       position: absolute;
       left: 35px;
       top: 320px;
@@ -611,7 +611,7 @@ footer a img {
   }
 
   #milestones p {
-      background-color: #3866AA;
+      background-color: #3866aa;
       color: #fff;
       padding: 0 0 3px 10px;
   }
