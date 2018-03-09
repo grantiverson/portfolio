@@ -57,10 +57,9 @@
                         $("#mini-nav").slideUp();                                                   /* hide the #mini-nav                                                  */
                         $("section").fadeOut("", function() {
                             $(".page").hide();                                                      /* hide the .page you were on                                          */
-                            $("#main-nav a.active").removeClass("active");                          /* remove the class .active from the #main-nav link                    */
-                            $("#mini-nav a.active").removeClass("active");                          /* remove the class .active from the #mini-nav link                    */
-                            $("#main-nav " + clickedHref + "main-nav").addClass("active").blur();   /* add the class .active from the #main-nav link                       */
-                            $("#mini-nav " + clickedHref + "mini-nav").addClass("active").blur();   /* add the class .active from the #mini-nav link                       */
+                            $("a.active").removeClass("active");                                    /* remove the class .active from the #main-nav or #mini-nav link       */
+                            $(clickedHref + "-main-nav").addClass("active").blur();                 /* add the class .active to the #main-nav link                         */
+                            $(clickedHref + "-mini-nav").addClass("active").blur()                  /* add the class .active to the #mini-nav link                         */
                             $(clickedHref).show();                                                  /* show the .page you are going to                                     */
                             $("section").fadeIn();
                         });
@@ -76,11 +75,11 @@
         <header>
             <div id="banner">
                 <a href="#about">
-                    <img src="img/Grant-small.jpg" alt="Grant">
+                    <img id="banner-img" src="img/Grant-small.jpg" alt="Grant">
                     <h1>Grant Iverson</h1>
                     <h2>Front-End Web Developer</h2>
                 </a>
-                <img id="nav-button" src="img/navButton.png" height=60 alt="Navigation Button">
+                <img id="nav-button" src="img/navButton.png" height=48 alt="Navigation Button">
                 <nav id="main-nav">
                     <ul>
                         <li><a href="#about" id="about-main-nav" class="active">About Me</a>
@@ -125,33 +124,35 @@
         <section id="main">
             <div id="about" class="page">
                 <h3>Who am I?</h3>
-                <img src="img/Grant.jpg" alt="Grant">
-                <p>I have a passion for studying creation which is fueled by my desire to understand God's character. To me, Science–especially Math–proves His existence and demonstrates His creative powers.</p>
-                <p>My goal in life is to share the love that my Father in Heaven has shown to me. I want others to see Jesus in my life through my actions, words, character, and presence. Everything I do is to bring glory to my God and demonstrate His grace to others. I do everything to the best of my abilities for Him.</p>
-                <a href="#contact" class="button contact-button">Contact Me</a>
+                <img id="about-img" src="img/Grant.jpg" alt="Grant">
+                <div id="about-txt">
+                    <p class="indent">I have a passion for studying creation which is fueled by my desire to understand God's character. To me, Science–especially Math–proves His existence and demonstrates His creative powers.</p>
+                    <p class="indent">My goal in life is to share the love that my Father in Heaven has shown to me. I want others to see Jesus in my life through my actions, words, character, and presence. Everything I do is to bring glory to my God and demonstrate His grace to others. I do everything to the best of my abilities for Him.</p>
+                    <a href="#contact" class="button contact-button">Contact Me</a>
+                </div>
             </div>
 
             <div id="contact" class="page">
                 <h3>Contact me!</h3>
                 <h4>Grant Iverson</h4>
-                <a href="mailto:iversonga@gmail.com"><p>Email me: <span>iversonga@gmail.com</span></p></a>
-                <a href="tel:1-704-433-0293"><p>Call: <span>704.433.0293</span></p></a>
-                <a href="sms:1-704-433-0293"><p>Or, <span>send me a text</span></p></a>
+                <a href="mailto:iversonga@gmail.com"><p>Email me: <span class="contact-text">iversonga@gmail.com</span></p></a>
+                <a href="tel:1-704-433-0293"><p>Call: <span class="contact-text">704.433.0293</span></p></a>
+                <a href="sms:1-704-433-0293"><p>Or, <span class="contact-text">send me a text</span></p></a>
             </div>
 
             <div id="history" class="page">
                 <h3>My History</h3>
                 <a href="#professional" class="button professional-button">Professional History</a>
                 <a href="#academic" class="button academic-button">Academic History</a>
-                <div id="milestones">
-                    <h6>Milestones to Web Development</h6>
-                    <p>Udacity Front-End Web Developer Nanodegree</p>
-                    <p>Completed HTML/CSS/JS/jQuery courses on Codecademy</p>
-                    <p>Completed HTML/CSS/JS/SQL courses on Khan Academy</p>
-                    <p>Taught HTML/CSS/JS class</p>
-                    <p>Designed and built website for JESM School</p>
-                    <p>Read HTML5/CSS/JS/jQuery "Missing Manual" books</p>
-                    <p>Read Adobe Dreamweaver CS6 Digital Classroom book</p>
+                <div id="milestones-list">
+                    <h4 id="milestones-title">Milestones to Web Development</h4>
+                    <p class="milestone">7. Udacity Front-End Web Developer Nanodegree</p>
+                    <p class="milestone">6. Completed HTML/CSS/JS/jQuery courses on Codecademy</p>
+                    <p class="milestone">5. Completed HTML/CSS/JS/SQL courses on Khan Academy</p>
+                    <p class="milestone">4. Taught HTML/CSS/JS class</p>
+                    <p class="milestone">3. Designed and built website for JESM School</p>
+                    <p class="milestone">2. Read HTML5/CSS/JS/jQuery "Missing Manual" books</p>
+                    <p class="milestone">1. Read Adobe Dreamweaver CS6 Digital Classroom book</p>
                 </div>
             </div>
 
@@ -159,19 +160,19 @@
                 <h3>Professional History</h3>
                 <div class="history-item">
                     <a href="http://wmaeagles.org/" target="_blank">
-                        <img src="img/WMA.jpg" alt="Walker Memorial Academy">
+                        <img class="history-img" src="img/WMA.jpg" alt="Walker Memorial Academy">
                     </a>
                     <div class="history-item-details">
                         <h4>July 2014 - 2018</h4>
                         <h5>Walker Memorial Academy</h5>
-                        <h6>7-12 Teacher</h6>
-                        <p>7th-12th: General math, Geometry, Algebra 1, Algebra 2, Precalculus, HTML/CSS/JS, Film Production</p>
+                        <h6>6-12 Teacher</h6>
+                        <p>6th-12th grades: General math, Geometry, Algebra 1, Algebra 2, Precalculus, HTML/CSS/JS, Film Production</p>
                         <p>Mac server and iPad manager</p>
                     </div>
                 </div>
                 <div class="history-item">
                     <a href="http://jesampson.com/" target="_blank">
-                        <img src="img/JES.jpg" alt="James E Sampson Memorial School">
+                        <img class="history-img" src="img/JES.jpg" alt="James E Sampson Memorial School">
                     </a>
                     <div class="history-item-details">
                         <h4>July 2011 - June 2014</h4>
@@ -184,25 +185,25 @@
                 </div>
                 <div class="history-item">
                     <a href="#">
-                        <img src="img/OSDA.jpg" alt="Oglethorpe SDA School">
+                        <img class="history-img" src="img/OSDA.jpg" alt="Oglethorpe SDA School">
                     </a>
                     <div class="history-item-details">
                         <h4>July 2010 - June 2011</h4>
                         <h5>Oglethorpe SDA School</h5>
                         <h6>3-8 Teacher</h6>
-                        <p>4th-8th: Bible, Math, Language, Science,</p><p>Social Studies, Computers, P.E.</p>
+                        <p>4th-8th grades: Bible, Math, Language, Science,</p><p>Social Studies, Computers, P.E.</p>
                         <p>3rd: Math</p>
                         <p>School technology coordinator</p>
                     </div>
                 </div>
-                <a href="#academic" class="button academic-button">Academic History</a>
+                <a href="#academic" class="button">Academic History</a>
             </div>
 
             <div id="academic" class="page">
                 <h3>Academic History</h3>
                 <div class="history-item">
                     <a href="https://www.udacity.com/" target="_blank">
-                        <img src="img/Udacity.jpg" alt="Udacity">
+                        <img class="history-img" src="img/Udacity.jpg" alt="Udacity">
                     </a>
                     <div class="history-item-details">
                         <h4>March 2018</h4>
@@ -216,7 +217,7 @@
                 </div>
                 <div class="history-item">
                     <a href="https://www.codecademy.com/" target="_blank">
-                        <img src="img/codecademy.jpg" alt="Codecademy">
+                        <img class="history-img" src="img/codecademy.jpg" alt="Codecademy">
                     </a>
                     <div class="history-item-details">
                         <h4>June - July 2015</h4>
@@ -230,7 +231,7 @@
                 </div>
                 <div class="history-item">
                     <a href="https://www.khanacademy.org/" target="_blank">
-                        <img src="img/KA.jpg" alt="Khan Academy">
+                        <img class="history-img" src="img/KA.jpg" alt="Khan Academy">
                     </a>
                     <div class="history-item-details">
                         <h4>August 2014 - March 2015</h4>
@@ -244,7 +245,7 @@
                 </div>
                 <div class="history-item">
                     <a href="http://www.wgu.edu/" target="_blank">
-                        <img src="img/WGU.jpg" alt="Western Governors University">
+                        <img class="history-img" src="img/WGU.jpg" alt="Western Governors University">
                     </a>
                     <div class="history-item-details">
                         <h4>May 2014 - 2015</h4>
@@ -257,7 +258,7 @@
                 </div>
                 <div class="history-item">
                     <a href="http://www1.southern.edu/" target="_blank">
-                        <img src="img/SAU.jpg" alt="Southern Adventist University">
+                        <img class="history-img" src="img/SAU.jpg" alt="Southern Adventist University">
                     </a>
                     <div class="history-item-details">
                         <h4>July 2004 - May 2010</h4>
@@ -270,7 +271,7 @@
                 </div>
                 <div class="history-item">
                     <a href="http://esdes.eu/en/" target="_blank">
-                        <img src="img/ESDES.jpg" alt="Escuela Superior de Español: Sagunto">
+                        <img class="history-img" src="img/ESDES.jpg" alt="Escuela Superior de Español: Sagunto">
                     </a>
                     <div class="history-item-details">
                         <h4>September 2005 - June 2006</h4>
@@ -283,7 +284,7 @@
                 </div>
                 <div class="history-item">
                     <a href="http://www.pisgah.us/" target="_blank">
-                        <img src="img/MPA.jpg" alt="Mount Pisgah Academy">
+                        <img class="history-img" src="img/MPA.jpg" alt="Mount Pisgah Academy">
                     </a>
                     <div class="history-item-details">
                         <h4>August 2002 - May 2004</h4>
@@ -295,65 +296,72 @@
                         <p>Participant in concert band and Audio/Visual Media for two years</p>
                     </div>
                 </div>
-                <a href="#professional" class="button professional-button">Professional History</a>
+                <a href="#professional" class="button">Professional History</a>
             </div>
 
             <div id="skills" class="page">
                 <h3>What can I do?</h3>
                 <div class="skills-list">
                     <h4>Skills</h4>
-                    <p>Analytical - Make decisions based on systematic, meticulous study of data</p>
-                    <p>Mathematics - B.A. Math, M.A. Math Education, proficient through Calculus</p>
-                    <p>Problem Solver - Experienced at tackling difficult problems</p>
-                    <p>Tech Savvy - Over 20 years experience with IT, networking, and computer applications</p>
+                    <div class="list-container">
+                        <p>Analytical - Make decisions based on systematic, meticulous study of data</p>
+                        <p>Mathematics - B.A. Math, M.A. Math Education, proficient through Calculus</p>
+                        <p>Problem Solver - Experienced at tackling difficult problems</p>
+                        <p>Tech Savvy - Over 20 years experience with IT, networking, and computer applications</p>
+                    </div>
                 </div>
                 <div class="knowledge-and-tools-list">
                     <h4>Knowledge and Tools</h4>
-                    <p>HTML5 ✦ CSS3 ✦ JavaScript</p>
-                    <p>Atom</p>
-                    <p>Adobe Photoshop & Dreamweaver</p>
-                    <p>Microsoft Office Suite</p>
-                    <p>Limited experience with Python, Ruby, and C++</p>
+                    <div class="list-container">
+                        <p>HTML5 ✦ CSS3 ✦ JavaScript</p>
+                        <p>Atom</p>
+                        <p>Adobe Photoshop & Dreamweaver</p>
+                        <p>Microsoft Office Suite</p>
+                        <p>Limited experience with Python, Ruby, and C++</p>
+                    </div>
                 </div>
                 <div class="words-that-describe-list">
                     <h4>Words that Describe Me</h4>
-                    <p>Athletic ✦ Bilingual ✦ Confident ✦ Curious ✦ Dependable ✦ Effective Communicator ✦ Flexible ✦ Growing ✦ Musical ✦ Team Player ✦ Well-rounded</p>
+                    <div class="list-container">
+                        <p>Athletic ✦ Bilingual ✦ Confident ✦ Curious ✦ Dependable ✦ Effective Communicator ✦ Flexible ✦ Growing ✦ Musical ✦ Team Player ✦ Well-rounded</p>
+                    </div>
                 </div>
                 <div class="certifications-and-achievements-list">
                     <h4>Certifications and Achievements</h4>
-                    <h5>Teaching certification</h5>
-                    <p>Grades 6-12 Math including Algebra 1 and 2, Geometry, Precalculus, and Calculus</p>
-                    <p>Spanish, Bible, Computer Science, Health/P.E., and Music</p>
-                    <h5>Praxis Tests</h5>
-                    <p>Mathematics: Content Knowledge: 175, 85th Percentile</p>
-                    <p>Principles of Learning and Teaching: 170</p>
+                    <div class="list-container">
+                        <p>Teaching certifications: Grades 6-12 Math including Algebra 1 and 2, Geometry, Precalculus, and Calculus; Spanish, Bible, Computer Science, Health/P.E., and Music</p>
+                        <p>Praxis II Mathematics: Content Knowledge score of 175, 85th Percentile</p>
+                        <p>Praxis Principles of Learning and Teaching score of 170</p>
+                    </div>
                 </div>
             </div>
 
             <div id="portfolio" class="page">
                 <h3>What have I done?</h3>
                 <div class="portfolio-item">
-                    <img src="img/JESMS-website.jpg" alt="James E. Sampson's Website">
+                    <a href="#" target="_blank">
+                        <img class="history-img" src="img/JESMS-website.jpg" alt="James E. Sampson's Website">
+                    </a>
                     <div class="portfolio-item-details">
                         <h4>James E. Sampson</h4>
                         <h5>jesampson.com</h5>
-                        <h6>Website for James E. Sampson Memorial School</h6>
+                        <p>Designed and managed website for James E. Sampson Memorial School</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="http://via.placeholder.com/440x330" alt="">
+                    <img class="history-img" src="http://via.placeholder.com/440x330" alt="">
                     <div class="portfolio-item-details">
                         <h4>Name</h4>
                         <h5>URL</h5>
-                        <h6>Description</h6>
+                        <p>Description</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="http://via.placeholder.com/440x330" alt="">
+                    <img class="history-img" src="http://via.placeholder.com/440x330" alt="">
                     <div class="portfolio-item-details">
                         <h4>Name</h4>
                         <h5>URL</h5>
-                        <h6>Description</h6>
+                        <p>Description</p>
                     </div>
                 </div>
             </div>

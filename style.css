@@ -25,14 +25,14 @@ h1 {
     padding-top: 0.4em;
     font-family: Helvetica, sans-serif;
     font-weight: 100;
-    font-size: 2.8em;
+    font-size: 1.8em;
     color: #555;
 }
 
 h2 {
     font-family: Helvetica, "Lucida Sans Unicode", sans-serif;
     font-weight: bold;
-    font-size: 1.25em;
+    font-size: 0.9em;
     color: #2a2a2a;
 }
 
@@ -46,27 +46,29 @@ h3 {
 h4 {
     font-family: Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: 1em;
+    margin-top: 0.2em;
 }
 
 h5 {
     font-family: Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 1.25em;
+    font-size: 0.9em;
     color: #3866aa;
 }
 
 h6 {
     font-family: Helvetica, sans-serif;
     font-weight: 100;
-    font-size: 1em;
+    font-size: 0.8em;
     color: #000;
     margin-bottom: 0.2em;
 }
 
 p {
     font-family:"Enriqueta", "Courier New", monospace;
-    font-size: 1.4em;
+    font-size: 0.8em;
+    margin-bottom: 0.2em;
 }
 
 a {
@@ -75,6 +77,10 @@ a {
 
 ul {
     margin-left: 0.6em;
+}
+
+h6 + p, h5 + p {
+    border-top: 1px black solid;
 }
 
 
@@ -91,6 +97,7 @@ BUTTONS
     text-align: center;
     font-size: 1.5em;
     padding: 0.3em 0.2em;
+    margin-top: 0.2em;
     background-color: #3866aa;
 }
 
@@ -118,7 +125,7 @@ header a img {
     padding: 0 0.2em;
 }
 
-#banner a img {
+#banner-img {
     float:right;
 }
 
@@ -163,12 +170,12 @@ mini-nav
     #mini-nav is the nav menu for window resolutions below 480
 ******************************/
 
-#mini-nav a.active {
+nav:nth-of-type(2) a.active {
     border-bottom: 3px solid #8d6334;
     margin-bottom: -3px;
 }
 
-#mini-nav a:hover {
+nav:nth-of-type(2) a:hover {
     border-bottom: 3px solid #544300;
     margin-bottom: -3px;
 }
@@ -187,24 +194,21 @@ section {
     padding: 10px;
 }
 
-.page img {
-}
-
 
 
 /******************************
 PAGE: ABOUT
 ******************************/
 
-#about img {
+#about-img {
     max-height: 250px;
-        display: block;
-        margin: auto;
-        margin-bottom: 10px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
-#about p {
-     margin-bottom: 0.2em;
+#about-txt {
+    overflow: hidden;
 }
 
 
@@ -215,49 +219,37 @@ PAGE: ABOUT
 PAGE: CONTACT ME
 ******************************/
 
-#contact span {
+.contact-text {
     color: #3866aa;
 }
 
 
 
 /******************************
-PAGE: HISTORY, PROFESSIONAL, ACADEMIC
+PAGE: HISTORY, PROFESSIONAL, ACADEMIC, and PORTFOLIO
 ******************************/
 
-#milestones {
+#milestones-list {
     margin-top: 10px;
-    background-color: #fff;
 }
 
-#milestones h6 {
+#milestones-title {
+    color: #fff;
     background-color: #3866aa;
-    padding: 0.1em;
-    font-size: 1.5em;
+    font-weight: normal;
+    padding: 0.25em 0.5em;
 }
 
-#milestones p {
-    padding: 0.2em;
+.milestone {
     font-family:"Enriqueta", "Courier New", monospace;
-    font-size: 1.1em;
+    font-size: 0.8em;
 }
 
-/* adds 30px space between divs on #professional and #academic pages */
-#professional div:not(:first-of-type), #academic div:not(:first-of-type) {
-    margin-top: 0.6em;
-}
-
-#history .professional-button {
-    margin-bottom: 0.2em;
-}
-
-.professional-button, .academic-button {
-    margin-top: 0.2em;
-}
-
-#professional div, #academic div, #skills div {
+.history-item, .portfolio-item {
     margin-bottom: 30px;
 }
+
+
 
 
 
@@ -265,22 +257,8 @@ PAGE: HISTORY, PROFESSIONAL, ACADEMIC
 PAGE: SKILLS
 ******************************/
 
-#skills h4 {
-     margin-top: 0.2em;
-}
-
-#skills p {
+.list-container {
      margin-left: 1em;
-}
-
-
-
-/******************************
-PAGE: PORTFOLIO
-******************************/
-
-#portfolio div {
-    text-align: right;
 }
 
 
@@ -337,12 +315,32 @@ footer a img {
   TEXT
   ******************************/
 
-  p {
-      font-size: 1.1em;
+  h1 {
+      font-size: 2.8em;
+  }
+
+  h2 {
+      font-size: 1.25em;
   }
 
   h3 {
       font-size: 1.9em;
+  }
+
+  h4 {
+      font-size: 1.4em;
+  }
+
+  h5 {
+      font-size: 1.25em;
+  }
+
+  h6 {
+      font-size: 1em;
+  }
+
+  p {
+      font-size: 1.1em;
   }
 
 
@@ -355,9 +353,7 @@ footer a img {
       display: block;
       margin-left: auto;
       margin-right: auto;
-
       font-size: 1em;
-
       padding: 10px 10px;
       width: 200px;
   }
@@ -386,21 +382,21 @@ footer a img {
       display: block;
       clear: both;
       padding: 0;
-      position: relative; /* necessary for drop shadow to be on top of <section> */
+      position: relative;
       top: 3px;
       z-index: 1;
   }
 
-  #main-nav ul li a:hover {
+  ul li a:hover {
       background-color: #8d6334;
       color: #fff;
   }
 
-  #main-nav ul li:hover > ul {
+  ul li:hover > ul {
       display: block;
   }
 
-  #main-nav ul li {
+  ul li {
       display: inline-block;
       margin-right: -4px;
       padding: 0;
@@ -408,33 +404,33 @@ footer a img {
       text-align: center;
   }
 
-  #main-nav ul li a {
+  ul li a {
       padding: 7px 4px 4px;
   }
 
-  #main-nav a.active:not(:hover) {
+  a.active:not(:hover) {
       background-color: #544300;
       color: #fdedc1;
   }
 
-  #main-nav ul ul {
+  ul ul {
       /*display: none;*/
       position: absolute;
       width: 25%;
       background-color: #fdedc1;
   }
 
-  #main-nav ul ul li {
+  ul ul li {
       display: block;
       width: auto;
       margin: 8px 0 8px;
   }
 
-  #main-nav ul ul li a {
+  ul ul li a {
       color: #544300;
   }
 
-  #main-nav ul ul li:hover > a {
+  ul ul li:hover > a {
       color: #fff;
   }
 
@@ -464,53 +460,76 @@ footer a img {
       position: relative;
   }
 
-  #about p {
+  .indent {
       text-indent: 1em;
-      overflow: hidden
   }
 
 
 
   /******************************
-  PAGE: HISTORY, PROFESSIONAL, ACADEMIC
+  PAGE: HISTORY, PROFESSIONAL, ACADEMIC, and PORTFOLIO
   ******************************/
 
-  #professional div, #academic div {
+  .professional-button, .academic-button {
+      display: inline-block;
+      position: relative;
+      max-width: 40%;
+  }
+
+  .professional-button {
+      float: right;
+      right: 51%;
+  }
+
+  .academic-button {
+      float: left;
+      left: 51%;
+  }
+
+  #milestones-list {
+      margin-top: 60px;
+      padding-bottom: 10px;
+  }
+
+  .milestone {
+      font-size: 1.8vw;
+      background-color: #3866aa;
+      color: #fff;
+      padding: 0 0 3px 10px;
+      margin: 10px 0;
+  }
+
+  .milestone:first-of-type {
+      margin-left: 45%;
+  }
+
+  .milestone:nth-of-type(2) {
+      margin-left: 37.5%;
+  }
+
+  .milestone:nth-of-type(3) {
+      margin-left: 30%;
+  }
+
+  .milestone:nth-of-type(4) {
+      margin-left: 22.5%;
+  }
+
+  .milestone:nth-of-type(5) {
+      margin-left: 15%;
+  }
+
+  .milestone:nth-of-type(6) {
+      margin-left: 7.5%;
+  }
+
+  .history-item, .history-item-details, .portfolio-item, .portfolio-item-details {
       overflow: hidden;
   }
 
-  #professional img, #academic img {
+  .history-img, .portfolio-img {
       clear: both;
       display: block;
-  }
-
-
-
-  /******************************
-  PAGE: PORTFOLIO
-  ******************************/
-
-  #portfolio div {
-      overflow: hidden;
-      position: relative;
-  }
-
-  #portfolio div div:nth-child(2) {
-      max-width: 50%;
-      position: absolute;
-      top: 15%;
-      right: 50%;
-  }
-
-  #portfolio img {
-      max-width: 48%;
-      float: right;
-      clear: right;
-      margin: 0 0 30px;
-  }
-
-  #portfolio div:nth-of-type(3) {
-      margin-bottom: -30px;
   }
 
 
@@ -569,7 +588,7 @@ footer a img {
   PAGE: ABOUT
   ******************************/
 
-  #about img {
+  #about-img {
       margin-right: 10px;
       float: left;
   }
@@ -583,94 +602,26 @@ footer a img {
 
 
   /******************************
-  PAGE: HISTORY, PROFESSIONAL, ACADEMIC
+  PAGE: HISTORY, PROFESSIONAL, ACADEMIC, and PORTFOLIO
   ******************************/
 
-  #history .button {
-      display: inline-block;
+  .history-item-details, .portfolio-item-details {
       position: relative;
-      top: -10px;
-  }
-
-  #history .button:first-of-type {
-      float: right;
-      right: 51%;
-  }
-
-  #history .button + .button {
-      float: left;
-      left: 51%;
-  }
-
-  #milestones {
-      margin-top: 60px;
-  }
-
-  #milestones {
-      padding-bottom: 10px;
-  }
-
-  #milestones p {
-      background-color: #3866aa;
-      color: #fff;
-      padding: 0 0 3px 10px;
-  }
-
-  #milestones p:first-of-type {
-      margin: 10px 0 10px 47.5%;
-  }
-
-  #milestones p:nth-of-type(2) {
-      margin: 10px 0 10px 40%;
-  }
-
-  #milestones p:nth-of-type(3) {
-      margin: 10px 0 10px 32.5%;
-  }
-
-  #milestones p:nth-of-type(4) {
-      margin: 10px 0 10px 25%;
-  }
-
-  #milestones p:nth-of-type(5) {
-      margin: 10px 0 10px 17.5%;
-  }
-
-  #milestones p:nth-of-type(6) {
-      margin: 10px 0 10px 10%;
-  }
-
-  #milestones p:nth-of-type(7) {
-      margin: 10px 0 10px 2.5%;
-  }
-
-  #professional div div, #academic div div {
-      position: relative;
-      left: 2%;
+      left: 5%;
       max-width: 58%;
   }
 
-  #professional img, #academic img {
+  .history-img, .portfolio-img {
       max-width: 40%;
       float: left;
   }
 
 
 
-  /******************************
-  PAGE: PORTFOLIO
-  ******************************/
-
-  #portfolio div div:nth-child(2) {
-      top: 30%;
-  }
-
-
-
 } /******** End of @media screen and (min-width: 701px) ********/
 
-@media screen and (min-width: 701px) and (max-width: 930px) {
-  #milestones p {
-      font-size: 1.85vw;
+@media screen and (min-width: 960px) {
+  .milestone {
+      font-size: 1.1em;
   }
 }
