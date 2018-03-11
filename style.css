@@ -524,7 +524,7 @@ footer a img {
       margin-left: 7.5%;
   }
 
-  .history-item, .history-item-details, .portfolio-item, .portfolio-item-details {
+  .history-item, .portfolio-item, .history-item-details, .portfolio-item-details {
       overflow: hidden;
   }
 
@@ -580,7 +580,7 @@ footer a img {
   ******************************/
 
   section {
-      max-width: 960px;
+      max-width: 920px;
       margin: 0 auto;
 
   }
@@ -609,7 +609,7 @@ footer a img {
   .history-item-details, .portfolio-item-details {
       position: relative;
       left: 5%;
-      max-width: 58%;
+      max-width: 55%;
   }
 
   .history-img, .portfolio-img {
@@ -621,7 +621,7 @@ footer a img {
 
 } /******** End of @media screen and (min-width: 701px) ********/
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 920px) {
   .milestone {
       font-size: 1.1em;
   }
