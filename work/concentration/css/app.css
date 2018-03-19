@@ -8,6 +8,14 @@ html {
     box-sizing: inherit;
 }
 
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 /* PAGE */
 body {
     background: #fff url('../img/memphis-colorful.png'); /* Background pattern from Subtle Patterns */
@@ -35,8 +43,10 @@ h1 {
 
 /* BODY */
 #deck {
-    width: 600px;
-    height: 600px;
+    width: 90vw;
+    height: 90vw;
+    max-width: 600px;
+    max-height: 600px;
     background: linear-gradient(160deg, #c8eec8 0%, #c8c8ff 100%);
     padding: 10px;
     border-radius: 8px;
@@ -48,8 +58,10 @@ h1 {
 
 /* CARDS */
 .card {
-    width: 125px;
-    height: 125px;
+    width: 21%;
+    height: 21%;
+    max-width: 125px;
+    max-height: 125px;
     background: #28323A;
     border-radius: 8px;
     cursor: pointer;
