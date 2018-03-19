@@ -47,6 +47,7 @@
                                 || /mailto/i.test(clickedHref)                                      /* does it include "mailto"                                            */
                                 || /tel/i.test(clickedHref)                                         /* does it include "tel"                                               */
                                 || /sms/i.test(clickedHref)                                         /* does it include "sms"?                                              */
+                                || /work/i.test(clickedHref)                                   /* does it include "work"?                                              */
                     if (hrefTest) {
                         return;                                                                     /* if it does include any of these, do nothing                         */
                     } else if ($(this).hasClass("return-to-top-button")) {                          /* is the link the .return-to-top-button at the bottom of each .page,  */
@@ -343,19 +344,23 @@
             <div id="portfolio" class="page">
                 <h3>What have I done?</h3>
                 <div class="portfolio-item">
-                    <img class="history-img" src="http://via.placeholder.com/440x330" alt="">
-                    <div class="portfolio-item-details">
-                        <h4>Name</h4>
-                        <h5>URL</h5>
-                        <p>Description</p>
-                    </div>
+                    <a href="work/concentration/index.html" target="_blank">
+                        <img class="history-img" src="img/concentration-website.jpg" alt="Concentration">
+                        <div class="portfolio-item-details">
+                            <h4>Concentration</h4>
+                            <h5>Udacity Project</h5>
+                            <p>Completed as part of Front-End Web Development Nanodegree</p>
+                        </div>
+                    </a>
                 </div><div class="portfolio-item">
-                    <img class="history-img" src="img/JESMS-website.jpg" alt="James E. Sampson's Website">
-                    <div class="portfolio-item-details">
-                        <h4>James E. Sampson</h4>
-                        <h5>jesampson.com</h5>
-                        <p>Designed and managed website for James E. Sampson Memorial School</p>
-                    </div>
+                    <a href="work/JES/index.html" target="_blank">
+                        <img class="history-img" src="img/JESMS-website.jpg" alt="James E. Sampson's Website">
+                        <div class="portfolio-item-details">
+                            <h4>James E. Sampson</h4>
+                            <h5>jesampson.com</h5>
+                            <p>Designed and managed website for James E. Sampson Memorial School</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="portfolio-item">
                     <img class="history-img" src="http://via.placeholder.com/440x330" alt="">
