@@ -1,0 +1,78 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* PAGE */
+body {
+    background: #fff url('../img/memphis-colorful.png'); /* Background pattern from Subtle Patterns */
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* HEADING */
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.restart {
+    float: right;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* BODY */
+#deck {
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(160deg, #c8eec8 0%, #c8c8ff 100%);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+/* CARDS */
+.card {
+    width: 125px;
+    height: 125px;
+    background: #28323A;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: auto;
+    font-size: 0;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card.open {
+    transform: rotateY(0);
+    background: #88f;
+    cursor: default;
+}
+
+.card.show {
+    font-size: 33px;
+}
+
+.card.match {
+    cursor: default;
+    background: #8e8;
+    font-size: 33px;
+}
