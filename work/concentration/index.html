@@ -5,8 +5,8 @@
     <title>Concentration</title>
     <meta name="description" content="Memory Matching Game">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
 <body>
     <div class="container">
@@ -15,10 +15,21 @@
         </header>
 
         <section id="score-pannel">
-            <span class="moves">0</span> Moves
+            <ul id="stars">
+        		<li><i id="third-star" class="fa fa-star"></i></li>
+        		<li><i id="second-star" class="fa fa-star"></i></li>
+        		<li><i id="first-star" class="fa fa-star"></i></li>
+        	</ul>
 
-            <div class="restart">
+            <span id="moves">0</span> Moves
+
+            <div id="restart">
                 <i class="fa fa-repeat"></i>
+            </div>
+
+            <div id="timer">
+                <span id="minutes">0</span>:
+                <span id="seconds">00</span>
             </div>
         </section>
 

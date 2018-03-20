@@ -35,9 +35,34 @@ h1 {
     font-weight: 300;
 }
 
-.restart {
+/* Styles for the Score Panel */
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+}
+
+#stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+#restart {
     float: right;
     cursor: pointer;
+    margin-left: 20px;
+}
+
+#timer {
+    float: right;
     margin-left: 20px;
 }
 
