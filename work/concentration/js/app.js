@@ -92,28 +92,40 @@ const movesUp = function () {
 
 //function that creates a modal when all matches have been made
 const finished = function () {
-    setTimeout(function() {                                          // setTimeout causes a slight delay before the alert window appears
-        const playAgain = confirm("You won after " + moves + " moves!\nYou got " + stars + " stars.\nYour time was " + minutes + ":" + seconds + "\nPress OK to play again!");              // allows the last pair of cards does not display as matching
+    let finishedMessage = "You won after " + moves + " moves!\n" + "You got " + stars + " star";
+    if (stars !== 1) {                                                                              // prints star if number of stars is 1
+        finishedMessage += "s";
+    }
+    finishedMessage += ".\n" + "Your time was " + minutes + ":";
+    if (seconds < 10) {                                                                             // adds leading 0 if necessary
+        finishedMessage += "0"
+    }
+    finishedMessage += seconds + "\n" + "Press OK to play again!"
+    setTimeout(function() {                                                                         // setTimeout causes a slight delay before the alert window appears
+        const playAgain = confirm(finishedMessage);
         if (playAgain) {
             deal();
+        } else {
+            runTimer = false;
         }
     }, 100);
-    clearInterval(timerInterval);
 };
 
 //makes timer counter work
 const timerUp = function () {
-    if (seconds == 60) {
-        seconds = 0;                                // increments minutes
-        minutes++;
-        minutesHTML.textContent = minutes;
+    if (runTimer) {
+        if (seconds == 60) {
+            seconds = 0;                                // increments minutes
+            minutes++;
+            minutesHTML.textContent = minutes;
+        }
+        if (seconds < 10) {                             // adds leading 0 if necessary then adds text to HTML
+            secondsHTML.textContent = "0" + seconds;
+        } else{
+            secondsHTML.textContent = seconds;
+        }
+        seconds++;
     }
-    if (seconds < 10) {                             // adds leading 0 if necessary then adds text to HTML
-        secondsHTML.textContent = "0" + seconds;
-    } else{
-        secondsHTML.textContent = seconds;
-    }
-    seconds++;
 }
 
 //part of the timer
@@ -125,7 +137,8 @@ const resetTimer = function () {
     minutes = 0;
     seconds = 0;
     minutesHTML.textContent = minutes;
-    minutesHTML.textContent = seconds;
+    secondsHTML.textContent = "0" + seconds;
+    runTimer = true;
 }
 
 const starRating = function () {
@@ -169,6 +182,7 @@ let stars = 3;
 let minutes = 0, seconds = 0;
 let minutesHTML = document.querySelector("#minutes");
 let secondsHTML = document.querySelector("#seconds");
+let runTimer = true;
 
 /* OTHER CODE */
 
@@ -184,3 +198,8 @@ restart.addEventListener("click", deal);
 for (let i = 0; i < deck.length; i++) {
     deck[i].addEventListener("click", showCard);
 }
+
+// causes immediate win conditions
+//////////////////////////////////
+// for (let i = 0; i < deck.length; i++) {deck[i].classList.add("match");} finished();
+//
