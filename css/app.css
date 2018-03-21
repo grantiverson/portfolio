@@ -226,7 +226,7 @@ PAGE: CONTACT ME
 
 
 /******************************
-PAGE: HISTORY, PROFESSIONAL, ACADEMIC, and PORTFOLIO
+PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
 ******************************/
 
 #milestones-list {
@@ -245,7 +245,7 @@ PAGE: HISTORY, PROFESSIONAL, ACADEMIC, and PORTFOLIO
     font-size: 0.8em;
 }
 
-.history-item, .portfolio-item {
+.history-item, .portfolio-item, .references-item {
     margin-bottom: 30px;
 }
 
@@ -401,7 +401,7 @@ footer a img {
       display: inline-block;
       margin-right: -4px;
       padding: 0;
-      width: 25%;
+      width: 20%;
       text-align: center;
   }
 
@@ -468,7 +468,7 @@ footer a img {
 
 
   /******************************
-  PAGE: HISTORY, PROFESSIONAL, ACADEMIC, and PORTFOLIO
+  PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
   ******************************/
 
   .professional-button, .academic-button {
@@ -524,11 +524,11 @@ footer a img {
       margin-left: 7.5%;
   }
 
-  .history-item, .portfolio-item, .history-item-details, .portfolio-item-details {
+  .history-item, .portfolio-item, .references-item, .history-item-details, .portfolio-item-details, .references-item-details {
       overflow: hidden;
   }
 
-  .history-img, .portfolio-img {
+  .history-img, .portfolio-img, .references-img {
       clear: both;
       display: block;
   }
@@ -603,16 +603,16 @@ footer a img {
 
 
   /******************************
-  PAGE: HISTORY, PROFESSIONAL, ACADEMIC, and PORTFOLIO
+  PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
   ******************************/
 
-  .history-item-details, .portfolio-item-details {
+  .history-item-details, .portfolio-item-details, .references-item-details {
       position: relative;
       left: 5%;
       max-width: 55%;
   }
 
-  .history-img, .portfolio-img {
+  .history-img, .portfolio-img, .references-img {
       max-width: 40%;
       float: left;
   }

@@ -17,7 +17,7 @@
             $(document).ready(function() {
 
                 /* Hide all pages */
-                $("#contact, #history, #professional, #academic, #skills, #portfolio").hide();
+                $("#contact, #history, #professional, #academic, #skills, #portfolio, #references").hide();
 
                 /* Makes nav-button work - clicking it opens/closes the #mini-nav menu */
                 $("#nav-button").click(function() {
@@ -98,6 +98,7 @@
                         </li>
                         <li><a href="#skills" id="skills-main-nav">Skills</a></li>
                         <li><a href="#portfolio" id="portfolio-main-nav">Portfolio</a></li>
+                        <li><a href="#references" id="references-main-nav">References</a></li>
                     </ul>
                 </nav>
                 <nav id="mini-nav">
@@ -117,6 +118,7 @@
                         </li>
                         <li><a href="#skills" id="skills-mini-nav">Skills</a></li>
                         <li><a href="#portfolio" id="portfolio-mini-nav">Portfolio</a></li>
+                        <li><a href="#references" id="references-mini-nav">References</a></li>
                     </ul>
                 </nav>
             </div>
@@ -356,16 +358,17 @@
                 <h3>What have I done?</h3>
                 <div class="portfolio-item">
                     <a href="work/concentration/index.html" target="_blank">
-                        <img class="history-img" src="img/concentration-website.jpg" alt="Concentration">
+                        <img class="portfolio-img" src="img/concentration-website.jpg" alt="Concentration">
                         <div class="portfolio-item-details">
                             <h4>Concentration</h4>
                             <h5>Udacity Project</h5>
                             <p>Completed as part of Front-End Web Development Nanodegree</p>
                         </div>
                     </a>
-                </div><div class="portfolio-item">
+                </div>
+                <div class="portfolio-item">
                     <a href="work/JES/index.html" target="_blank">
-                        <img class="history-img" src="img/JESMS-website.jpg" alt="James E. Sampson's Website">
+                        <img class="portfolio-img" src="img/JESMS-website.jpg" alt="James E. Sampson's Website">
                         <div class="portfolio-item-details">
                             <h4>James E. Sampson</h4>
                             <h5>jesampson.com</h5>
@@ -374,7 +377,7 @@
                     </a>
                 </div>
                 <div class="portfolio-item">
-                    <img class="history-img" src="http://via.placeholder.com/440x330" alt="">
+                    <img class="portfolio-img" src="http://via.placeholder.com/440x330" alt="">
                     <div class="portfolio-item-details">
                         <h4>Name</h4>
                         <h5>URL</h5>
@@ -382,6 +385,35 @@
                     </div>
                 </div>
             </div>
+
+            <div id="references" class="page">
+                <h3>What do others say?</h3>
+                <div class="references-item">
+                    <img class="references-img" src="img/references1.jpg" alt="Class Photo">
+                    <div class="references-item-details">
+                        <h4>"Loves God, Inspires Youth"</h4>
+                        <h5>Deborah Dahl</h5>
+                        <p>Former James E. Sampson Memorial School Principal</p>
+                    </div>
+                </div>
+                <div class="references-item">
+                    <img class="references-img" src="img/references2.jpg" alt="Science Project">
+                    <div class="references-item-details">
+                        <h4>"Knowledgeable, Applies Learning"</h4>
+                        <h5>Michelle Chase</h5>
+                        <p>Oglethorpe SDA School Principal</p>
+                    </div>
+                </div>
+                <div class="references-item">
+                    <img class="references-img" src="img/references3.jpg" alt="Accomplished Student">
+                    <div class="references-item-details">
+                        <h4>"Strong in Math, Good Methods"</h4>
+                        <h5>Sandra Doran</h5>
+                        <p>FL Conference Associate Superintendent</p>
+                    </div>
+                </div>
+            </div>
+
             <div id="return-to-top-button-div">
                 <a href="#banner" class="button return-to-top-button">Back to top</a>
             </div>
