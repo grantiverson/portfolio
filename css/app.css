@@ -186,7 +186,7 @@ nav:nth-of-type(2) a:hover {
 PAGES
 ******************************/
 
-section {
+main {
     padding: 0 10px;
 }
 
@@ -579,7 +579,7 @@ footer a img {
   PAGES
   ******************************/
 
-  section {
+  main {
       max-width: 920px;
       margin: 0 auto;
 

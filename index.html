@@ -56,13 +56,13 @@
                     } else {
                         event.preventDefault();                                      /* otherwise, don't go to the link in the HTML                         */
                         $("#mini-nav").slideUp();                                    /* hide the #mini-nav                                                  */
-                        $("section").fadeOut("", function() {
+                        $("main").fadeOut("", function() {
                             $(".page").hide();                                       /* hide the .page you were on                                          */
                             $("a.active").removeClass("active");                     /* remove the class .active from the #main-nav or #mini-nav link       */
                             $(clickedHref + "-main-nav").addClass("active").blur();  /* add the class .active to the #main-nav link                         */
                             $(clickedHref + "-mini-nav").addClass("active").blur()   /* add the class .active to the #mini-nav link                         */
                             $(clickedHref).show();                                   /* show the .page you are going to                                     */
-                            $("section").fadeIn();
+                            $("main").fadeIn();
                         });
                     }
                     $("html, body").animate({scrollTop: "0px" });                    /* scroll the window to the top of the page                            */
@@ -124,7 +124,7 @@
             </div>
         </header>
 
-        <section id="main">
+        <main id="main">
             <div id="about" class="page">
                 <h3>Who am I?</h3>
                 <img id="about-img" src="img/Grant.jpg" alt="Grant">
@@ -147,7 +147,7 @@
             </div>
 
             <div id="contact" class="page">
-                <h3>Contact me!</h3>
+                <h3>How can you contact me?</h3>
                 <p class="indent">I am currently looking for the opportunity to
                     work full-time as a Front-End Web Developer. If you feel
                     that I would be a good fit for your business, please contact
@@ -159,7 +159,7 @@
             </div>
 
             <div id="history" class="page">
-                <h3>My History</h3>
+                <h3>How did I become a developer?</h3>
                 <a href="#professional" class="button professional-button">Professional History</a>
                 <a href="#academic" class="button academic-button">Academic History</a>
                 <div id="milestones-list">
@@ -175,7 +175,7 @@
             </div>
 
             <div id="professional" class="page">
-                <h3>Professional History</h3>
+                <h3>Where have I worked?</h3>
                 <div class="history-item">
                     <a href="http://wmaeagles.org/" target="_blank">
                         <img class="history-img" src="img/WMA.jpg" alt="Walker Memorial Academy">
@@ -217,7 +217,7 @@
             </div>
 
             <div id="academic" class="page">
-                <h3>Academic History</h3>
+                <h3>Where have I studied?</h3>
                 <div class="history-item">
                     <a href="https://www.udacity.com/" target="_blank">
                         <img class="history-img" src="img/Udacity.jpg" alt="Udacity">
@@ -324,8 +324,8 @@
                         <p>Learner - Love to learn and master new skills</p>
                         <p>Activator - Get things done and motivate others to take action</p>
                         <p>Analytical - Make decisions based on systematic, meticulous study of data</p>
-                        <p>Precise - Detail oriented and carefuly to ensure correctness of work</p>
-                        <p>Problem Solver - Experienced at tackling difficult problems</p>
+                        <p>Precise - Detail oriented and carefully to ensure correctness of work</p>
+                        <p>Problem Solver - Experienced in tackling difficult problems</p>
                         <p>Individualization - Recognize individuals' strengths to empower them to effective action</p>
                     </div>
                 </div>
@@ -363,7 +363,7 @@
             </div>
 
             <div id="portfolio" class="page">
-                <h3>What have I done?</h3>
+                <h3>What projects have I worked on?</h3>
                 <div class="portfolio-item">
                     <a href="work/concentration/index.html" target="_blank">
                         <img class="portfolio-img" src="img/concentration-website.jpg" alt="Concentration">
@@ -431,7 +431,7 @@
             <div id="return-to-top-button-div">
                 <a href="#banner" class="button return-to-top-button">Back to top</a>
             </div>
-        </section>
+        </main>
 
         <footer>
             <div id="social-media-buttons">
