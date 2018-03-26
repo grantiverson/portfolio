@@ -201,10 +201,7 @@ PAGE: ABOUT
 ******************************/
 
 #about-img {
-    max-height: 250px;
-    display: block;
-    margin: auto;
-    margin-bottom: 10px;
+    display: none;
 }
 
 #about-txt {
@@ -307,6 +304,7 @@ footer a img {
   /* banner that includes title and nav menus */
   #banner {
       padding: 0 5%;
+      height: 149px;
   }
 
 
@@ -383,6 +381,7 @@ footer a img {
       display: block;
       clear: both;
       padding: 0;
+      margin:  20px 0 0 0;
       position: relative;
       top: 3px;
       z-index: 1;
@@ -459,6 +458,13 @@ footer a img {
 
   #about {
       position: relative;
+  }
+
+  #about-img {
+      max-height: 250px;
+      display: block;
+      margin: auto;
+      margin-bottom: 10px;
   }
 
   .indent {
