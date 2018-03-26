@@ -1,8 +1,5 @@
 $(document).ready(function() {
 
-    /* Hide all pages */
-    //$("#contact, #history, #professional, #academic, #skills, #portfolio, #references").hide();
-
     /* Makes nav-button work - clicking it opens/closes the #mini-nav menu */
     $("#nav-button").click(function() {
         $("#mini-nav").slideToggle()
@@ -26,7 +23,6 @@ $(document).ready(function() {
 
     $("a").click(function() {
         if ($(this).hasClass("return-to-top-button")) {      /* is the link the .return-to-top-button at the bottom of each .page,  */
-            //event.preventDefault();
             $("#mini-nav").slideUp();                        /* hide the #mini-nav                                                  */
             $("html, body").animate({scrollTop: "0px" });    /* scroll the window to the top of the page                            */
         }
