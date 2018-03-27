@@ -17,6 +17,15 @@ img {
 }
 
 /******************************
+ACCESSABILITY
+******************************/
+
+:focus {
+    outline-color: #544300;
+    outline-width: 3px;
+}
+
+/******************************
 TEXT
 ******************************/
 
@@ -81,11 +90,6 @@ ul {
 
 h6 + p, h5 + p {
     border-top: 1px black solid;
-}
-
-:focus {
-    outline-color: #8d6334;
-    outline-width: 3px;
 }
 
 
@@ -174,12 +178,13 @@ mini-nav
 ******************************/
 
 nav:nth-of-type(2) a.active {
-    border-bottom: 3px solid #8d6334;
+    border-bottom: 3px solid #544300;
     margin-bottom: -3px;
 }
 
-nav:nth-of-type(2) a:hover {
-    border-bottom: 3px solid #544300;
+nav:nth-of-type(2) a:hover,
+nav:nth-of-type(2) a:focus {
+    border-bottom: 3px solid #8d6334;
     margin-bottom: -3px;
 }
 
@@ -389,12 +394,14 @@ footer a img {
       z-index: 1;
   }
 
-  ul li a:hover {
-      background-color: #8d6334;
-      color: #fff;
+  ul li a:hover,
+  ul li a:focus {
+      background-color: #8d6334 !important;
+      color: #fff !important;
   }
 
-  ul li:hover > ul {
+  ul li:hover > ul,
+  ul li:focus > ul {
       display: block;
   }
 
@@ -432,7 +439,8 @@ footer a img {
       color: #544300;
   }
 
-  ul ul li:hover > a {
+  ul ul li:hover > a,
+  ul ul li:focus > a {
       color: #fff;
   }
 
