@@ -1,8 +1,7 @@
 /******************************
-GENERAL
+NORMALIZE CSS
 ******************************/
 
-/* normalize css */
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, li, footer, header, banner, nav, section {
     margin: 0;
     padding: 0;
@@ -12,8 +11,44 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, li, footer, header
     font: inherit;
 }
 
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+a {
+  background-color: transparent;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
 img {
-    max-width: 100%;
+  max-width: 100%;
+  border: 0;
 }
 
 /******************************
@@ -69,8 +104,6 @@ h5 {
 h6 {
     font-family: Helvetica, sans-serif;
     font-weight: 100;
-    font-size: 0.8em;
-    color: #000;
     margin-bottom: 0.2em;
 }
 
