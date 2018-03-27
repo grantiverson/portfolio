@@ -83,6 +83,11 @@ h6 + p, h5 + p {
     border-top: 1px black solid;
 }
 
+:focus {
+    outline-color: #8d6334;
+    outline-width: 3px;
+}
+
 
 
 /******************************
@@ -133,7 +138,6 @@ header a img {
 
 /******************************
 NAVIGATION
-
     #mini-nav is the nav menu for window resolutions below 480
     #main-nav is the nav menu for window resolutions above 480
 ******************************/
@@ -165,7 +169,6 @@ nav a {
 
 /******************************
 mini-nav
-
     #main-nav is the nav menu for window resolutions above 480
     #mini-nav is the nav menu for window resolutions below 480
 ******************************/
@@ -371,7 +374,6 @@ footer a img {
 
   /******************************
   main-nav
-
       #main-nav is the nav menu for window resolutions above 480
       #mini-nav is the nav menu for window resolutions below 480
   ******************************/
@@ -445,7 +447,7 @@ footer a img {
   }
 
   .page {
-      min-height: 350px;
+      min-height: 360px;
       padding: 10px 20px;
       clear: both;
   }
