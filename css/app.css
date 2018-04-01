@@ -291,6 +291,10 @@ PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
     margin-left: 7px;
 }
 
+.history-item em {
+    color: #3866aa;
+}
+
 /******************************
 PAGE: SKILLS
 ******************************/
