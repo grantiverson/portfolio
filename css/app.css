@@ -287,9 +287,9 @@ PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
     margin-bottom: 30px;
 }
 
-
-
-
+.history-item li {
+    margin-left: 7px;
+}
 
 /******************************
 PAGE: SKILLS
@@ -427,18 +427,18 @@ footer a img {
       z-index: 1;
   }
 
-  ul li a:hover,
-  ul li a:focus {
+  nav ul li a:hover,
+  nav ul li a:focus {
       background-color: #8d6334 !important;
       color: #fff !important;
   }
 
-  ul li:hover > ul,
-  ul li:focus > ul {
+  nav ul li:hover > ul,
+  nav ul li:focus > ul {
       display: block;
   }
 
-  ul li {
+  nav ul li {
       display: inline-block;
       margin-right: -4px;
       padding: 0;
@@ -446,7 +446,7 @@ footer a img {
       text-align: center;
   }
 
-  ul li a {
+  nav ul li a {
       padding: 7px 4px 4px;
   }
 
@@ -455,25 +455,25 @@ footer a img {
       color: #fdedc1;
   }
 
-  ul ul {
+  nav ul ul {
       /*display: none;*/
       position: absolute;
       width: 25%;
       background-color: #fdedc1;
   }
 
-  ul ul li {
+  nav ul ul li {
       display: block;
       width: auto;
       margin: 8px 0 8px;
   }
 
-  ul ul li a {
+  nav ul ul li a {
       color: #544300;
   }
 
-  ul ul li:hover > a,
-  ul ul li:focus > a {
+  nav ul ul li:hover > a,
+  nav ul ul li:focus > a {
       color: #fff;
   }
 
