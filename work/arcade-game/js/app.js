@@ -60,12 +60,23 @@ Player.prototype.reset = function() {   // Resets player to starting position
 }
 
 Player.prototype.lose = function() {    // What to do if player loses
+    lives -= 1;
+    document.getElementById('#lives').textContent = lives;
     player.reset();
+    if (lives === 0) {
+        alert(`You lose. You got ${wins} points!`);
+        lives = 3;
+        wins = 0;
+        document.getElementById('#lives').textContent = lives;
+        document.getElementById('#wins').textContent = wins;
+    }
 }
 
 Player.prototype.win = function() {    // What to do if player wins
+    wins ++;
+    document.getElementById('#wins').textContent = wins;
     player.reset();
-}
+};
 
 Player.prototype.handleInput = function(key) {  // Moves player based on key input
     if (key === 'down' && player.y < 400) {
@@ -78,6 +89,8 @@ Player.prototype.handleInput = function(key) {  // Moves player based on key inp
         this.x -= 101;
     }
 }
+
+let wins = 0, lives = 3;
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
