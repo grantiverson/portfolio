@@ -8,4 +8,4 @@ Use the direction keys on your keyboard to move your character up, down, left, o
 
 ## Getting started
 
-In order to play this game, you can either clone the git project, or you can play it online at https://grantiverson.github.io/work/arcade-game/index.html
+In order to play this game, you can either clone the git project, or you can play it online at https://grantiverson.github.io/work/arcade-game/index.html. If you want to download the files, open index.html in your browser to start playing.
