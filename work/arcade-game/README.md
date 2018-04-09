@@ -4,7 +4,7 @@ I made this game as a project for my Front-End Web Development Nanodegree from U
 
 ## How to play
 
-Use the direction keys on your keyboard to move your character up, down, left, or right. Make it to the water without getting hit by the ladybugs and you win!
+Use the direction keys on your keyboard to move your character up, down, left, or right. Make it to the water without getting hit by the ladybugs and you get a point! See how many points you can get before you lose all three of your lives!
 
 ## Getting started
 
