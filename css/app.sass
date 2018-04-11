@@ -1,6 +1,10 @@
+//Responsive Design
+$break-small: 481px
+$break-large: 701px
+
+//Fonts
 $font-stack: Helvetica, sans-serif
 $main-text: "Enriqueta", "Courier New", monospace
-$page-width: 920px
 
 //Colors
 $banner-bg: #fcf5e7
@@ -9,10 +13,12 @@ $active-nav-color: #544300
 $hover-nav-color: #8d6334
 $accent-color: #3866aa
 
+//Other
+$page-width: 920px
 
-// ******************************
-// NORMALIZE CSS
-// ******************************/
+/******************************
+/* NORMALIZE CSS
+/******************************/
 
 html,
 body,
@@ -75,17 +81,17 @@ img
     max-width: 100%
     border: 0
 
-// ******************************
-// ACCESSABILITY
-// ******************************/
+/******************************
+/* ACCESSABILITY
+/******************************/
 
 \:focus
     outline-color: $active-nav-color
     outline-width: 3px
 
-// ******************************
-// TEXT
-// ******************************/
+/******************************
+/* TEXT
+/******************************/
 
 h1
     margin: 0 0 0.2em
@@ -96,7 +102,7 @@ h1
     color: #555
 
 h2
-    font-family: Helvetica, "Lucida Sans Unicode", sans-serif
+    font-family: $font-stack
     font-weight: bold
     font-size: 1.1em
     color: #2a2a2a
@@ -148,9 +154,9 @@ strong
 
 
 
-// ******************************
-// BUTTONS
-// ******************************/
+/******************************
+/* BUTTONS
+/******************************/
 .button
     display: block
     margin: 0 auto
@@ -165,9 +171,9 @@ strong
 
 
 
-// ******************************
-// HEADING
-// ******************************/
+/******************************
+/* HEADING
+/******************************/
 
 /* header that includes the banner */
 header
@@ -188,11 +194,11 @@ header
 
 
 
-// ******************************
-// NAVIGATION
-//    #mini-nav is the nav menu for window resolutions below 480
-//    #main-nav is the nav menu for window resolutions above 480
-// ******************************/
+/******************************
+/* NAVIGATION
+/*    #mini-nav is the nav menu for window resolutions below 480
+/*    #main-nav is the nav menu for window resolutions above 480
+/******************************/
 
 #main-nav,
 #mini-nav
@@ -215,11 +221,11 @@ nav
 
 
 
-// ******************************
-// mini-nav
-//    #main-nav is the nav menu for window resolutions above 480
-//    #mini-nav is the nav menu for window resolutions below 480
-// ******************************/
+/******************************
+/* mini-nav
+/*    #main-nav is the nav menu for window resolutions above 480
+/*    #mini-nav is the nav menu for window resolutions below 480
+/******************************/
 
 nav:nth-of-type(2) a
     &.active
@@ -233,9 +239,9 @@ nav:nth-of-type(2) a
 
 
 
-// ******************************
-// PAGES
-// ******************************/
+/******************************
+/* PAGES
+/******************************/
 
 main
     padding: 0 5%
@@ -245,9 +251,9 @@ main
 
 
 
-// ******************************
-// PAGE: ABOUT
-// ******************************/
+/******************************
+/* PAGE: ABOUT
+/******************************/
 
 #about-img
     display: none
@@ -259,18 +265,18 @@ main
 
 
 
-// ******************************
-// PAGE: CONTACT ME
-// ******************************/
+/******************************
+/* PAGE: CONTACT ME
+/******************************/
 
 .contact-text
     color: $accent-color
 
 
 
-// ******************************
-// PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
-// ******************************/
+/******************************
+/* PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+/******************************/
 
 #milestones-list
     margin-top: 10px
@@ -297,18 +303,18 @@ main
 .history-item em
     color: $accent-color
 
-// ******************************
-// PAGE: SKILLS
-// ******************************/
+/******************************
+/* PAGE: SKILLS
+/******************************/
 
 .list-container
     margin: 0 0 1em 1em
 
 
 
-// ******************************
-// FOOTER
-// ******************************/
+/******************************
+/* FOOTER
+/******************************/
 
 footer
     margin: 10px auto 20px
@@ -331,17 +337,17 @@ footer a img
 
 
 
-// *########################################################################################################################################################################*/
-//         ****************************************
-//         Screens with higher resolution than 480px
-//         ****************************************/
-// *########################################################################################################################################################################*/
+/*########################################################################################################################################################################*/
+/*         ****************************************
+/*         Screens with higher resolution than 480px
+/*         ****************************************/
+/*########################################################################################################################################################################*/
 
-@media screen and (min-width: 481px)
+@media screen and (min-width: $break-small)
 
-    // ******************************
-    // GENERAL
-    // ******************************/
+    /******************************
+    /* GENERAL
+    /******************************/
 
     /* banner that includes title and nav menus */
     #banner
@@ -350,9 +356,9 @@ footer a img
 
 
 
-    // ******************************
-    // TEXT
-    // ******************************/
+    /******************************
+    /* TEXT
+    /******************************/
 
     h1
         font-size: 2.8em
@@ -378,9 +384,9 @@ footer a img
 
 
 
-    // ******************************
-    // BUTTONS
-    // ******************************/
+    /******************************
+    /* BUTTONS
+    /******************************/
 
     .button
         display: block
@@ -392,20 +398,20 @@ footer a img
 
 
 
-    // ******************************
-    // NAVIGATION
-    // ******************************/
+    /******************************
+    /* NAVIGATION
+    /******************************/
 
     #nav-button
         display: none
 
 
 
-    // ******************************
-    // main-nav
-    //    #main-nav is the nav menu for window resolutions above 480
-    //    #mini-nav is the nav menu for window resolutions below 480
-    // ******************************/
+    /******************************
+    /* main-nav
+    /*    #main-nav is the nav menu for window resolutions above 480
+    /*    #mini-nav is the nav menu for window resolutions below 480
+    /******************************/
 
     #main-nav
         font-size: 1em
@@ -467,9 +473,9 @@ footer a img
 
 
 
-    // ******************************
-    // PAGES
-    // ******************************/
+    /******************************
+    /* PAGES
+    /******************************/
 
     section
         padding: 0 5%
@@ -481,9 +487,9 @@ footer a img
 
 
 
-    // ******************************
-    // PAGE: ABOUT
-    // ******************************/
+    /******************************
+    /* PAGE: ABOUT
+    /******************************/
 
     #about
         position: relative
@@ -500,9 +506,9 @@ footer a img
 
 
 
-    // ******************************
-    // PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
-    // ******************************/
+    /******************************
+    /* PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+    /******************************/
 
     .professional-button,
     .academic-button
@@ -563,9 +569,9 @@ footer a img
 
 
 
-    // ******************************
-    // FOOTER
-    // ******************************/
+    /******************************
+    /* FOOTER
+    /******************************/
 
     footer
         p
@@ -578,21 +584,21 @@ footer a img
     #return-to-top-button-div
         display: none
 
-/******** End of @media screen and (min-width: 481px) ********/
+/******** End of @media screen and (min-width: $break-small) ********/
 
 
 
-// *########################################################################################################################################################################*/
-//         *****************************************
-//         Screens with higher resolution than 701 px
-//         *****************************************/
-// *########################################################################################################################################################################*/
+/*########################################################################################################################################################################*/
+/*         *****************************************
+/*         Screens with higher resolution than 701 px
+/*         *****************************************/
+/*########################################################################################################################################################################*/
 
-@media screen and (min-width: 701px)
+@media screen and (min-width: $break-large)
 
-    // ******************************
-    // HEADING
-    // ******************************/
+    /******************************
+    /* HEADING
+    /******************************/
 
     #banner
         max-width: $page-width
@@ -600,18 +606,18 @@ footer a img
 
 
 
-    // ******************************
-    // PAGES
-    // ******************************/
+    /******************************
+    /* PAGES
+    /******************************/
 
     main
         max-width: $page-width
         margin: 0 auto
 
 
-    // ******************************
-    // PAGE: ABOUT
-    // ******************************/
+    /******************************
+    /* PAGE: ABOUT
+    /******************************/
 
     #about-img
         margin-right: 10px
@@ -624,9 +630,9 @@ footer a img
 
 
 
-    // ******************************
-    // PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
-    // ******************************/
+    /******************************
+    /* PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+    /******************************/
 
     .history-item-details,
     .portfolio-item-details,
@@ -643,7 +649,7 @@ footer a img
 
 
 
-/******** End of @media screen and (min-width: 701px) ********/
+/******** End of @media screen and (min-width: $break-large) ********/
 
 @media screen and (min-width: $page-width)
     .milestone
