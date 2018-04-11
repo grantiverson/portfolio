@@ -1,0 +1,695 @@
+/******************************
+/NORMALIZE CSS
+/******************************/
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, li, footer, header, banner, nav, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    text-decoration: none;
+    font: inherit;
+}
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+a {
+  background-color: transparent;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+img {
+  max-width: 100%;
+  border: 0;
+}
+
+/******************************
+/ACCESSABILITY
+/******************************/
+
+:focus {
+    outline-color: #544300;
+    outline-width: 3px;
+}
+
+/******************************
+/TEXT
+/******************************/
+
+h1 {
+    margin: 0 0 0.2em;
+    padding-top: 0.4em;
+    font-family: Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 1.8em;
+    color: #555;
+}
+
+h2 {
+    font-family: Helvetica, "Lucida Sans Unicode", sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #2a2a2a;
+}
+
+h3 {
+    font-size: 1.6em;
+    font-family: "Enriqueta", "Courier New", monospace;
+    text-indent: 0.65em;
+    margin-bottom: 0.2em;
+}
+
+h4 {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 0.2em;
+    color: #3866aa;
+}
+
+h5 {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+h6 {
+    font-family: Helvetica, sans-serif;
+    font-weight: 100;
+    margin-bottom: 0.2em;
+}
+
+p {
+    font-family:"Enriqueta", "Courier New", monospace;
+    font-size: 1em;
+    margin-bottom: 0.2em;
+}
+
+a {
+    color: inherit;
+}
+
+ul {
+    margin-left: 0.6em;
+}
+
+h6 + p, h5 + p {
+    border-top: 1px black solid;
+}
+
+strong {
+    background-color: #3866aa;
+    color: #fff;
+    padding: 0 2px 1px 2px;
+    border-radius: 3px;
+    box-shadow: 2px 1px 1px #aaa;
+}
+
+
+
+/******************************
+/BUTTONS
+/******************************/
+.button {
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    font-family: helvetica, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0.3em 0.2em;
+    margin-top: 0.2em;
+    background-color: #3866aa;
+}
+
+
+
+/******************************
+/HEADING
+/******************************/
+
+/* header that includes the banner */
+header {
+    background-color: #fcf5e7;
+}
+
+header a img {
+    height: 120px;
+}
+
+#nav-button {
+    margin: 0.2em;
+}
+
+/* banner that includes title and nav menus */
+#banner {
+    padding: 0 0.2em;
+}
+
+#banner-img {
+    float:right;
+}
+
+
+
+/******************************
+/NAVIGATION
+/    #mini-nav is the nav menu for window resolutions below 480
+/    #main-nav is the nav menu for window resolutions above 480
+/******************************/
+
+#main-nav, #mini-nav {
+    display: none;
+}
+
+nav {
+    background-color: #fdedc1;
+    font-size: 1.5em;
+    padding-bottom: 0.4em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+nav li {
+    padding: 0.4em 0.4em 0 0.4em;
+}
+
+nav a {
+    display: block;
+}
+
+
+
+/******************************
+/mini-nav
+/    #main-nav is the nav menu for window resolutions above 480
+/    #mini-nav is the nav menu for window resolutions below 480
+/******************************/
+
+nav:nth-of-type(2) a.active {
+    border-bottom: 3px solid #544300;
+    margin-bottom: -3px;
+}
+
+nav:nth-of-type(2) a:hover,
+nav:nth-of-type(2) a:focus {
+    border-bottom: 3px solid #8d6334;
+    margin-bottom: -3px;
+}
+
+
+
+/******************************
+/PAGES
+/******************************/
+
+main {
+    padding: 0 5%;
+}
+
+.page {
+    padding: 10px;
+}
+
+
+
+/******************************
+/PAGE: ABOUT
+/******************************/
+
+#about-img {
+    display: none;
+}
+
+#about-txt {
+    overflow: hidden;
+}
+
+
+
+
+
+/******************************
+/PAGE: CONTACT ME
+/******************************/
+
+.contact-text {
+    color: #3866aa;
+}
+
+
+
+/******************************
+/PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+/******************************/
+
+#milestones-list {
+    margin-top: 10px;
+}
+
+#milestones-title {
+    color: #fff;
+    background-color: #3866aa;
+    font-weight: normal;
+    padding: 0.25em 0.5em;
+}
+
+.milestone {
+    font-family:"Enriqueta", "Courier New", monospace;
+    font-size: 0.8em;
+}
+
+.history-item,
+.portfolio-item,
+.references-item {
+    margin-bottom: 30px;
+}
+
+.history-item li,
+.portfolio-item li {
+    margin-left: 7px;
+}
+
+.history-item em {
+    color: #3866aa;
+}
+
+/******************************
+/PAGE: SKILLS
+/******************************/
+
+.list-container {
+     margin: 0 0 1em 1em;
+}
+
+
+
+/******************************
+/FOOTER
+/******************************/
+
+footer {
+    margin: 10px auto 20px;
+    padding: 0 5%;
+    max-width: 920px;
+}
+
+.return-to-top-button {
+    background-color: #555;
+    margin: 0 auto;
+}
+
+#return-to-top-button-div {
+    background-color: #999;
+    padding: 10px;
+}
+
+footer a img {
+    float: right;
+    margin: 0;
+    display: inline;
+    height: 25px;
+}
+
+
+
+/*########################################################################################################################################################################*/
+        /****************************************
+        /Screens with higher resolution than 480px
+        /****************************************/
+/*########################################################################################################################################################################*/
+
+@media screen and (min-width: 481px) {
+
+  /******************************
+  /GENERAL
+  /******************************/
+
+  /* banner that includes title and nav menus */
+  #banner {
+      padding: 0 5%;
+      height: 149px;
+  }
+
+
+
+  /******************************
+  /TEXT
+  /******************************/
+
+  h1 {
+      font-size: 2.8em;
+  }
+
+  h2 {
+      font-size: 1.25em;
+  }
+
+  h3 {
+      font-size: 1.9em;
+  }
+
+  h4 {
+      font-size: 1.4em;
+      margin: 0;
+  }
+
+  h5 {
+      font-size: 1.25em;
+  }
+
+  h6 {
+      font-size: 1em;
+  }
+
+  p {
+      font-size: 1.1em;
+  }
+
+
+
+  /******************************
+  /BUTTONS
+  /******************************/
+
+  .button {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1em;
+      padding: 10px 10px;
+      width: 200px;
+  }
+
+
+
+  /******************************
+  /NAVIGATION
+  /******************************/
+
+  #nav-button {
+      display: none;
+  }
+
+
+
+  /******************************
+  /main-nav
+  /    #main-nav is the nav menu for window resolutions above 480
+  /    #mini-nav is the nav menu for window resolutions below 480
+  /******************************/
+
+  #main-nav {
+      font-size: 1em;
+      display: block;
+      clear: both;
+      padding: 0;
+      margin:  20px 0 0 0;
+      position: relative;
+      top: 3px;
+      z-index: 1;
+  }
+
+  nav ul li a:hover,
+  nav ul li a:focus {
+      background-color: #8d6334 !important;
+      color: #fff !important;
+  }
+
+  nav ul li:hover > ul,
+  nav ul li:focus > ul {
+      display: block;
+  }
+
+  nav ul li {
+      display: inline-block;
+      margin-right: -4px;
+      padding: 0;
+      width: 20%;
+      text-align: center;
+  }
+
+  nav ul li a {
+      padding: 7px 4px 4px;
+  }
+
+  a.active:not(:hover) {
+      background-color: #544300;
+      color: #fdedc1;
+  }
+
+  nav ul ul {
+      display: none;
+      position: absolute;
+      width: 25%;
+      background-color: #fdedc1;
+  }
+
+  nav ul ul li {
+      display: block;
+      width: auto;
+      margin: 8px 0 8px;
+  }
+
+  nav ul ul li a {
+      color: #544300;
+  }
+
+  nav ul ul li:hover > a,
+  nav ul ul li:focus > a {
+      color: #fff;
+  }
+
+
+
+  /******************************
+  /PAGES
+  /******************************/
+
+  section {
+      padding: 0 5%;
+  }
+
+  .page {
+      min-height: 360px;
+      padding: 10px 20px;
+      clear: both;
+  }
+
+
+
+  /******************************
+  /PAGE: ABOUT
+  /******************************/
+
+  #about {
+      position: relative;
+  }
+
+  #about-img {
+      max-height: 250px;
+      display: block;
+      margin: auto;
+      margin-bottom: 10px;
+  }
+
+  .indent {
+      text-indent: 1em;
+      margin-bottom: 16px;
+  }
+
+
+
+  /******************************
+  /PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+  /******************************/
+
+  .professional-button, .academic-button {
+      display: inline-block;
+      position: relative;
+      max-width: 40%;
+  }
+
+  .professional-button {
+      float: right;
+      right: 51%;
+  }
+
+  .academic-button {
+      float: left;
+      left: 51%;
+  }
+
+  #milestones-list {
+      margin-top: 60px;
+      padding-bottom: 10px;
+  }
+
+  .milestone {
+      font-size: 1.8vw;
+      background-color: #3866aa;
+      color: #fff;
+      padding: 0 0 3px 10px;
+      margin: 10px 0;
+  }
+
+  .milestone:first-of-type {
+      margin-left: 45%;
+  }
+
+  .milestone:nth-of-type(2) {
+      margin-left: 37.5%;
+  }
+
+  .milestone:nth-of-type(3) {
+      margin-left: 30%;
+  }
+
+  .milestone:nth-of-type(4) {
+      margin-left: 22.5%;
+  }
+
+  .milestone:nth-of-type(5) {
+      margin-left: 15%;
+  }
+
+  .milestone:nth-of-type(6) {
+      margin-left: 7.5%;
+  }
+
+  .history-item, .portfolio-item, .references-item, .history-item-details, .portfolio-item-details, .references-item-details {
+      overflow: hidden;
+  }
+
+  .history-img, .portfolio-img, .references-img {
+      clear: both;
+      display: block;
+  }
+
+
+
+  /******************************
+  /FOOTER
+  /******************************/
+
+  footer p {
+    font-size: 0.9em;
+  }
+
+  footer a img {
+    height: 20px;
+    margin: 0 1px;
+  }
+
+  #return-to-top-button-div {
+    display: none;
+  }
+
+}
+/******** End of @media screen and (min-width: 481px) ********/
+
+
+
+/*########################################################################################################################################################################*/
+        /*****************************************
+        /Screens with higher resolution than 701 px
+        /*****************************************/
+/*########################################################################################################################################################################*/
+
+@media screen and (min-width: 701px) {
+
+  /******************************
+  /HEADING
+  /******************************/
+
+  #banner {
+      max-width: 920px;
+      margin: 0 auto;
+  }
+
+
+
+  /******************************
+  /PAGES
+  /******************************/
+
+  main {
+      max-width: 920px;
+      margin: 0 auto;
+
+  }
+
+  /******************************
+  /PAGE: ABOUT
+  /******************************/
+
+  #about-img {
+      margin-right: 10px;
+      float: left;
+  }
+
+  .contact-button {
+      position: absolute;
+      left: 35px;
+      top: 320px;
+  }
+
+
+
+  /******************************
+  /PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+  /******************************/
+
+  .history-item-details, .portfolio-item-details, .references-item-details {
+      position: relative;
+      left: 5%;
+      max-width: 55%;
+  }
+
+  .history-img, .portfolio-img, .references-img {
+      max-width: 40%;
+      float: left;
+  }
+
+
+
+}
+/******** End of @media screen and (min-width: 701px) ********/
+
+@media screen and (min-width: 920px) {
+  .milestone {
+      font-size: 1.1em;
+  }
+}
