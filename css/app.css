@@ -1,6 +1,6 @@
 /******************************
-NORMALIZE CSS
-******************************/
+/NORMALIZE CSS
+/******************************/
 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, li, footer, header, banner, nav, section {
     margin: 0;
@@ -52,8 +52,8 @@ img {
 }
 
 /******************************
-ACCESSABILITY
-******************************/
+/ACCESSABILITY
+/******************************/
 
 :focus {
     outline-color: #544300;
@@ -61,8 +61,8 @@ ACCESSABILITY
 }
 
 /******************************
-TEXT
-******************************/
+/TEXT
+/******************************/
 
 h1 {
     margin: 0 0 0.2em;
@@ -136,8 +136,8 @@ strong {
 
 
 /******************************
-BUTTONS
-******************************/
+/BUTTONS
+/******************************/
 .button {
     display: block;
     margin: 0 auto;
@@ -154,8 +154,8 @@ BUTTONS
 
 
 /******************************
-HEADING
-******************************/
+/HEADING
+/******************************/
 
 /* header that includes the banner */
 header {
@@ -182,10 +182,10 @@ header a img {
 
 
 /******************************
-NAVIGATION
-    #mini-nav is the nav menu for window resolutions below 480
-    #main-nav is the nav menu for window resolutions above 480
-******************************/
+/NAVIGATION
+/    #mini-nav is the nav menu for window resolutions below 480
+/    #main-nav is the nav menu for window resolutions above 480
+/******************************/
 
 #main-nav, #mini-nav {
     display: none;
@@ -213,10 +213,10 @@ nav a {
 
 
 /******************************
-mini-nav
-    #main-nav is the nav menu for window resolutions above 480
-    #mini-nav is the nav menu for window resolutions below 480
-******************************/
+/mini-nav
+/    #main-nav is the nav menu for window resolutions above 480
+/    #mini-nav is the nav menu for window resolutions below 480
+/******************************/
 
 nav:nth-of-type(2) a.active {
     border-bottom: 3px solid #544300;
@@ -232,11 +232,11 @@ nav:nth-of-type(2) a:focus {
 
 
 /******************************
-PAGES
-******************************/
+/PAGES
+/******************************/
 
 main {
-    padding: 0 10px;
+    padding: 0 5%;
 }
 
 .page {
@@ -246,8 +246,8 @@ main {
 
 
 /******************************
-PAGE: ABOUT
-******************************/
+/PAGE: ABOUT
+/******************************/
 
 #about-img {
     display: none;
@@ -262,8 +262,8 @@ PAGE: ABOUT
 
 
 /******************************
-PAGE: CONTACT ME
-******************************/
+/PAGE: CONTACT ME
+/******************************/
 
 .contact-text {
     color: #3866aa;
@@ -272,8 +272,8 @@ PAGE: CONTACT ME
 
 
 /******************************
-PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
-******************************/
+/PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+/******************************/
 
 #milestones-list {
     margin-top: 10px;
@@ -307,8 +307,8 @@ PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
 }
 
 /******************************
-PAGE: SKILLS
-******************************/
+/PAGE: SKILLS
+/******************************/
 
 .list-container {
      margin: 0 0 1em 1em;
@@ -317,8 +317,8 @@ PAGE: SKILLS
 
 
 /******************************
-FOOTER
-******************************/
+/FOOTER
+/******************************/
 
 footer {
     margin: 10px auto 20px;
@@ -327,7 +327,7 @@ footer {
 }
 
 .return-to-top-button {
-    background-color: #666;
+    background-color: #555;
     margin: 0 auto;
 }
 
@@ -347,15 +347,15 @@ footer a img {
 
 /*########################################################################################################################################################################*/
         /****************************************
-        Screens with higher resolution than 480px
-        ****************************************/
+        /Screens with higher resolution than 480px
+        /****************************************/
 /*########################################################################################################################################################################*/
 
 @media screen and (min-width: 481px) {
 
   /******************************
-  GENERAL
-  ******************************/
+  /GENERAL
+  /******************************/
 
   /* banner that includes title and nav menus */
   #banner {
@@ -366,8 +366,8 @@ footer a img {
 
 
   /******************************
-  TEXT
-  ******************************/
+  /TEXT
+  /******************************/
 
   h1 {
       font-size: 2.8em;
@@ -401,8 +401,8 @@ footer a img {
 
 
   /******************************
-  BUTTONS
-  ******************************/
+  /BUTTONS
+  /******************************/
 
   .button {
       display: block;
@@ -416,8 +416,8 @@ footer a img {
 
 
   /******************************
-  NAVIGATION
-  ******************************/
+  /NAVIGATION
+  /******************************/
 
   #nav-button {
       display: none;
@@ -426,10 +426,10 @@ footer a img {
 
 
   /******************************
-  main-nav
-      #main-nav is the nav menu for window resolutions above 480
-      #mini-nav is the nav menu for window resolutions below 480
-  ******************************/
+  /main-nav
+  /    #main-nav is the nav menu for window resolutions above 480
+  /    #mini-nav is the nav menu for window resolutions below 480
+  /******************************/
 
   #main-nav {
       font-size: 1em;
@@ -471,7 +471,7 @@ footer a img {
   }
 
   nav ul ul {
-      /*display: none;*/
+      display: none;
       position: absolute;
       width: 25%;
       background-color: #fdedc1;
@@ -495,8 +495,8 @@ footer a img {
 
 
   /******************************
-  PAGES
-  ******************************/
+  /PAGES
+  /******************************/
 
   section {
       padding: 0 5%;
@@ -511,8 +511,8 @@ footer a img {
 
 
   /******************************
-  PAGE: ABOUT
-  ******************************/
+  /PAGE: ABOUT
+  /******************************/
 
   #about {
       position: relative;
@@ -533,8 +533,8 @@ footer a img {
 
 
   /******************************
-  PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
-  ******************************/
+  /PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+  /******************************/
 
   .professional-button, .academic-button {
       display: inline-block;
@@ -601,8 +601,8 @@ footer a img {
 
 
   /******************************
-  FOOTER
-  ******************************/
+  /FOOTER
+  /******************************/
 
   footer p {
     font-size: 0.9em;
@@ -617,21 +617,22 @@ footer a img {
     display: none;
   }
 
-} /******** End of @media screen and (min-width: 481px) ********/
+}
+/******** End of @media screen and (min-width: 481px) ********/
 
 
 
 /*########################################################################################################################################################################*/
         /*****************************************
-        Screens with higher resolution than 701 px
-        *****************************************/
+        /Screens with higher resolution than 701 px
+        /*****************************************/
 /*########################################################################################################################################################################*/
 
 @media screen and (min-width: 701px) {
 
   /******************************
-  HEADING
-  ******************************/
+  /HEADING
+  /******************************/
 
   #banner {
       max-width: 920px;
@@ -641,8 +642,8 @@ footer a img {
 
 
   /******************************
-  PAGES
-  ******************************/
+  /PAGES
+  /******************************/
 
   main {
       max-width: 920px;
@@ -651,8 +652,8 @@ footer a img {
   }
 
   /******************************
-  PAGE: ABOUT
-  ******************************/
+  /PAGE: ABOUT
+  /******************************/
 
   #about-img {
       margin-right: 10px;
@@ -668,8 +669,8 @@ footer a img {
 
 
   /******************************
-  PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
-  ******************************/
+  /PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+  /******************************/
 
   .history-item-details, .portfolio-item-details, .references-item-details {
       position: relative;
@@ -684,7 +685,8 @@ footer a img {
 
 
 
-} /******** End of @media screen and (min-width: 701px) ********/
+}
+/******** End of @media screen and (min-width: 701px) ********/
 
 @media screen and (min-width: 920px) {
   .milestone {
