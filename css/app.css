@@ -57,11 +57,21 @@ h1 {
 
 img {
   max-width: 100%;
-  border: 0; }
+  border: 0;
+}
+
+/******************************
+ACCESSABILITY
+******************************/
 
 :focus {
-  outline-color: #544300;
-  outline-width: 3px; }
+    outline-color: #544300;
+    outline-width: 3px;
+}
+
+/******************************
+TEXT
+******************************/
 
 h1 {
   margin: 0 0 0.2em;
@@ -122,17 +132,27 @@ strong {
   border-radius: 3px;
   box-shadow: 2px 1px 1px #aaa; }
 
+/******************************
+BUTTONS
+******************************/
 .button {
-  display: block;
-  margin: 0 auto;
-  color: #fff;
-  font-family: Helvetica, sans-serif;
-  font-weight: 100;
-  text-align: center;
-  font-size: 1.5em;
-  padding: 0.3em 0.2em;
-  margin-top: 0.2em;
-  background-color: #3866aa; }
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    font-family: helvetica, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0.3em 0.2em;
+    margin-top: 0.2em;
+    background-color: #3866aa;
+}
+
+
+
+/******************************
+HEADING
+******************************/
 
 /* header that includes the banner */
 header {
@@ -150,9 +170,16 @@ header {
 #banner-img {
   float: right; }
 
-#main-nav,
-#mini-nav {
-  display: none; }
+
+/******************************
+NAVIGATION
+    #mini-nav is the nav menu for window resolutions below 480
+    #main-nav is the nav menu for window resolutions above 480
+******************************/
+
+#main-nav, #mini-nav {
+    display: none;
+}
 
 nav {
   background-color: #fdedc1;
@@ -160,33 +187,80 @@ nav {
   padding-bottom: 0.4em; }
   nav ul {
     list-style-type: none;
-    margin-left: 0; }
-  nav li {
-    padding: 0.4em 0.4em 0 0.4em; }
-  nav a {
-    display: block; }
+    margin-left: 0;
+}
+
+nav li {
+    padding: 0.4em 0.4em 0 0.4em;
+}
+
+nav a {
+    display: block;
+}
+
+
+
+/******************************
+mini-nav
+    #main-nav is the nav menu for window resolutions above 480
+    #mini-nav is the nav menu for window resolutions below 480
+******************************/
 
 nav:nth-of-type(2) a.active {
-  border-bottom: 3px solid #544300;
-  margin-bottom: -3px; }
-nav:nth-of-type(2) a:hover, nav:nth-of-type(2) a:focus {
-  border-bottom: 3px solid #8d6334;
-  margin-bottom: -3px; }
+    border-bottom: 3px solid #544300;
+    margin-bottom: -3px;
+}
+
+nav:nth-of-type(2) a:hover,
+nav:nth-of-type(2) a:focus {
+    border-bottom: 3px solid #8d6334;
+    margin-bottom: -3px;
+}
+
+
+
+/******************************
+PAGES
+******************************/
 
 main {
-  padding: 0 5%; }
+    padding: 0 10px;
+}
 
 .page {
-  padding: 10px; }
+    padding: 10px;
+}
+
+
+
+/******************************
+PAGE: ABOUT
+******************************/
 
 #about-img {
   display: none; }
 
 #about-txt {
-  overflow: hidden; }
+    overflow: hidden;
+}
+
+
+
+
+
+/******************************
+PAGE: CONTACT ME
+******************************/
 
 .contact-text {
-  color: #3866aa; }
+    color: #3866aa;
+}
+
+
+
+/******************************
+PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+******************************/
 
 #milestones-list {
   margin-top: 10px; }
@@ -211,10 +285,22 @@ main {
   margin-left: 7px; }
 
 .history-item em {
-  color: #3866aa; }
+    color: #3866aa;
+}
+
+/******************************
+PAGE: SKILLS
+******************************/
 
 .list-container {
-  margin: 0 0 1em 1em; }
+     margin: 0 0 1em 1em;
+}
+
+
+
+/******************************
+FOOTER
+******************************/
 
 footer {
   margin: 10px auto 20px;
@@ -230,16 +316,37 @@ footer {
   padding: 10px; }
 
 footer a img {
-  float: right;
-  margin: 0;
-  display: inline;
-  height: 25px; }
+    float: right;
+    margin: 0;
+    display: inline;
+    height: 25px;
+}
+
+
+
+/*########################################################################################################################################################################*/
+        /****************************************
+        Screens with higher resolution than 480px
+        ****************************************/
+/*########################################################################################################################################################################*/
 
 @media screen and (min-width: 481px) {
+
+  /******************************
+  GENERAL
+  ******************************/
+
   /* banner that includes title and nav menus */
   #banner {
-    padding: 0 5%;
-    height: 149px; }
+      padding: 0 5%;
+      height: 149px;
+  }
+
+
+
+  /******************************
+  TEXT
+  ******************************/
 
   h1 {
     font-size: 2.8em; }
@@ -261,18 +368,41 @@ footer a img {
     font-size: 1em; }
 
   p {
-    font-size: 1.1em; }
+      font-size: 1.1em;
+  }
+
+
+
+  /******************************
+  BUTTONS
+  ******************************/
 
   .button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1em;
-    padding: 10px 10px;
-    width: 200px; }
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1em;
+      padding: 10px 10px;
+      width: 200px;
+  }
+
+
+
+  /******************************
+  NAVIGATION
+  ******************************/
 
   #nav-button {
-    display: none; }
+      display: none;
+  }
+
+
+
+  /******************************
+  main-nav
+      #main-nav is the nav menu for window resolutions above 480
+      #mini-nav is the nav menu for window resolutions below 480
+  ******************************/
 
   #main-nav {
     font-size: 1em;
@@ -302,26 +432,47 @@ footer a img {
         background-color: #8d6334 !important;
         color: #fff !important; }
   nav ul ul {
-    display: none;
-    position: absolute;
-    width: 25%;
-    background-color: #fdedc1; }
-    nav ul ul li {
+      /*display: none;*/
+      position: absolute;
+      width: 25%;
+      background-color: #fdedc1;
+  }
+
+  nav ul ul li {
       display: block;
       width: auto;
-      margin: 8px 0 8px; }
-      nav ul ul li a {
-        color: #544300; }
-      nav ul ul li:hover > a, nav ul ul li:focus > a {
-        color: #fff; }
+      margin: 8px 0 8px;
+  }
+
+  nav ul ul li a {
+      color: #544300;
+  }
+
+  nav ul ul li:hover > a,
+  nav ul ul li:focus > a {
+      color: #fff;
+  }
+
+
+
+  /******************************
+  PAGES
+  ******************************/
 
   section {
     padding: 0 5%; }
 
   .page {
-    min-height: 360px;
-    padding: 10px 20px;
-    clear: both; }
+      min-height: 360px;
+      padding: 10px 20px;
+      clear: both;
+  }
+
+
+
+  /******************************
+  PAGE: ABOUT
+  ******************************/
 
   #about {
     position: relative; }
@@ -336,11 +487,15 @@ footer a img {
     text-indent: 1em;
     margin-bottom: 16px; }
 
-  .professional-button,
-  .academic-button {
-    display: inline-block;
-    position: relative;
-    max-width: 40%; }
+  /******************************
+  PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+  ******************************/
+
+  .professional-button, .academic-button {
+      display: inline-block;
+      position: relative;
+      max-width: 40%;
+  }
 
   .professional-button {
     float: right;
@@ -355,37 +510,51 @@ footer a img {
     padding-bottom: 10px; }
 
   .milestone {
-    font-size: 1.8vw;
-    background-color: #3866aa;
-    color: #fff;
-    padding: 0 0 3px 10px;
-    margin: 10px 0; }
-    .milestone:first-of-type {
-      margin-left: 45%; }
-    .milestone:nth-of-type(2) {
-      margin-left: 37.5%; }
-    .milestone:nth-of-type(3) {
-      margin-left: 30%; }
-    .milestone:nth-of-type(4) {
-      margin-left: 22.5%; }
-    .milestone:nth-of-type(5) {
-      margin-left: 15%; }
-    .milestone:nth-of-type(6) {
-      margin-left: 7.5%; }
+      font-size: 1.8vw;
+      background-color: #3866aa;
+      color: #fff;
+      padding: 0 0 3px 10px;
+      margin: 10px 0;
+  }
 
-  .history-item,
-  .portfolio-item,
-  .references-item,
-  .history-item-details,
-  .portfolio-item-details,
-  .references-item-details {
-    overflow: hidden; }
+  .milestone:first-of-type {
+      margin-left: 45%;
+  }
 
-  .history-img,
-  .portfolio-img,
-  .references-img {
-    clear: both;
-    display: block; }
+  .milestone:nth-of-type(2) {
+      margin-left: 37.5%;
+  }
+
+  .milestone:nth-of-type(3) {
+      margin-left: 30%;
+  }
+
+  .milestone:nth-of-type(4) {
+      margin-left: 22.5%;
+  }
+
+  .milestone:nth-of-type(5) {
+      margin-left: 15%;
+  }
+
+  .milestone:nth-of-type(6) {
+      margin-left: 7.5%;
+  }
+
+  .history-item, .portfolio-item, .references-item, .history-item-details, .portfolio-item-details, .references-item-details {
+      overflow: hidden;
+  }
+
+  .history-img, .portfolio-img, .references-img {
+      clear: both;
+      display: block;
+  }
+
+
+
+  /******************************
+  FOOTER
+  ******************************/
 
   footer p {
     font-size: 0.9em; }
@@ -394,39 +563,77 @@ footer a img {
     margin: 0 1px; }
 
   #return-to-top-button-div {
-    display: none; } }
-/******** End of @media screen and (min-width: 481px) ******* */
+    display: none;
+  }
+
+} /******** End of @media screen and (min-width: 481px) ********/
+
+
+
+/*########################################################################################################################################################################*/
+        /*****************************************
+        Screens with higher resolution than 701 px
+        *****************************************/
+/*########################################################################################################################################################################*/
+
 @media screen and (min-width: 701px) {
+
+  /******************************
+  HEADING
+  ******************************/
+
   #banner {
-    max-width: 920px;
-    margin: 0 auto; }
+      max-width: 920px;
+      margin: 0 auto;
+  }
+
+
+
+  /******************************
+  PAGES
+  ******************************/
 
   main {
-    max-width: 920px;
-    margin: 0 auto; }
+      max-width: 920px;
+      margin: 0 auto;
+
+  }
+
+  /******************************
+  PAGE: ABOUT
+  ******************************/
 
   #about-img {
     margin-right: 10px;
     float: left; }
 
   .contact-button {
-    position: absolute;
-    left: 35px;
-    top: 320px; }
+      position: absolute;
+      left: 35px;
+      top: 320px;
+  }
 
-  .history-item-details,
-  .portfolio-item-details,
-  .references-item-details {
-    position: relative;
-    left: 5%;
-    max-width: 55%; }
 
-  .history-img,
-  .portfolio-img,
-  .references-img {
-    max-width: 40%;
-    float: left; } }
-/******** End of @media screen and (min-width: 701px) ******* */
+
+  /******************************
+  PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+  ******************************/
+
+  .history-item-details, .portfolio-item-details, .references-item-details {
+      position: relative;
+      left: 5%;
+      max-width: 55%;
+  }
+
+  .history-img, .portfolio-img, .references-img {
+      max-width: 40%;
+      float: left;
+  }
+
+
+
+} /******** End of @media screen and (min-width: 701px) ********/
+
 @media screen and (min-width: 920px) {
   .milestone {
     font-size: 1.1em; } }
