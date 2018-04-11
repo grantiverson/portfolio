@@ -173,8 +173,8 @@ strong
 header
     background-color: $banner-bg
 
-header a img
-    height: 120px
+    a img
+        height: 120px
 
 #nav-button
     margin: 0.2em
@@ -203,15 +203,15 @@ nav
     font-size: 1.5em
     padding-bottom: 0.4em
 
-nav ul
-    list-style-type: none
-    margin-left: 0
+    ul
+        list-style-type: none
+        margin-left: 0
 
-nav li
-    padding: 0.4em 0.4em 0 0.4em
+    li
+        padding: 0.4em 0.4em 0 0.4em
 
-nav a
-    display: block
+    a
+        display: block
 
 
 
@@ -221,14 +221,15 @@ nav a
 //    #mini-nav is the nav menu for window resolutions below 480
 // ******************************/
 
-nav:nth-of-type(2) a.active
-    border-bottom: 3px solid $active-nav-color
-    margin-bottom: -3px
+nav:nth-of-type(2) a
+    &.active
+        border-bottom: 3px solid $active-nav-color
+        margin-bottom: -3px
 
-nav:nth-of-type(2) a:hover,
-nav:nth-of-type(2) a:focus
-    border-bottom: 3px solid $hover-nav-color
-    margin-bottom: -3px
+    &:hover,
+    &:focus
+        border-bottom: 3px solid $hover-nav-color
+        margin-bottom: -3px
 
 
 
@@ -338,236 +339,244 @@ footer a img
 
 @media screen and (min-width: 481px)
 
-// ******************************
-// GENERAL
-// ******************************/
+    // ******************************
+    // GENERAL
+    // ******************************/
 
-/* banner that includes title and nav menus */
-#banner
-    padding: 0 5%
-    height: 149px
+    /* banner that includes title and nav menus */
+    #banner
+        padding: 0 5%
+        height: 149px
 
 
 
-// ******************************
-// TEXT
-// ******************************/
+    // ******************************
+    // TEXT
+    // ******************************/
 
-h1
-    font-size: 2.8em
+    h1
+        font-size: 2.8em
 
-h2
-    font-size: 1.25em
+    h2
+        font-size: 1.25em
 
-h3
-    font-size: 1.9em
+    h3
+        font-size: 1.9em
 
-h4
-    font-size: 1.4em
-    margin: 0
+    h4
+        font-size: 1.4em
+        margin: 0
 
-h5
-    font-size: 1.25em
+    h5
+        font-size: 1.25em
 
-h6
-    font-size: 1em
+    h6
+        font-size: 1em
 
-p
-    font-size: 1.1em
+    p
+        font-size: 1.1em
 
 
 
-// ******************************
-// BUTTONS
-// ******************************/
+    // ******************************
+    // BUTTONS
+    // ******************************/
 
-.button
-    display: block
-    margin-left: auto
-    margin-right: auto
-    font-size: 1em
-    padding: 10px 10px
-    width: 200px
+    .button
+        display: block
+        margin-left: auto
+        margin-right: auto
+        font-size: 1em
+        padding: 10px 10px
+        width: 200px
 
 
 
-// ******************************
-// NAVIGATION
-// ******************************/
+    // ******************************
+    // NAVIGATION
+    // ******************************/
 
-#nav-button
-    display: none
+    #nav-button
+        display: none
 
 
 
-// ******************************
-// main-nav
-//    #main-nav is the nav menu for window resolutions above 480
-//    #mini-nav is the nav menu for window resolutions below 480
-// ******************************/
+    // ******************************
+    // main-nav
+    //    #main-nav is the nav menu for window resolutions above 480
+    //    #mini-nav is the nav menu for window resolutions below 480
+    // ******************************/
 
-#main-nav
-    font-size: 1em
-    display: block
-    clear: both
-    padding: 0
-    margin:  20px 0 0 0
-    position: relative
-    top: 3px
-    z-index: 1
+    #main-nav
+        font-size: 1em
+        display: block
+        clear: both
+        padding: 0
+        margin:  20px 0 0 0
+        position: relative
+        top: 3px
+        z-index: 1
 
-nav ul li a:hover,
-nav ul li a:focus
-    background-color: $hover-nav-color !important
-    color: #fff !important
+    a.active:not(:hover)
+        background-color: $active-nav-color
+        color: $nav-color
 
-nav ul li:hover > ul,
-nav ul li:focus > ul
-    display: block
+    nav
 
-nav ul li
-    display: inline-block
-    margin-right: -4px
-    padding: 0
-    width: 20%
-    text-align: center
+        ul
 
-nav ul li a
-    padding: 7px 4px 4px
+            li
+                display: inline-block
+                margin-right: -4px
+                padding: 0
+                width: 20%
+                text-align: center
 
-a.active:not(:hover)
-    background-color: $active-nav-color
-    color: $nav-color
+                &:hover > ul,
+                &:focus > ul
+                    display: block
 
-nav ul ul
-    display: none
-    position: absolute
-    width: 25%
-    background-color: $nav-color
+                a
+                    padding: 7px 4px 4px
 
-nav ul ul li
-    display: block
-    width: auto
-    margin: 8px 0 8px
+                    &:hover,
+                    &:focus
+                        background-color: $hover-nav-color !important
+                        color: #fff !important
 
-nav ul ul li a
-    color: $active-nav-color
 
-nav ul ul li:hover > a,
-nav ul ul li:focus > a
-    color: #fff
 
 
+            ul
+                display: none
+                position: absolute
+                width: 25%
+                background-color: $nav-color
 
-// ******************************
-// PAGES
-// ******************************/
+                li
+                    display: block
+                    width: auto
+                    margin: 8px 0 8px
 
-section
-    padding: 0 5%
+                    a
+                        color: $active-nav-color
 
-.page
-    min-height: 360px
-    padding: 10px 20px
-    clear: both
+                    &:hover > a,
+                    &:focus > a
+                        color: #fff
 
 
 
-// ******************************
-// PAGE: ABOUT
-// ******************************/
+    // ******************************
+    // PAGES
+    // ******************************/
 
-#about
-    position: relative
+    section
+        padding: 0 5%
 
-#about-img
-    max-height: 250px
-    display: block
-    margin: auto
-    margin-bottom: 10px
+    .page
+        min-height: 360px
+        padding: 10px 20px
+        clear: both
 
-.indent
-    text-indent: 1em
-    margin-bottom: 16px
 
 
+    // ******************************
+    // PAGE: ABOUT
+    // ******************************/
 
-// ******************************
-// PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
-// ******************************/
+    #about
+        position: relative
 
-.professional-button,
-.academic-button
-    display: inline-block
-    position: relative
-    max-width: 40%
+    #about-img
+        max-height: 250px
+        display: block
+        margin: auto
+        margin-bottom: 10px
 
-.professional-button
-    float: right
-    right: 51%
+    .indent
+        text-indent: 1em
+        margin-bottom: 16px
 
-.academic-button
-    float: left
-    left: 51%
 
-#milestones-list
-    margin-top: 60px
-    padding-bottom: 10px
 
-.milestone
-    font-size: 1.8vw
-    background-color: $accent-color
-    color: #fff
-    padding: 0 0 3px 10px
-    margin: 10px 0
+    // ******************************
+    // PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+    // ******************************/
 
-.milestone:first-of-type
-    margin-left: 45%
+    .professional-button,
+    .academic-button
+        display: inline-block
+        position: relative
+        max-width: 40%
 
-.milestone:nth-of-type(2)
-    margin-left: 37.5%
+    .professional-button
+        float: right
+        right: 51%
 
-.milestone:nth-of-type(3)
-    margin-left: 30%
+    .academic-button
+        float: left
+        left: 51%
 
-.milestone:nth-of-type(4)
-    margin-left: 22.5%
+    #milestones-list
+        margin-top: 60px
+        padding-bottom: 10px
 
-.milestone:nth-of-type(5)
-    margin-left: 15%
+    .milestone
+        font-size: 1.8vw
+        background-color: $accent-color
+        color: #fff
+        padding: 0 0 3px 10px
+        margin: 10px 0
 
-.milestone:nth-of-type(6)
-    margin-left: 7.5%
+        &:first-of-type
+            margin-left: 45%
 
-.history-item,
-.portfolio-item,
-.references-item,
-.history-item-details,
-.portfolio-item-details,
-.references-item-details
-    overflow: hidden
+        &:nth-of-type(2)
+            margin-left: 37.5%
 
-.history-img,
-.portfolio-img,
-.references-img
-    clear: both
-    display: block
+        &:nth-of-type(3)
+            margin-left: 30%
 
+        &:nth-of-type(4)
+            margin-left: 22.5%
 
+        &:nth-of-type(5)
+            margin-left: 15%
 
-// ******************************
-// FOOTER
-// ******************************/
+        &:nth-of-type(6)
+            margin-left: 7.5%
 
-footer p
-    font-size: 0.9em
+    .history-item,
+    .portfolio-item,
+    .references-item,
+    .history-item-details,
+    .portfolio-item-details,
+    .references-item-details
+        overflow: hidden
 
-footer a img
-    height: 20px
-    margin: 0 1px
+    .history-img,
+    .portfolio-img,
+    .references-img
+        clear: both
+        display: block
 
-#return-to-top-button-div
-    display: none
+
+
+    // ******************************
+    // FOOTER
+    // ******************************/
+
+    footer
+        p
+            font-size: 0.9em
+
+        a img
+            height: 20px
+            margin: 0 1px
+
+    #return-to-top-button-div
+        display: none
 
 /******** End of @media screen and (min-width: 481px) ********/
 
@@ -581,61 +590,61 @@ footer a img
 
 @media screen and (min-width: 701px)
 
-// ******************************
-// HEADING
-// ******************************/
+    // ******************************
+    // HEADING
+    // ******************************/
 
-#banner
-    max-width: $page-width
-    margin: 0 auto
-
-
-
-// ******************************
-// PAGES
-// ******************************/
-
-main
-    max-width: $page-width
-    margin: 0 auto
-
-
-// ******************************
-// PAGE: ABOUT
-// ******************************/
-
-#about-img
-    margin-right: 10px
-    float: left
-
-.contact-button
-    position: absolute
-    left: 35px
-    top: 320px
+    #banner
+        max-width: $page-width
+        margin: 0 auto
 
 
 
-// ******************************
-// PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
-// ******************************/
+    // ******************************
+    // PAGES
+    // ******************************/
 
-.history-item-details,
-.portfolio-item-details,
-.references-item-details
-    position: relative
-    left: 5%
-    max-width: 55%
+    main
+        max-width: $page-width
+        margin: 0 auto
 
-.history-img,
-.portfolio-img,
-.references-img
-    max-width: 40%
-    float: left
+
+    // ******************************
+    // PAGE: ABOUT
+    // ******************************/
+
+    #about-img
+        margin-right: 10px
+        float: left
+
+    .contact-button
+        position: absolute
+        left: 35px
+        top: 320px
+
+
+
+    // ******************************
+    // PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+    // ******************************/
+
+    .history-item-details,
+    .portfolio-item-details,
+    .references-item-details
+        position: relative
+        left: 5%
+        max-width: 55%
+
+    .history-img,
+    .portfolio-img,
+    .references-img
+        max-width: 40%
+        float: left
 
 
 
 /******** End of @media screen and (min-width: 701px) ********/
 
 @media screen and (min-width: $page-width)
-.milestone
-    font-size: 1.1em
+    .milestone
+        font-size: 1.1em

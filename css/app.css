@@ -137,9 +137,8 @@ strong {
 /* header that includes the banner */
 header {
   background-color: #fcf5e7; }
-
-header a img {
-  height: 120px; }
+  header a img {
+    height: 120px; }
 
 #nav-button {
   margin: 0.2em; }
@@ -159,23 +158,18 @@ nav {
   background-color: #fdedc1;
   font-size: 1.5em;
   padding-bottom: 0.4em; }
-
-nav ul {
-  list-style-type: none;
-  margin-left: 0; }
-
-nav li {
-  padding: 0.4em 0.4em 0 0.4em; }
-
-nav a {
-  display: block; }
+  nav ul {
+    list-style-type: none;
+    margin-left: 0; }
+  nav li {
+    padding: 0.4em 0.4em 0 0.4em; }
+  nav a {
+    display: block; }
 
 nav:nth-of-type(2) a.active {
   border-bottom: 3px solid #544300;
   margin-bottom: -3px; }
-
-nav:nth-of-type(2) a:hover,
-nav:nth-of-type(2) a:focus {
+nav:nth-of-type(2) a:hover, nav:nth-of-type(2) a:focus {
   border-bottom: 3px solid #8d6334;
   margin-bottom: -3px; }
 
@@ -241,216 +235,200 @@ footer a img {
   display: inline;
   height: 25px; }
 
-/* banner that includes title and nav menus */
-#banner {
-  padding: 0 5%;
-  height: 149px; }
+@media screen and (min-width: 481px) {
+  /* banner that includes title and nav menus */
+  #banner {
+    padding: 0 5%;
+    height: 149px; }
 
-h1 {
-  font-size: 2.8em; }
+  h1 {
+    font-size: 2.8em; }
 
-h2 {
-  font-size: 1.25em; }
+  h2 {
+    font-size: 1.25em; }
 
-h3 {
-  font-size: 1.9em; }
+  h3 {
+    font-size: 1.9em; }
 
-h4 {
-  font-size: 1.4em;
-  margin: 0; }
+  h4 {
+    font-size: 1.4em;
+    margin: 0; }
 
-h5 {
-  font-size: 1.25em; }
+  h5 {
+    font-size: 1.25em; }
 
-h6 {
-  font-size: 1em; }
+  h6 {
+    font-size: 1em; }
 
-p {
-  font-size: 1.1em; }
+  p {
+    font-size: 1.1em; }
 
-.button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1em;
-  padding: 10px 10px;
-  width: 200px; }
+  .button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1em;
+    padding: 10px 10px;
+    width: 200px; }
 
-#nav-button {
-  display: none; }
+  #nav-button {
+    display: none; }
 
-#main-nav {
-  font-size: 1em;
-  display: block;
-  clear: both;
-  padding: 0;
-  margin: 20px 0 0 0;
-  position: relative;
-  top: 3px;
-  z-index: 1; }
+  #main-nav {
+    font-size: 1em;
+    display: block;
+    clear: both;
+    padding: 0;
+    margin: 20px 0 0 0;
+    position: relative;
+    top: 3px;
+    z-index: 1; }
 
-nav ul li a:hover,
-nav ul li a:focus {
-  background-color: #8d6334 !important;
-  color: #fff !important; }
+  a.active:not(:hover) {
+    background-color: #544300;
+    color: #fdedc1; }
 
-nav ul li:hover > ul,
-nav ul li:focus > ul {
-  display: block; }
+  nav ul li {
+    display: inline-block;
+    margin-right: -4px;
+    padding: 0;
+    width: 20%;
+    text-align: center; }
+    nav ul li:hover > ul, nav ul li:focus > ul {
+      display: block; }
+    nav ul li a {
+      padding: 7px 4px 4px; }
+      nav ul li a:hover, nav ul li a:focus {
+        background-color: #8d6334 !important;
+        color: #fff !important; }
+  nav ul ul {
+    display: none;
+    position: absolute;
+    width: 25%;
+    background-color: #fdedc1; }
+    nav ul ul li {
+      display: block;
+      width: auto;
+      margin: 8px 0 8px; }
+      nav ul ul li a {
+        color: #544300; }
+      nav ul ul li:hover > a, nav ul ul li:focus > a {
+        color: #fff; }
 
-nav ul li {
-  display: inline-block;
-  margin-right: -4px;
-  padding: 0;
-  width: 20%;
-  text-align: center; }
+  section {
+    padding: 0 5%; }
 
-nav ul li a {
-  padding: 7px 4px 4px; }
+  .page {
+    min-height: 360px;
+    padding: 10px 20px;
+    clear: both; }
 
-a.active:not(:hover) {
-  background-color: #544300;
-  color: #fdedc1; }
+  #about {
+    position: relative; }
 
-nav ul ul {
-  display: none;
-  position: absolute;
-  width: 25%;
-  background-color: #fdedc1; }
+  #about-img {
+    max-height: 250px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px; }
 
-nav ul ul li {
-  display: block;
-  width: auto;
-  margin: 8px 0 8px; }
+  .indent {
+    text-indent: 1em;
+    margin-bottom: 16px; }
 
-nav ul ul li a {
-  color: #544300; }
+  .professional-button,
+  .academic-button {
+    display: inline-block;
+    position: relative;
+    max-width: 40%; }
 
-nav ul ul li:hover > a,
-nav ul ul li:focus > a {
-  color: #fff; }
+  .professional-button {
+    float: right;
+    right: 51%; }
 
-section {
-  padding: 0 5%; }
+  .academic-button {
+    float: left;
+    left: 51%; }
 
-.page {
-  min-height: 360px;
-  padding: 10px 20px;
-  clear: both; }
+  #milestones-list {
+    margin-top: 60px;
+    padding-bottom: 10px; }
 
-#about {
-  position: relative; }
+  .milestone {
+    font-size: 1.8vw;
+    background-color: #3866aa;
+    color: #fff;
+    padding: 0 0 3px 10px;
+    margin: 10px 0; }
+    .milestone:first-of-type {
+      margin-left: 45%; }
+    .milestone:nth-of-type(2) {
+      margin-left: 37.5%; }
+    .milestone:nth-of-type(3) {
+      margin-left: 30%; }
+    .milestone:nth-of-type(4) {
+      margin-left: 22.5%; }
+    .milestone:nth-of-type(5) {
+      margin-left: 15%; }
+    .milestone:nth-of-type(6) {
+      margin-left: 7.5%; }
 
-#about-img {
-  max-height: 250px;
-  display: block;
-  margin: auto;
-  margin-bottom: 10px; }
+  .history-item,
+  .portfolio-item,
+  .references-item,
+  .history-item-details,
+  .portfolio-item-details,
+  .references-item-details {
+    overflow: hidden; }
 
-.indent {
-  text-indent: 1em;
-  margin-bottom: 16px; }
+  .history-img,
+  .portfolio-img,
+  .references-img {
+    clear: both;
+    display: block; }
 
-.professional-button,
-.academic-button {
-  display: inline-block;
-  position: relative;
-  max-width: 40%; }
+  footer p {
+    font-size: 0.9em; }
+  footer a img {
+    height: 20px;
+    margin: 0 1px; }
 
-.professional-button {
-  float: right;
-  right: 51%; }
-
-.academic-button {
-  float: left;
-  left: 51%; }
-
-#milestones-list {
-  margin-top: 60px;
-  padding-bottom: 10px; }
-
-.milestone {
-  font-size: 1.8vw;
-  background-color: #3866aa;
-  color: #fff;
-  padding: 0 0 3px 10px;
-  margin: 10px 0; }
-
-.milestone:first-of-type {
-  margin-left: 45%; }
-
-.milestone:nth-of-type(2) {
-  margin-left: 37.5%; }
-
-.milestone:nth-of-type(3) {
-  margin-left: 30%; }
-
-.milestone:nth-of-type(4) {
-  margin-left: 22.5%; }
-
-.milestone:nth-of-type(5) {
-  margin-left: 15%; }
-
-.milestone:nth-of-type(6) {
-  margin-left: 7.5%; }
-
-.history-item,
-.portfolio-item,
-.references-item,
-.history-item-details,
-.portfolio-item-details,
-.references-item-details {
-  overflow: hidden; }
-
-.history-img,
-.portfolio-img,
-.references-img {
-  clear: both;
-  display: block; }
-
-footer p {
-  font-size: 0.9em; }
-
-footer a img {
-  height: 20px;
-  margin: 0 1px; }
-
-#return-to-top-button-div {
-  display: none; }
-
+  #return-to-top-button-div {
+    display: none; } }
 /******** End of @media screen and (min-width: 481px) ******* */
-#banner {
-  max-width: 920px;
-  margin: 0 auto; }
+@media screen and (min-width: 701px) {
+  #banner {
+    max-width: 920px;
+    margin: 0 auto; }
 
-main {
-  max-width: 920px;
-  margin: 0 auto; }
+  main {
+    max-width: 920px;
+    margin: 0 auto; }
 
-#about-img {
-  margin-right: 10px;
-  float: left; }
+  #about-img {
+    margin-right: 10px;
+    float: left; }
 
-.contact-button {
-  position: absolute;
-  left: 35px;
-  top: 320px; }
+  .contact-button {
+    position: absolute;
+    left: 35px;
+    top: 320px; }
 
-.history-item-details,
-.portfolio-item-details,
-.references-item-details {
-  position: relative;
-  left: 5%;
-  max-width: 55%; }
+  .history-item-details,
+  .portfolio-item-details,
+  .references-item-details {
+    position: relative;
+    left: 5%;
+    max-width: 55%; }
 
-.history-img,
-.portfolio-img,
-.references-img {
-  max-width: 40%;
-  float: left; }
-
+  .history-img,
+  .portfolio-img,
+  .references-img {
+    max-width: 40%;
+    float: left; } }
 /******** End of @media screen and (min-width: 701px) ******* */
-.milestone {
-  font-size: 1.1em; }
+@media screen and (min-width: 920px) {
+  .milestone {
+    font-size: 1.1em; } }
 
 /*# sourceMappingURL=app.css.map */
