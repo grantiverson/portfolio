@@ -1,4 +1,5 @@
 $font-stack: Helvetica, sans-serif
+$main-text: "Enriqueta", "Courier New", monospace
 $page-width: 920px
 
 //Colors
@@ -9,11 +10,30 @@ $hover-nav-color: #8d6334
 $accent-color: #3866aa
 
 
-/******************************
-/NORMALIZE CSS
-/******************************/
+// ******************************
+// NORMALIZE CSS
+// ******************************/
 
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, li, footer, header, banner, nav, section
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+footer,
+header,
+banner,
+nav,
+section
     margin: 0
     padding: 0
     border: 0
@@ -22,12 +42,12 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, li, footer, header
     font: inherit
 
 html
-  font-family: sans-serif /* 1 */
-  -ms-text-size-adjust: 100% /* 2 */
-  -webkit-text-size-adjust: 100% /* 2 */
+    font-family: sans-serif
+    -ms-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%
 
 body
-  margin: 0
+    margin: 0
 
 article,
 aside,
@@ -42,35 +62,35 @@ menu,
 nav,
 section,
 summary
-  display: block
+    display: block
 
 a
-  background-color: transparent
+    background-color: transparent
 
 h1
-  font-size: 2em
-  margin: 0.67em 0
+    font-size: 2em
+    margin: 0.67em 0
 
 img
-  max-width: 100%
-  border: 0
+    max-width: 100%
+    border: 0
 
-/******************************
-/ACCESSABILITY
-/******************************/
+// ******************************
+// ACCESSABILITY
+// ******************************/
 
-:focus
+\:focus
     outline-color: $active-nav-color
     outline-width: 3px
 
-/******************************
-/TEXT
-/******************************/
+// ******************************
+// TEXT
+// ******************************/
 
 h1
     margin: 0 0 0.2em
     padding-top: 0.4em
-    font-family: 
+    font-family: $font-stack
     font-weight: 100
     font-size: 1.8em
     color: #555
@@ -83,7 +103,7 @@ h2
 
 h3
     font-size: 1.6em
-    font-family: "Enriqueta", "Courier New", monospace
+    font-family: $main-text
     text-indent: 0.65em
     margin-bottom: 0.2em
 
@@ -105,7 +125,7 @@ h6
     margin-bottom: 0.2em
 
 p
-    font-family:"Enriqueta", "Courier New", monospace
+    font-family: $main-text
     font-size: 1em
     margin-bottom: 0.2em
 
@@ -115,7 +135,8 @@ a
 ul
     margin-left: 0.6em
 
-h6 + p, h5 + p
+h6 + p,
+h5 + p
     border-top: 1px black solid
 
 strong
@@ -127,9 +148,9 @@ strong
 
 
 
-/******************************
-/BUTTONS
-/******************************/
+// ******************************
+// BUTTONS
+// ******************************/
 .button
     display: block
     margin: 0 auto
@@ -144,9 +165,9 @@ strong
 
 
 
-/******************************
-/HEADING
-/******************************/
+// ******************************
+// HEADING
+// ******************************/
 
 /* header that includes the banner */
 header
@@ -163,17 +184,18 @@ header a img
     padding: 0 0.2em
 
 #banner-img
-    float:right
+    float: right
 
 
 
-/******************************
-/NAVIGATION
-/    #mini-nav is the nav menu for window resolutions below 480
-/    #main-nav is the nav menu for window resolutions above 480
-/******************************/
+// ******************************
+// NAVIGATION
+//    #mini-nav is the nav menu for window resolutions below 480
+//    #main-nav is the nav menu for window resolutions above 480
+// ******************************/
 
-#main-nav, #mini-nav
+#main-nav,
+#mini-nav
     display: none
 
 nav
@@ -193,11 +215,11 @@ nav a
 
 
 
-/******************************
-/mini-nav
-/    #main-nav is the nav menu for window resolutions above 480
-/    #mini-nav is the nav menu for window resolutions below 480
-/******************************/
+// ******************************
+// mini-nav
+//    #main-nav is the nav menu for window resolutions above 480
+//    #mini-nav is the nav menu for window resolutions below 480
+// ******************************/
 
 nav:nth-of-type(2) a.active
     border-bottom: 3px solid $active-nav-color
@@ -210,9 +232,9 @@ nav:nth-of-type(2) a:focus
 
 
 
-/******************************
-/PAGES
-/******************************/
+// ******************************
+// PAGES
+// ******************************/
 
 main
     padding: 0 10px
@@ -222,9 +244,9 @@ main
 
 
 
-/******************************
-/PAGE: ABOUT
-/******************************/
+// ******************************
+// PAGE: ABOUT
+// ******************************/
 
 #about-img
     display: none
@@ -236,18 +258,18 @@ main
 
 
 
-/******************************
-/PAGE: CONTACT ME
-/******************************/
+// ******************************
+// PAGE: CONTACT ME
+// ******************************/
 
 .contact-text
     color: $accent-color
 
 
 
-/******************************
-/PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
-/******************************/
+// ******************************
+// PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+// ******************************/
 
 #milestones-list
     margin-top: 10px
@@ -259,7 +281,7 @@ main
     padding: 0.25em 0.5em
 
 .milestone
-    font-family:"Enriqueta", "Courier New", monospace
+    font-family: $main-text
     font-size: 0.8em
 
 .history-item,
@@ -274,18 +296,18 @@ main
 .history-item em
     color: $accent-color
 
-/******************************
-/PAGE: SKILLS
-/******************************/
+// ******************************
+// PAGE: SKILLS
+// ******************************/
 
 .list-container
-     margin: 0 0 1em 1em
+    margin: 0 0 1em 1em
 
 
 
-/******************************
-/FOOTER
-/******************************/
+// ******************************
+// FOOTER
+// ******************************/
 
 footer
     margin: 10px auto 20px
@@ -308,300 +330,312 @@ footer a img
 
 
 
-/*########################################################################################################################################################################*/
-        /****************************************
-        /Screens with higher resolution than 480px
-        /****************************************/
-/*########################################################################################################################################################################*/
+// *########################################################################################################################################################################*/
+//         ****************************************
+//         Screens with higher resolution than 480px
+//         ****************************************/
+// *########################################################################################################################################################################*/
 
 @media screen and (min-width: 481px)
 
-  /******************************
-  /GENERAL
-  /******************************/
+// ******************************
+// GENERAL
+// ******************************/
 
-  /* banner that includes title and nav menus */
-  #banner
-      padding: 0 5%
-      height: 149px
-
-
-
-  /******************************
-  /TEXT
-  /******************************/
-
-  h1
-      font-size: 2.8em
-
-  h2
-      font-size: 1.25em
-
-  h3
-      font-size: 1.9em
-
-  h4
-      font-size: 1.4em
-      margin: 0
-
-  h5
-      font-size: 1.25em
-
-  h6
-      font-size: 1em
-
-  p
-      font-size: 1.1em
+/* banner that includes title and nav menus */
+#banner
+    padding: 0 5%
+    height: 149px
 
 
 
-  /******************************
-  /BUTTONS
-  /******************************/
+// ******************************
+// TEXT
+// ******************************/
 
-  .button
-      display: block
-      margin-left: auto
-      margin-right: auto
-      font-size: 1em
-      padding: 10px 10px
-      width: 200px
+h1
+    font-size: 2.8em
 
+h2
+    font-size: 1.25em
 
+h3
+    font-size: 1.9em
 
-  /******************************
-  /NAVIGATION
-  /******************************/
+h4
+    font-size: 1.4em
+    margin: 0
 
-  #nav-button
-      display: none
+h5
+    font-size: 1.25em
 
+h6
+    font-size: 1em
 
-
-  /******************************
-  /main-nav
-  /    #main-nav is the nav menu for window resolutions above 480
-  /    #mini-nav is the nav menu for window resolutions below 480
-  /******************************/
-
-  #main-nav
-      font-size: 1em
-      display: block
-      clear: both
-      padding: 0
-      margin:  20px 0 0 0
-      position: relative
-      top: 3px
-      z-index: 1
-
-  nav ul li a:hover,
-  nav ul li a:focus
-      background-color: $hover-nav-color !important
-      color: #fff !important
-
-  nav ul li:hover > ul,
-  nav ul li:focus > ul
-      display: block
-
-  nav ul li
-      display: inline-block
-      margin-right: -4px
-      padding: 0
-      width: 20%
-      text-align: center
-
-  nav ul li a
-      padding: 7px 4px 4px
-
-  a.active:not(:hover)
-      background-color: $active-nav-color
-      color: $nav-color
-
-  nav ul ul
-      display: none
-      position: absolute
-      width: 25%
-      background-color: $nav-color
-
-  nav ul ul li
-      display: block
-      width: auto
-      margin: 8px 0 8px
-
-  nav ul ul li a
-      color: $active-nav-color
-
-  nav ul ul li:hover > a,
-  nav ul ul li:focus > a
-      color: #fff
+p
+    font-size: 1.1em
 
 
 
-  /******************************
-  /PAGES
-  /******************************/
+// ******************************
+// BUTTONS
+// ******************************/
 
-  section
-      padding: 0 5%
-
-  .page
-      min-height: 360px
-      padding: 10px 20px
-      clear: both
-
-
-
-  /******************************
-  /PAGE: ABOUT
-  /******************************/
-
-  #about
-      position: relative
-
-  #about-img
-      max-height: 250px
-      display: block
-      margin: auto
-      margin-bottom: 10px
-
-  .indent
-      text-indent: 1em
-      margin-bottom: 16px
+.button
+    display: block
+    margin-left: auto
+    margin-right: auto
+    font-size: 1em
+    padding: 10px 10px
+    width: 200px
 
 
 
-  /******************************
-  /PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
-  /******************************/
+// ******************************
+// NAVIGATION
+// ******************************/
 
-  .professional-button, .academic-button
-      display: inline-block
-      position: relative
-      max-width: 40%
-
-  .professional-button
-      float: right
-      right: 51%
-
-  .academic-button
-      float: left
-      left: 51%
-
-  #milestones-list
-      margin-top: 60px
-      padding-bottom: 10px
-
-  .milestone
-      font-size: 1.8vw
-      background-color: $accent-color
-      color: #fff
-      padding: 0 0 3px 10px
-      margin: 10px 0
-
-  .milestone:first-of-type
-      margin-left: 45%
-
-  .milestone:nth-of-type(2)
-      margin-left: 37.5%
-
-  .milestone:nth-of-type(3)
-      margin-left: 30%
-
-  .milestone:nth-of-type(4)
-      margin-left: 22.5%
-
-  .milestone:nth-of-type(5)
-      margin-left: 15%
-
-  .milestone:nth-of-type(6)
-      margin-left: 7.5%
-
-  .history-item, .portfolio-item, .references-item, .history-item-details, .portfolio-item-details, .references-item-details
-      overflow: hidden
-
-  .history-img, .portfolio-img, .references-img
-      clear: both
-      display: block
+#nav-button
+    display: none
 
 
 
-  /******************************
-  /FOOTER
-  /******************************/
+// ******************************
+// main-nav
+//    #main-nav is the nav menu for window resolutions above 480
+//    #mini-nav is the nav menu for window resolutions below 480
+// ******************************/
 
-  footer p
+#main-nav
+    font-size: 1em
+    display: block
+    clear: both
+    padding: 0
+    margin:  20px 0 0 0
+    position: relative
+    top: 3px
+    z-index: 1
+
+nav ul li a:hover,
+nav ul li a:focus
+    background-color: $hover-nav-color !important
+    color: #fff !important
+
+nav ul li:hover > ul,
+nav ul li:focus > ul
+    display: block
+
+nav ul li
+    display: inline-block
+    margin-right: -4px
+    padding: 0
+    width: 20%
+    text-align: center
+
+nav ul li a
+    padding: 7px 4px 4px
+
+a.active:not(:hover)
+    background-color: $active-nav-color
+    color: $nav-color
+
+nav ul ul
+    display: none
+    position: absolute
+    width: 25%
+    background-color: $nav-color
+
+nav ul ul li
+    display: block
+    width: auto
+    margin: 8px 0 8px
+
+nav ul ul li a
+    color: $active-nav-color
+
+nav ul ul li:hover > a,
+nav ul ul li:focus > a
+    color: #fff
+
+
+
+// ******************************
+// PAGES
+// ******************************/
+
+section
+    padding: 0 5%
+
+.page
+    min-height: 360px
+    padding: 10px 20px
+    clear: both
+
+
+
+// ******************************
+// PAGE: ABOUT
+// ******************************/
+
+#about
+    position: relative
+
+#about-img
+    max-height: 250px
+    display: block
+    margin: auto
+    margin-bottom: 10px
+
+.indent
+    text-indent: 1em
+    margin-bottom: 16px
+
+
+
+// ******************************
+// PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+// ******************************/
+
+.professional-button,
+.academic-button
+    display: inline-block
+    position: relative
+    max-width: 40%
+
+.professional-button
+    float: right
+    right: 51%
+
+.academic-button
+    float: left
+    left: 51%
+
+#milestones-list
+    margin-top: 60px
+    padding-bottom: 10px
+
+.milestone
+    font-size: 1.8vw
+    background-color: $accent-color
+    color: #fff
+    padding: 0 0 3px 10px
+    margin: 10px 0
+
+.milestone:first-of-type
+    margin-left: 45%
+
+.milestone:nth-of-type(2)
+    margin-left: 37.5%
+
+.milestone:nth-of-type(3)
+    margin-left: 30%
+
+.milestone:nth-of-type(4)
+    margin-left: 22.5%
+
+.milestone:nth-of-type(5)
+    margin-left: 15%
+
+.milestone:nth-of-type(6)
+    margin-left: 7.5%
+
+.history-item,
+.portfolio-item,
+.references-item,
+.history-item-details,
+.portfolio-item-details,
+.references-item-details
+    overflow: hidden
+
+.history-img,
+.portfolio-img,
+.references-img
+    clear: both
+    display: block
+
+
+
+// ******************************
+// FOOTER
+// ******************************/
+
+footer p
     font-size: 0.9em
 
-  footer a img
+footer a img
     height: 20px
     margin: 0 1px
 
-  #return-to-top-button-div
+#return-to-top-button-div
     display: none
 
 /******** End of @media screen and (min-width: 481px) ********/
 
 
 
-/*########################################################################################################################################################################*/
-        /*****************************************
-        /Screens with higher resolution than 701 px
-        /*****************************************/
-/*########################################################################################################################################################################*/
+// *########################################################################################################################################################################*/
+//         *****************************************
+//         Screens with higher resolution than 701 px
+//         *****************************************/
+// *########################################################################################################################################################################*/
 
 @media screen and (min-width: 701px)
 
-  /******************************
-  /HEADING
-  /******************************/
+// ******************************
+// HEADING
+// ******************************/
 
-  #banner
-      max-width: $page-width
-      margin: 0 auto
-
-
-
-  /******************************
-  /PAGES
-  /******************************/
-
-  main
-      max-width: $page-width
-      margin: 0 auto
-
-
-  /******************************
-  /PAGE: ABOUT
-  /******************************/
-
-  #about-img
-      margin-right: 10px
-      float: left
-
-  .contact-button
-      position: absolute
-      left: 35px
-      top: 320px
+#banner
+    max-width: $page-width
+    margin: 0 auto
 
 
 
-  /******************************
-  /PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
-  /******************************/
+// ******************************
+// PAGES
+// ******************************/
 
-  .history-item-details, .portfolio-item-details, .references-item-details
-      position: relative
-      left: 5%
-      max-width: 55%
+main
+    max-width: $page-width
+    margin: 0 auto
 
-  .history-img, .portfolio-img, .references-img
-      max-width: 40%
-      float: left
+
+// ******************************
+// PAGE: ABOUT
+// ******************************/
+
+#about-img
+    margin-right: 10px
+    float: left
+
+.contact-button
+    position: absolute
+    left: 35px
+    top: 320px
+
+
+
+// ******************************
+// PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+// ******************************/
+
+.history-item-details,
+.portfolio-item-details,
+.references-item-details
+    position: relative
+    left: 5%
+    max-width: 55%
+
+.history-img,
+.portfolio-img,
+.references-img
+    max-width: 40%
+    float: left
 
 
 
 /******** End of @media screen and (min-width: 701px) ********/
 
 @media screen and (min-width: $page-width)
-  .milestone
-      font-size: 1.1em
+.milestone
+    font-size: 1.1em
