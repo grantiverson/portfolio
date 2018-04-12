@@ -1,6 +1,6 @@
 /****************************** */
 /* NORMALIZE CSS */
-/***************************** */
+/******************************/
 html,
 body,
 div,
@@ -64,14 +64,14 @@ img {
 
 /****************************** */
 /* ACCESSABILITY */
-/***************************** */
+/******************************/
 :focus {
   outline-color: #544300;
   outline-width: 3px; }
 
 /****************************** */
 /* TEXT */
-/***************************** */
+/******************************/
 h1 {
   margin: 0 0 0.2em;
   padding-top: 0.4em;
@@ -133,7 +133,7 @@ strong {
 
 /****************************** */
 /* BUTTONS */
-/***************************** */
+/******************************/
 .button {
   display: block;
   margin: 0 auto;
@@ -148,7 +148,7 @@ strong {
 
 /****************************** */
 /* HEADING */
-/***************************** */
+/******************************/
 /* header that includes the banner */
 header {
   background-color: #fcf5e7; }
@@ -170,7 +170,7 @@ header {
 /* NAVIGATION */
 /*    #mini-nav is the nav menu for window resolutions below 480 */
 /*    #main-nav is the nav menu for window resolutions above 480 */
-/***************************** */
+/******************************/
 #main-nav,
 #mini-nav {
   display: none; }
@@ -191,17 +191,18 @@ nav {
 /* mini-nav */
 /*    #main-nav is the nav menu for window resolutions above 480 */
 /*    #mini-nav is the nav menu for window resolutions below 480 */
-/***************************** */
+/******************************/
 nav:nth-of-type(2) a.active {
   border-bottom: 3px solid #544300;
   margin-bottom: -3px; }
+
 nav:nth-of-type(2) a:hover, nav:nth-of-type(2) a:focus {
   border-bottom: 3px solid #8d6334;
   margin-bottom: -3px; }
 
 /****************************** */
 /* PAGES */
-/***************************** */
+/******************************/
 main {
   padding: 0 5%; }
 
@@ -210,7 +211,7 @@ main {
 
 /****************************** */
 /* PAGE: ABOUT */
-/***************************** */
+/******************************/
 #about-img {
   display: none; }
 
@@ -219,13 +220,13 @@ main {
 
 /****************************** */
 /* PAGE: CONTACT ME */
-/***************************** */
+/******************************/
 .contact-text {
   color: #3866aa; }
 
 /****************************** */
 /* PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES */
-/***************************** */
+/******************************/
 #milestones-list {
   margin-top: 10px; }
 
@@ -253,13 +254,13 @@ main {
 
 /****************************** */
 /* PAGE: SKILLS */
-/***************************** */
+/******************************/
 .list-container {
   margin: 0 0 1em 1em; }
 
 /****************************** */
 /* FOOTER */
-/***************************** */
+/******************************/
 footer {
   margin: 10px auto 20px;
   padding: 0 5%;
@@ -279,51 +280,42 @@ footer a img {
   display: inline;
   height: 25px; }
 
-/*######################################################################################################################################################################## */
+/*########################################################################################################################################################################*/
 /*         **************************************** */
 /*         Screens with higher resolution than 480px */
-/*         *************************************** */
-/*######################################################################################################################################################################## */
+/*         ****************************************/
+/*########################################################################################################################################################################*/
 @media screen and (min-width: 481px) {
   /****************************** */
   /* GENERAL */
-  /***************************** */
+  /******************************/
   /* banner that includes title and nav menus */
   #banner {
     padding: 0 5%;
     height: 149px; }
-
   #about-banner-img {
     display: none; }
-
   /****************************** */
   /* TEXT */
-  /***************************** */
+  /******************************/
   h1 {
     font-size: 2.8em; }
-
   h2 {
     font-size: 1.25em; }
-
   h3 {
     font-size: 1.9em; }
-
   h4 {
     font-size: 1.4em;
     margin: 0; }
-
   h5 {
     font-size: 1.25em; }
-
   h6 {
     font-size: 1em; }
-
   p {
     font-size: 1.1em; }
-
   /****************************** */
   /* BUTTONS */
-  /***************************** */
+  /******************************/
   .button {
     display: block;
     margin-left: auto;
@@ -331,18 +323,16 @@ footer a img {
     font-size: 1em;
     padding: 10px 10px;
     width: 200px; }
-
   /****************************** */
   /* NAVIGATION */
-  /***************************** */
+  /******************************/
   #nav-button {
     display: none; }
-
   /****************************** */
   /* main-nav */
   /*    #main-nav is the nav menu for window resolutions above 480 */
   /*    #mini-nav is the nav menu for window resolutions below 480 */
-  /***************************** */
+  /******************************/
   #main-nav {
     font-size: 1em;
     display: block;
@@ -352,18 +342,17 @@ footer a img {
     position: relative;
     top: 3px;
     z-index: 1; }
-
   a.active:not(:hover) {
     background-color: #544300;
     color: #fdedc1; }
-
   nav ul li {
     display: inline-block;
     margin-right: -4px;
     padding: 0;
     width: 20%;
     text-align: center; }
-    nav ul li:hover > ul, nav ul li:focus > ul {
+    nav ul li:hover > ul,
+    nav ul li:focus > ul {
       display: block; }
     nav ul li a {
       padding: 7px 4px 4px; }
@@ -381,57 +370,48 @@ footer a img {
       margin: 8px 0 8px; }
       nav ul ul li a {
         color: #544300; }
-      nav ul ul li:hover > a, nav ul ul li:focus > a {
+      nav ul ul li:hover > a,
+      nav ul ul li:focus > a {
         color: #fff; }
-
   /****************************** */
   /* PAGES */
-  /***************************** */
+  /******************************/
   section {
     padding: 0 5%; }
-
   .page {
     min-height: 360px;
     padding: 10px 20px;
     clear: both; }
-
   /****************************** */
   /* PAGE: ABOUT */
-  /***************************** */
+  /******************************/
   #about {
     position: relative; }
-
   #about-img {
     max-height: 250px;
     display: block;
     margin: auto;
     margin-bottom: 10px; }
-
   .indent {
     text-indent: 1em;
     margin-bottom: 16px; }
-
   /****************************** */
   /* PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES */
-  /***************************** */
+  /******************************/
   .professional-button,
   .academic-button {
     display: inline-block;
     position: relative;
     max-width: 40%; }
-
   .professional-button {
     float: right;
     right: 51%; }
-
   .academic-button {
     float: left;
     left: 51%; }
-
   #milestones-list {
     margin-top: 60px;
     padding-bottom: 10px; }
-
   .milestone {
     font-size: 1.8vw;
     background-color: #3866aa;
@@ -450,7 +430,6 @@ footer a img {
       margin-left: 15%; }
     .milestone:nth-of-type(6) {
       margin-left: 7.5%; }
-
   .history-item,
   .portfolio-item,
   .references-item,
@@ -458,75 +437,67 @@ footer a img {
   .portfolio-item-details,
   .references-item-details {
     overflow: hidden; }
-
   .history-img,
   .portfolio-img,
   .references-img {
     clear: both;
     display: block; }
-
   /****************************** */
   /* FOOTER */
-  /***************************** */
+  /******************************/
   footer p {
     font-size: 0.9em; }
   footer a img {
     height: 20px;
     margin: 0 1px; }
-
   #return-to-top-button-div {
     display: none; } }
-/******** End of @media screen and (min-width: $break-small) ******* */
-/*######################################################################################################################################################################## */
+
+/******** End of @media screen and (min-width: $break-small) ********/
+/*########################################################################################################################################################################*/
 /*         ***************************************** */
 /*         Screens with higher resolution than 701 px */
-/*         **************************************** */
-/*######################################################################################################################################################################## */
+/*         *****************************************/
+/*########################################################################################################################################################################*/
 @media screen and (min-width: 701px) {
   /****************************** */
   /* HEADING */
-  /***************************** */
+  /******************************/
   #banner {
     max-width: 920px;
     margin: 0 auto; }
-
   /****************************** */
   /* PAGES */
-  /***************************** */
+  /******************************/
   main {
     max-width: 920px;
     margin: 0 auto; }
-
   /****************************** */
   /* PAGE: ABOUT */
-  /***************************** */
+  /******************************/
   #about-img {
     margin-right: 10px;
     float: left; }
-
   .contact-button {
     position: absolute;
     left: 35px;
     top: 320px; }
-
   /****************************** */
   /* PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES */
-  /***************************** */
+  /******************************/
   .history-item-details,
   .portfolio-item-details,
   .references-item-details {
     position: relative;
     left: 5%;
     max-width: 55%; }
-
   .history-img,
   .portfolio-img,
   .references-img {
     max-width: 40%;
     float: left; } }
-/******** End of @media screen and (min-width: $break-large) ******* */
+
+/******** End of @media screen and (min-width: $break-large) ********/
 @media screen and (min-width: 920px) {
   .milestone {
     font-size: 1.1em; } }
-
-/*# sourceMappingURL=app.css.map */
