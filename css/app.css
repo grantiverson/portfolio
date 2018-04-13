@@ -106,7 +106,7 @@ h5 {
 
 h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 100;
+  font-weight: 200;
   margin-bottom: 0.2em;
   color: #fafafa; }
 
@@ -302,9 +302,10 @@ footer a img {
   /* TEXT */
   /******************************/
   h1 {
-    font-size: 2.7em; }
+    font-size: 1.8em; }
   h2 {
-    font-size: 1.25em; }
+    font-size: 1em;
+    margin-left: 2em; }
   h3 {
     font-size: 1.9em; }
   h4 {
@@ -451,6 +452,13 @@ footer a img {
   #banner {
     max-width: 920px;
     margin: 0 auto; }
+  /****************************** */
+  /* TEXT */
+  /******************************/
+  h1 {
+    font-size: 2.7em; }
+  h2 {
+    font-size: 1.25em; }
   /****************************** */
   /* PAGES */
   /******************************/
