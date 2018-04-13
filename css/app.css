@@ -153,10 +153,8 @@ strong {
 /******************************/
 /* header that includes the banner */
 header {
-  background-color: #444445; }
-  header a img {
-    width: 120px;
-    padding-top: 5px; }
+  background-color: #444445;
+  position: relative; }
 
 #nav-button {
   margin: 0.2em; }
@@ -167,7 +165,9 @@ header {
   height: 149px; }
 
 #banner-img {
-  float: right; }
+  float: right;
+  width: 120px;
+  margin: 5px 0; }
 
 /****************************** */
 /* NAVIGATION */
