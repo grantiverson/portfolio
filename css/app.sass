@@ -3,15 +3,17 @@ $break-small: 481px
 $break-large: 701px
 
 //Fonts
-$font-stack: Helvetica, sans-serif
-$main-text: "Enriqueta", "Courier New", monospace
+$sans-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif
+$serif-font-stack: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace
 
 //Colors
-$banner-bg: #fcf5e7
-$nav-color: #fdedc1
-$active-nav-color: #544300
-$hover-nav-color: #8d6334
-$accent-color: #3866aa
+$body-bg: #302f2f
+$banner-bg: #444445
+$nav-color: #6e6e6e
+$active-nav-color: #22bcf0
+$hover-nav-color: #555
+$accent-color: #22bcf0
+$text-color: #fafafa
 
 //Other
 $page-width: 920px
@@ -54,6 +56,7 @@ html
 
 body
     margin: 0
+    background-color: $body-bg
 
 article,
 aside,
@@ -96,44 +99,48 @@ img
 h1
     margin: 0 0 0.2em
     padding-top: 0.4em
-    font-family: $font-stack
+    font-family: $sans-font-stack
     font-weight: 100
     font-size: 1.8em
-    color: #555
+    color: $accent-color
 
 h2
-    font-family: $font-stack
+    font-family: $sans-font-stack
     font-weight: bold
     font-size: 1.1em
-    color: #2a2a2a
+    color: $text-color
 
 h3
     font-size: 1.6em
-    font-family: $main-text
+    font-family: $serif-font-stack
     text-indent: 0.65em
     margin-bottom: 0.2em
+    color: $text-color
 
 h4
-    font-family: $font-stack
+    font-family: $sans-font-stack
     font-weight: bold
     font-size: 1em
     margin-top: 0.2em
     color: $accent-color
 
 h5
-    font-family: $font-stack
+    font-family: $sans-font-stack
     font-weight: bold
     font-size: 0.9em
+    color: $text-color
 
 h6
-    font-family: $font-stack
+    font-family: $sans-font-stack
     font-weight: 100
     margin-bottom: 0.2em
+    color: $text-color
 
 p
-    font-family: $main-text
+    font-family: $serif-font-stack
     font-size: 1em
     margin-bottom: 0.2em
+    color: $text-color
 
 a
     color: inherit
@@ -143,14 +150,14 @@ ul
 
 h6 + p,
 h5 + p
-    border-top: 1px black solid
+    border-top: 1px white solid
 
 strong
     background-color: $accent-color
-    color: #fff
+    color: #302f2f
     padding: 0 2px 1px 2px
     border-radius: 3px
-    box-shadow: 2px 1px 1px #aaa
+    // box-shadow: 2px 1px 1px #aaa
 
 
 
@@ -161,7 +168,7 @@ strong
     display: block
     margin: 0 auto
     color: #fff
-    font-family: $font-stack
+    font-family: $sans-font-stack
     font-weight: 100
     text-align: center
     font-size: 1.5em
@@ -289,7 +296,7 @@ main
     padding: 0.25em 0.5em
 
 .milestone
-    font-family: $main-text
+    font-family: $serif-font-stack
     font-size: 0.8em
 
 .history-item,

@@ -34,7 +34,8 @@ html {
   -webkit-text-size-adjust: 100%; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: #302f2f; }
 
 article,
 aside,
@@ -66,7 +67,7 @@ img {
 /* ACCESSABILITY */
 /******************************/
 :focus {
-  outline-color: #544300;
+  outline-color: #22bcf0;
   outline-width: 3px; }
 
 /****************************** */
@@ -75,44 +76,48 @@ img {
 h1 {
   margin: 0 0 0.2em;
   padding-top: 0.4em;
-  font-family: Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-size: 1.8em;
-  color: #555; }
+  color: #22bcf0; }
 
 h2 {
-  font-family: Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 1.1em;
-  color: #2a2a2a; }
+  color: #fafafa; }
 
 h3 {
   font-size: 1.6em;
-  font-family: "Enriqueta", "Courier New", monospace;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   text-indent: 0.65em;
-  margin-bottom: 0.2em; }
+  margin-bottom: 0.2em;
+  color: #fafafa; }
 
 h4 {
-  font-family: Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 1em;
   margin-top: 0.2em;
-  color: #3866aa; }
+  color: #22bcf0; }
 
 h5 {
-  font-family: Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
-  font-size: 0.9em; }
+  font-size: 0.9em;
+  color: #fafafa; }
 
 h6 {
-  font-family: Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
-  margin-bottom: 0.2em; }
+  margin-bottom: 0.2em;
+  color: #fafafa; }
 
 p {
-  font-family: "Enriqueta", "Courier New", monospace;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-size: 1em;
-  margin-bottom: 0.2em; }
+  margin-bottom: 0.2em;
+  color: #fafafa; }
 
 a {
   color: inherit; }
@@ -122,14 +127,13 @@ ul {
 
 h6 + p,
 h5 + p {
-  border-top: 1px black solid; }
+  border-top: 1px white solid; }
 
 strong {
-  background-color: #3866aa;
-  color: #fff;
+  background-color: #22bcf0;
+  color: #302f2f;
   padding: 0 2px 1px 2px;
-  border-radius: 3px;
-  box-shadow: 2px 1px 1px #aaa; }
+  border-radius: 3px; }
 
 /****************************** */
 /* BUTTONS */
@@ -138,20 +142,20 @@ strong {
   display: block;
   margin: 0 auto;
   color: #fff;
-  font-family: Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
   text-align: center;
   font-size: 1.5em;
   padding: 0.3em 0.2em;
   margin-top: 0.2em;
-  background-color: #3866aa; }
+  background-color: #22bcf0; }
 
 /****************************** */
 /* HEADING */
 /******************************/
 /* header that includes the banner */
 header {
-  background-color: #fcf5e7; }
+  background-color: #444445; }
   header a img {
     height: 120px; }
 
@@ -176,7 +180,7 @@ header {
   display: none; }
 
 nav {
-  background-color: #fdedc1;
+  background-color: #6e6e6e;
   font-size: 1.5em;
   padding-bottom: 0.4em; }
   nav ul {
@@ -193,11 +197,11 @@ nav {
 /*    #mini-nav is the nav menu for window resolutions below 480 */
 /******************************/
 nav:nth-of-type(2) a.active {
-  border-bottom: 3px solid #544300;
+  border-bottom: 3px solid #22bcf0;
   margin-bottom: -3px; }
 
 nav:nth-of-type(2) a:hover, nav:nth-of-type(2) a:focus {
-  border-bottom: 3px solid #8d6334;
+  border-bottom: 3px solid #555;
   margin-bottom: -3px; }
 
 /****************************** */
@@ -222,7 +226,7 @@ main {
 /* PAGE: CONTACT ME */
 /******************************/
 .contact-text {
-  color: #3866aa; }
+  color: #22bcf0; }
 
 /****************************** */
 /* PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES */
@@ -232,12 +236,12 @@ main {
 
 #milestones-title {
   color: #fff;
-  background-color: #3866aa;
+  background-color: #22bcf0;
   font-weight: normal;
   padding: 0.25em 0.5em; }
 
 .milestone {
-  font-family: "Enriqueta", "Courier New", monospace;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   font-size: 0.8em; }
 
 .history-item,
@@ -250,7 +254,7 @@ main {
   margin-left: 7px; }
 
 .history-item em {
-  color: #3866aa; }
+  color: #22bcf0; }
 
 /****************************** */
 /* PAGE: SKILLS */
@@ -343,8 +347,8 @@ footer a img {
     top: 3px;
     z-index: 1; }
   a.active:not(:hover) {
-    background-color: #544300;
-    color: #fdedc1; }
+    background-color: #22bcf0;
+    color: #6e6e6e; }
   nav ul li {
     display: inline-block;
     margin-right: -4px;
@@ -357,19 +361,19 @@ footer a img {
     nav ul li a {
       padding: 7px 4px 4px; }
       nav ul li a:hover, nav ul li a:focus {
-        background-color: #8d6334 !important;
+        background-color: #555 !important;
         color: #fff !important; }
   nav ul ul {
     display: none;
     position: absolute;
     width: 25%;
-    background-color: #fdedc1; }
+    background-color: #6e6e6e; }
     nav ul ul li {
       display: block;
       width: auto;
       margin: 8px 0 8px; }
       nav ul ul li a {
-        color: #544300; }
+        color: #22bcf0; }
       nav ul ul li:hover > a,
       nav ul ul li:focus > a {
         color: #fff; }
@@ -414,7 +418,7 @@ footer a img {
     padding-bottom: 10px; }
   .milestone {
     font-size: 1.8vw;
-    background-color: #3866aa;
+    background-color: #22bcf0;
     color: #fff;
     padding: 0 0 3px 10px;
     margin: 10px 0; }
