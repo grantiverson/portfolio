@@ -7,8 +7,8 @@ $sans-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif
 $serif-font-stack: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace
 
 //Colors
-$body-bg: #302f2f
-$banner-bg: #444445
+$body-color: #302f2f
+$banner-color: #444445
 $nav-color: #6e6e6e
 $active-nav-color: #22bcf0
 $hover-nav-color: #555
@@ -56,7 +56,7 @@ html
 
 body
     margin: 0
-    background-color: $body-bg
+    background-color: $body-color
 
 article,
 aside,
@@ -75,10 +75,6 @@ summary
 
 a
     background-color: transparent
-
-h1
-    font-size: 2em
-    margin: 0.67em 0
 
 img
     max-width: 100%
@@ -101,7 +97,7 @@ h1
     padding-top: 0.4em
     font-family: $sans-font-stack
     font-weight: 100
-    font-size: 1.8em
+    font-size: 2em
     color: $accent-color
 
 h2
@@ -146,7 +142,14 @@ a
     color: inherit
 
 ul
-    margin-left: 0.6em
+    list-style: none
+
+li
+    margin-left: -0.6em
+
+    p::before
+        content: "• "
+        color: $text-color
 
 h6 + p,
 h5 + p
@@ -154,7 +157,7 @@ h5 + p
 
 strong
     background-color: $accent-color
-    color: #302f2f
+    color: $body-color
     padding: 0 2px 1px 2px
     border-radius: 3px
     // box-shadow: 2px 1px 1px #aaa
@@ -167,9 +170,9 @@ strong
 .button
     display: block
     margin: 0 auto
-    color: #fff
+    color: $body-color
     font-family: $sans-font-stack
-    font-weight: 100
+    font-weight: 200
     text-align: center
     font-size: 1.5em
     padding: 0.3em 0.2em
@@ -184,7 +187,7 @@ strong
 
 /* header that includes the banner */
 header
-    background-color: $banner-bg
+    background-color: $banner-color
 
     a img
         height: 120px
@@ -290,7 +293,7 @@ main
     margin-top: 10px
 
 #milestones-title
-    color: #fff
+    color: $body-color
     background-color: $accent-color
     font-weight: normal
     padding: 0.25em 0.5em
@@ -330,12 +333,15 @@ footer
     max-width: $page-width
 
 .return-to-top-button
-    background-color: #555
+    background-color: $banner-color
     margin: 0 auto
 
 #return-to-top-button-div
-    background-color: #999
+    background-color: $nav-color
     padding: 10px
+
+    a
+        color: $text-color
 
 footer a img
     float: right

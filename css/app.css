@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /****************************** */
 /* NORMALIZE CSS */
 /******************************/
@@ -55,10 +56,6 @@ summary {
 a {
   background-color: transparent; }
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
 img {
   max-width: 100%;
   border: 0; }
@@ -78,7 +75,7 @@ h1 {
   padding-top: 0.4em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
-  font-size: 1.8em;
+  font-size: 2em;
   color: #22bcf0; }
 
 h2 {
@@ -123,7 +120,13 @@ a {
   color: inherit; }
 
 ul {
-  margin-left: 0.6em; }
+  list-style: none; }
+
+li {
+  margin-left: -0.6em; }
+  li p::before {
+    content: "• ";
+    color: #fafafa; }
 
 h6 + p,
 h5 + p {
@@ -141,9 +144,9 @@ strong {
 .button {
   display: block;
   margin: 0 auto;
-  color: #fff;
+  color: #302f2f;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 100;
+  font-weight: 200;
   text-align: center;
   font-size: 1.5em;
   padding: 0.3em 0.2em;
@@ -235,7 +238,7 @@ main {
   margin-top: 10px; }
 
 #milestones-title {
-  color: #fff;
+  color: #302f2f;
   background-color: #22bcf0;
   font-weight: normal;
   padding: 0.25em 0.5em; }
@@ -271,12 +274,14 @@ footer {
   max-width: 920px; }
 
 .return-to-top-button {
-  background-color: #555;
+  background-color: #444445;
   margin: 0 auto; }
 
 #return-to-top-button-div {
-  background-color: #999;
+  background-color: #6e6e6e;
   padding: 10px; }
+  #return-to-top-button-div a {
+    color: #fafafa; }
 
 footer a img {
   float: right;
