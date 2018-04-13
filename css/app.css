@@ -367,7 +367,7 @@ footer a img {
       padding: 7px 4px 4px; }
       nav ul li a:hover, nav ul li a:focus {
         background-color: #555 !important;
-        color: #fff !important; }
+        color: #fafafa !important; }
   nav ul ul {
     display: none;
     position: absolute;
@@ -381,7 +381,7 @@ footer a img {
         color: #22bcf0; }
       nav ul ul li:hover > a,
       nav ul ul li:focus > a {
-        color: #fff; }
+        color: #fafafa; }
   /****************************** */
   /* PAGES */
   /******************************/
@@ -424,7 +424,7 @@ footer a img {
   .milestone {
     font-size: 1.8vw;
     background-color: #22bcf0;
-    color: #fff;
+    color: #fafafa;
     padding: 0 0 3px 10px;
     margin: 10px 0; }
     .milestone:first-of-type {
