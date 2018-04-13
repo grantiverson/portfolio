@@ -12,8 +12,12 @@ $banner-color: #444445
 $nav-color: #6e6e6e
 $active-nav-color: #22bcf0
 $hover-nav-color: #555
+$accent-background-color: #22bcf0
+
+//Font Colors
+$main-text-color: #fafafa
 $accent-color: #22bcf0
-$text-color: #fafafa
+$dark-text-color: #302f2f
 
 //Other
 $page-width: 920px
@@ -104,14 +108,14 @@ h2
     font-family: $sans-font-stack
     font-weight: bold
     font-size: 1.1em
-    color: $text-color
+    color: $main-text-color
 
 h3
     font-size: 1.6em
     font-family: $serif-font-stack
     text-indent: 0.65em
     margin-bottom: 0.2em
-    color: $text-color
+    color: $main-text-color
 
 h4
     font-family: $sans-font-stack
@@ -124,39 +128,40 @@ h5
     font-family: $sans-font-stack
     font-weight: bold
     font-size: 0.9em
-    color: $text-color
+    color: $main-text-color
 
 h6
     font-family: $sans-font-stack
     font-weight: 100
     margin-bottom: 0.2em
-    color: $text-color
+    color: $main-text-color
 
 p
     font-family: $serif-font-stack
     font-size: 1em
     margin-bottom: 0.2em
-    color: $text-color
+    color: $main-text-color
 
 a
     color: inherit
 
 ul
     list-style: none
+    color: $body-color
 
 li
     margin-left: -0.6em
 
     p::before
         content: "• "
-        color: $text-color
+        color: $main-text-color
 
 h6 + p,
 h5 + p
     border-top: 1px white solid
 
 strong
-    background-color: $accent-color
+    background-color: $accent-background-color
     color: $body-color
     padding: 0 2px 1px 2px
     border-radius: 3px
@@ -177,7 +182,7 @@ strong
     font-size: 1.5em
     padding: 0.3em 0.2em
     margin-top: 0.2em
-    background-color: $accent-color
+    background-color: $accent-background-color
 
 
 
@@ -294,7 +299,7 @@ main
 
 #milestones-title
     color: $body-color
-    background-color: $accent-color
+    background-color: $accent-background-color
     font-weight: normal
     padding: 0.25em 0.5em
 
@@ -341,7 +346,7 @@ footer
     padding: 10px
 
     a
-        color: $text-color
+        color: $main-text-color
 
 footer a img
     float: right
@@ -442,7 +447,7 @@ footer a img
 
     a.active:not(:hover)
         background-color: $active-nav-color
-        color: $nav-color
+        color: $main-text-color
 
     nav
 
@@ -465,7 +470,7 @@ footer a img
                     &:hover,
                     &:focus
                         background-color: $hover-nav-color !important
-                        color: $text-color !important
+                        color: $main-text-color !important
 
 
 
@@ -482,11 +487,11 @@ footer a img
                     margin: 8px 0 8px
 
                     a
-                        color: $active-nav-color
+                        color: $body-color
 
                     &:hover > a,
                     &:focus > a
-                        color: $text-color
+                        color: $main-text-color
 
 
 
@@ -547,8 +552,8 @@ footer a img
 
     .milestone
         font-size: 1.8vw
-        background-color: $accent-color
-        color: $text-color
+        background-color: $accent-background-color
+        color: $main-text-color
         padding: 0 0 3px 10px
         margin: 10px 0
 

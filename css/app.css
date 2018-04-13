@@ -120,7 +120,8 @@ a {
   color: inherit; }
 
 ul {
-  list-style: none; }
+  list-style: none;
+  color: #302f2f; }
 
 li {
   margin-left: -0.6em; }
@@ -353,7 +354,7 @@ footer a img {
     z-index: 1; }
   a.active:not(:hover) {
     background-color: #22bcf0;
-    color: #6e6e6e; }
+    color: #fafafa; }
   nav ul li {
     display: inline-block;
     margin-right: -4px;
@@ -378,7 +379,7 @@ footer a img {
       width: auto;
       margin: 8px 0 8px; }
       nav ul ul li a {
-        color: #22bcf0; }
+        color: #302f2f; }
       nav ul ul li:hover > a,
       nav ul ul li:focus > a {
         color: #fafafa; }
