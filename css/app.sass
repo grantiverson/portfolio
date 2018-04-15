@@ -9,7 +9,8 @@ $serif-font-stack: monaco,"Andale Mono",monospace
 // OLD $serif-font-stack:"Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace
 
 //Colors
-$body-color: #282C34
+$dark-background-color: #282C34
+$light-body-color: #fafafa
 $banner-color: #3D4350
 $nav-color: #6e6e6e
 $accent-background-color: #22bcf0
@@ -61,8 +62,8 @@ html
     -webkit-text-size-adjust: 100%
 
 body
+    background-color: $dark-background-color
     margin: 0
-    background-color: $body-color
 
 article,
 aside,
@@ -150,7 +151,7 @@ a
 
 ul
     list-style: none
-    color: $body-color
+    color: $dark-text-color
 
 h6 + p,
 h5 + p
@@ -158,7 +159,7 @@ h5 + p
 
 strong
     background-color: $accent-background-color
-    color: $body-color
+    color: $dark-text-color
     padding: 0 2px 1px 2px
     border-radius: 3px
     // box-shadow: 2px 1px 1px #aaa
@@ -171,7 +172,7 @@ strong
 .button
     display: block
     margin: 0 auto
-    color: $body-color
+    color: $dark-text-color
     font-family: $sans-font-stack
     font-weight: 200
     text-align: center
@@ -247,9 +248,18 @@ nav:nth-of-type(2) a
 main
     padding: 0 5%
 
-section,
-.page
+section
     padding: 10px
+
+.dark-page
+    background-color: $dark-background-color
+
+.light-page
+    background-color: $light-body-color
+
+    h3,
+    p
+        color: $dark-text-color
 
 
 
@@ -298,7 +308,7 @@ section,
     margin-top: 10px
 
 #milestones-title
-    color: $body-color
+    color: $dark-text-color
     background-color: $accent-background-color
     font-weight: normal
     padding: 0.25em 0.5em
@@ -471,7 +481,7 @@ footer a img
                     margin: 8px 0 8px
 
                     a
-                        color: $body-color
+                        color: $dark-text-color
 
                     &:hover > a,
                     &:focus > a
@@ -500,10 +510,6 @@ footer a img
     /******************************/
 
     section
-        padding: 0 5%
-
-    section,
-    .page
         padding: 10px 20px
         clear: both
 
