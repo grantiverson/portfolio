@@ -216,9 +216,6 @@ section,
 /****************************** */
 /* PAGE: ABOUT */
 /******************************/
-#about-img {
-  display: none; }
-
 #about-txt {
   overflow: hidden; }
 
@@ -385,7 +382,6 @@ footer a img {
     padding: 0 5%; }
   section,
   .page {
-    min-height: 360px;
     padding: 10px 20px;
     clear: both; }
   /****************************** */
@@ -393,11 +389,6 @@ footer a img {
   /******************************/
   #about {
     position: relative; }
-  #about-img {
-    max-height: 250px;
-    display: block;
-    margin: auto;
-    margin-bottom: 10px; }
   .indent {
     text-indent: 1em;
     margin-bottom: 16px; }
@@ -467,16 +458,6 @@ footer a img {
   main {
     max-width: 920px;
     margin: 0 auto; }
-  /****************************** */
-  /* PAGE: ABOUT */
-  /******************************/
-  #about-img {
-    margin-right: 10px;
-    float: left; }
-  .contact-button {
-    position: absolute;
-    left: 35px;
-    top: 320px; }
   /****************************** */
   /* PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES */
   /******************************/
