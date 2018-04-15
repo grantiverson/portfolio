@@ -122,9 +122,12 @@ ul {
   list-style: none;
   color: #302f2f; }
 
-h6 + p,
-h5 + p {
-  border-top: 1px white solid; }
+h6,
+h5 {
+  border-bottom: 1px white solid; }
+
+h5 + h6 {
+  border: none; }
 
 strong {
   background-color: #22bcf0;
@@ -259,18 +262,45 @@ section * {
   font-family: monaco, "Andale Mono", monospace;
   font-size: 0.8em; }
 
-.history-item,
-.portfolio-item,
-.references-item {
-  margin-bottom: 30px; }
-
-.history-item li,
-.portfolio-item li {
-  margin-left: 7px; }
-
 .history-item em {
   color: #22bcf0; }
 
+#portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px; }
+
+.portfolio-item {
+  position: relative;
+  margin: 5px;
+  background-color: #282C34; }
+  .portfolio-item:hover .portfolio-img {
+    opacity: 0.3; }
+  .portfolio-item:hover .portfolio-item-details {
+    opacity: 1; }
+
+.portfolio-img {
+  display: block;
+  max-width: 380px;
+  width: auto;
+  height: auto;
+  transition: .5s ease; }
+
+.portfolio-item-details {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  opacity: 0;
+  transition: .5s ease;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); }
+  .portfolio-item-details p {
+    color: #abb2bf; }
+
+/***********************************************/
 /****************************** */
 /* PAGE: SKILLS */
 /******************************/
@@ -325,8 +355,7 @@ footer p {
   h3 {
     font-size: 1.9em; }
   h4 {
-    font-size: 1.4em;
-    margin: 0; }
+    font-size: 1.4em; }
   h5 {
     font-size: 1.25em; }
   h6 {
@@ -424,18 +453,6 @@ footer p {
   #milestones-list {
     margin-top: 60px;
     padding-bottom: 10px; }
-  .history-item,
-  .portfolio-item,
-  .references-item,
-  .history-item-details,
-  .portfolio-item-details,
-  .references-item-details {
-    overflow: hidden; }
-  .history-img,
-  .portfolio-img,
-  .references-img {
-    clear: both;
-    display: block; }
   /****************************** */
   /* FOOTER */
   /******************************/
@@ -504,17 +521,6 @@ footer p {
       margin-left: 10%; }
     .milestone:nth-of-type(6) {
       margin-left: 5%; }
-  .history-item-details,
-  .portfolio-item-details,
-  .references-item-details {
-    position: relative;
-    left: 5%;
-    max-width: 55%; }
-  .history-img,
-  .portfolio-img,
-  .references-img {
-    max-width: 40%;
-    float: left; }
   /****************************** */
   /* FOOTER */
   /******************************/

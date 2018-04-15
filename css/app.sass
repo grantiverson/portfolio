@@ -153,9 +153,13 @@ ul
     list-style: none
     color: $dark-text-color
 
-h6 + p,
-h5 + p
-    border-top: 1px white solid
+h6,
+h5
+        border-bottom: 1px white solid
+
+h5
+    + h6
+        border: none
 
 strong
     background-color: $accent-background-color
@@ -327,17 +331,67 @@ section
     font-family: $serif-font-stack
     font-size: 0.8em
 
-.history-item,
-.portfolio-item,
-.references-item
-    margin-bottom: 30px
+// .history-item,
+// .portfolio-item,
+// .references-item
+//     margin-bottom: 30px
 
-.history-item li,
-.portfolio-item li
-    margin-left: 7px
+// .history-item li,
+// .portfolio-item li
+//     margin-left: 7px
 
 .history-item em
     color: $accent-color
+
+#portfolio-container
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    max-width: 800px
+
+.portfolio-item
+    position: relative
+    margin: 5px
+    background-color: $dark-background-color
+
+    &:hover
+        .portfolio-img
+            opacity: 0.3
+
+        .portfolio-item-details
+            opacity: 1
+
+
+
+.portfolio-img
+    display: block
+    max-width: 380px
+    width: auto
+    height: auto
+    transition: .5s ease
+
+.portfolio-item-details
+    width: 100%
+    position: absolute
+    top: 50%
+    left: 50%
+    text-align: center
+    opacity: 0
+    transition: .5s ease
+    transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+
+    p
+        color: $main-text-color
+
+
+
+/***********************************************/
+
+
+
+
+
 
 /******************************
 /* PAGE: SKILLS
@@ -408,7 +462,6 @@ footer
 
     h4
         font-size: 1.4em
-        margin: 0
 
     h5
         font-size: 1.25em
@@ -560,19 +613,20 @@ footer
         margin-top: 60px
         padding-bottom: 10px
 
-    .history-item,
-    .portfolio-item,
-    .references-item,
-    .history-item-details,
-    .portfolio-item-details,
-    .references-item-details
-        overflow: hidden
+    // .history-item,
+    // .portfolio-item,
+    // .references-item,
+    // .history-item-details,
+    // .portfolio-item-details,
+    // .references-item-details
+    //     overflow: hidden
 
-    .history-img,
-    .portfolio-img,
-    .references-img
-        clear: both
-        display: block
+    // .history-img,
+    // .portfolio-img,
+    // .references-img
+    //     clear: both
+    //     display: block
+    //
 
 
 
@@ -677,18 +731,18 @@ footer
         &:nth-of-type(6)
             margin-left: 5%
 
-    .history-item-details,
-    .portfolio-item-details,
-    .references-item-details
-        position: relative
-        left: 5%
-        max-width: 55%
+    // .history-item-details,
+    // .portfolio-item-details,
+    // .references-item-details
+    //     position: relative
+    //     left: 5%
+    //     max-width: 55%
 
-    .history-img,
-    .portfolio-img,
-    .references-img
-        max-width: 40%
-        float: left
+    // .history-img,
+    // .portfolio-img,
+    // .references-img
+        // max-width: 40%
+        // float: left
 
 
 
