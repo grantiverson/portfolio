@@ -87,6 +87,11 @@ img
     max-width: 100%
     border: 0
 
+// Sets page content width
+section *
+        margin: 0 auto
+        max-width: $content-max-width
+
 /******************************
 /* ACCESSABILITY
 /******************************/
@@ -118,8 +123,9 @@ h3
     font-size: 1.6em
     font-family: $serif-font-stack
     text-indent: 0.65em
-    margin-bottom: 0.2em
+    margin-bottom: 3em
     color: $light-text-color
+    text-align: center
 
 h4
     font-family: $sans-font-stack
@@ -251,14 +257,6 @@ nav:nth-of-type(2) a
 /* PAGES
 /******************************/
 
-section
-
-
-    *
-        margin: 0 auto
-        max-width: $content-max-width
-
-
 .dark-page
     background-color: $dark-background-color
 
@@ -298,6 +296,9 @@ section
 /******************************
 /* PAGE: ABOUT
 /******************************/
+
+#about
+    padding: 150px 0
 
 #about-txt
     overflow: hidden
@@ -342,6 +343,9 @@ section
 
 .history-item em
     color: $accent-color
+
+#portfolio
+    padding: 150px 0
 
 #portfolio-container
     display: flex

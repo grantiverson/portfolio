@@ -58,6 +58,10 @@ img {
   max-width: 100%;
   border: 0; }
 
+section * {
+  margin: 0 auto;
+  max-width: 1180px; }
+
 /****************************** */
 /* ACCESSABILITY */
 /******************************/
@@ -87,8 +91,9 @@ h3 {
   font-size: 1.6em;
   font-family: monaco, "Andale Mono", monospace;
   text-indent: 0.65em;
-  margin-bottom: 0.2em;
-  color: #fafafa; }
+  margin-bottom: 3em;
+  color: #fafafa;
+  text-align: center; }
 
 h4 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -199,10 +204,6 @@ nav:nth-of-type(2) a:hover, nav:nth-of-type(2) a:focus {
 /****************************** */
 /* PAGES */
 /******************************/
-section * {
-  margin: 0 auto;
-  max-width: 1180px; }
-
 .dark-page {
   background-color: #282C34; }
 
@@ -236,6 +237,9 @@ section * {
 /****************************** */
 /* PAGE: ABOUT */
 /******************************/
+#about {
+  padding: 150px 0; }
+
 #about-txt {
   overflow: hidden; }
 
@@ -264,6 +268,9 @@ section * {
 
 .history-item em {
   color: #22bcf0; }
+
+#portfolio {
+  padding: 150px 0; }
 
 #portfolio-container {
   display: flex;
