@@ -21,6 +21,16 @@ $(document).ready(function() {
         $(this).fadeOut();
     });
 
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 500);
+        }
+    });
+
     $("a").click(function() {
         if ($(this).hasClass("return-to-top-button")) {      /* is the link the .return-to-top-button at the bottom of each .page,  */
             $("#mini-nav").slideUp();                        /* hide the #mini-nav                                                  */
