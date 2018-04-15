@@ -10,17 +10,6 @@ $(document).ready(function() {
         $("#mini-nav").hide();
     });
 
-    /* #main-nav animations */
-    $("#main-nav ul ul").hide();                         /* Hides submenus */
-    $("#main-nav ul li").hover(function() {              /* Makes submenus fadeIn/fadeOut on hover */
-        $(this).find("ul").stop(true,true).fadeIn();
-    }, function() {
-        $(this).find("ul").stop(true,true).fadeOut();
-    });
-    $("#main-nav ul ul").click(function() {              /* Makes submenus fadeOut on click */
-        $(this).fadeOut();
-    });
-
     $('a[href^="#"]').on('click', function(event) {
         var target = $(this.getAttribute('href'));
         if( target.length ) {
