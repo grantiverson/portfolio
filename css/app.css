@@ -205,7 +205,12 @@ section,
 /* PAGE: INTRODUCTION */
 /******************************/
 #introduction {
-  margin: auto auto; }
+  margin: auto;
+  width: 300px;
+  height: 100vh; }
+
+#introduction-content {
+  margin-top: 30vh; }
 
 #logo {
   margin: 10px 5px 20px;
@@ -367,6 +372,8 @@ footer a img {
   /****************************** */
   /* HEADING */
   /******************************/
+  #introduction {
+    width: 420px; }
   #logo {
     float: left;
     width: 80px;
@@ -453,6 +460,8 @@ footer a img {
   /****************************** */
   /* HEADING */
   /******************************/
+  #introduction {
+    width: 570px; }
   #logo {
     margin: 15px;
     width: 120px; }
