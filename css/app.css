@@ -79,9 +79,9 @@ h1 {
 h2 {
   font-family: monaco, "Andale Mono", monospace;
   font-weight: 100;
-  font-size: 0.8em;
+  font-size: 0.7em;
   color: #fafafa;
-  margin-left: 1em; }
+  margin-left: 2em; }
 
 h3 {
   font-size: 1.6em;
@@ -155,7 +155,9 @@ header {
 
 #nav-button {
   margin: 0.2em;
-  float: right; }
+  position: absolute;
+  top: 0;
+  right: 0; }
 
 /****************************** */
 /* NAVIGATION */
@@ -194,8 +196,9 @@ nav:nth-of-type(2) a:hover, nav:nth-of-type(2) a:focus {
 /****************************** */
 /* PAGES */
 /******************************/
-section {
-  padding: 10px; }
+section * {
+  margin: 0 auto;
+  max-width: 1180px; }
 
 .dark-page {
   background-color: #282C34; }
@@ -211,11 +214,16 @@ section {
 /******************************/
 #introduction {
   margin: auto;
-  width: 300px;
-  height: 100vh; }
+  height: 100vh;
+  text-align: center; }
 
 #introduction-content {
-  margin-top: 30vh; }
+  margin-top: 30vh;
+  display: inline-block; }
+
+#introduction-text {
+  display: inline-block;
+  text-align: left; }
 
 #logo {
   margin: 10px 5px 20px;
@@ -312,7 +320,7 @@ footer p {
   h1 {
     font-size: 1.8em; }
   h2 {
-    font-size: 1em;
+    font-size: 0.8em;
     margin-left: 2em; }
   h3 {
     font-size: 1.9em; }
@@ -384,8 +392,6 @@ footer p {
   /****************************** */
   /* HEADING */
   /******************************/
-  #introduction {
-    width: 420px; }
   #logo {
     float: left;
     width: 80px;
@@ -460,7 +466,7 @@ footer p {
   h1 {
     font-size: 2.7em; }
   h2 {
-    font-size: 1.25em; }
+    font-size: 1.2em; }
   /****************************** */
   /* main-nav */
   /*    #main-nav is the nav menu for window resolutions above 480 */
@@ -477,12 +483,6 @@ footer p {
   #logo {
     margin: 15px;
     width: 120px; }
-  /****************************** */
-  /* PAGES */
-  /******************************/
-  main {
-    max-width: 920px;
-    margin: 0 auto; }
   /****************************** */
   /* PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES */
   /******************************/

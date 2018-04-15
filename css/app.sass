@@ -24,7 +24,7 @@ $dark-text-color: #302f2f
 $light-text-color: #fafafa
 
 //Other
-$page-width: 920px
+$content-max-width: 1180px
 
 /******************************
 /* NORMALIZE CSS
@@ -110,9 +110,9 @@ h1
 h2
     font-family: $serif-font-stack
     font-weight: 100
-    font-size: 0.8em
+    font-size: 0.7em
     color: $light-text-color
-    margin-left: 1em
+    margin-left: 2em
 
 h3
     font-size: 1.6em
@@ -192,7 +192,9 @@ header
 
 #nav-button
     margin: 0.2em
-    float: right
+    position: absolute
+    top: 0
+    right: 0
 
 
 
@@ -246,7 +248,12 @@ nav:nth-of-type(2) a
 /******************************/
 
 section
-    padding: 10px
+
+
+    *
+        margin: 0 auto
+        max-width: $content-max-width
+
 
 .dark-page
     background-color: $dark-background-color
@@ -266,11 +273,16 @@ section
 
 #introduction
     margin: auto
-    width: 300px
     height: 100vh
+    text-align: center
 
 #introduction-content
     margin-top: 30vh
+    display: inline-block
+
+#introduction-text
+    display: inline-block
+    text-align: left
 
 #logo
     margin: 10px 5px 20px
@@ -388,7 +400,7 @@ footer
         font-size: 1.8em
 
     h2
-        font-size: 1em
+        font-size: 0.8em
         margin-left: 2em
 
     h3
@@ -500,9 +512,6 @@ footer
     /* HEADING
     /******************************/
 
-    #introduction
-        width: 420px
-
     #logo
         float: left
         width: 80px
@@ -610,7 +619,7 @@ footer
         font-size: 2.7em
 
     h2
-        font-size: 1.25em
+        font-size: 1.2em
 
 
 
@@ -636,16 +645,6 @@ footer
     #logo
         margin: 15px
         width: 120px
-
-
-
-    /******************************
-    /* PAGES
-    /******************************/
-
-    main
-        max-width: $page-width
-        margin: 0 auto
 
 
 
@@ -708,6 +707,6 @@ footer
 
 /******** End of @media screen and (min-width: $break-large) ********/
 
-@media screen and (min-width: $page-width)
+@media screen and (min-width: 920px)
     .milestone
         font-size: 1.1em
