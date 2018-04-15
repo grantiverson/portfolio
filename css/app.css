@@ -72,13 +72,13 @@ img {
 h1 {
   margin: 0 0 0.2em;
   padding-top: 0.4em;
-  font-family: consolas, monaco, "Andale Mono", monospace;
+  font-family: monaco, "Andale Mono", monospace;
   font-weight: 100;
   font-size: 1.2em;
   color: #22bcf0; }
 
 h2 {
-  font-family: consolas, monaco, "Andale Mono", monospace;
+  font-family: monaco, "Andale Mono", monospace;
   font-weight: 100;
   font-size: 0.8em;
   color: #fafafa;
@@ -86,7 +86,7 @@ h2 {
 
 h3 {
   font-size: 1.6em;
-  font-family: consolas, monaco, "Andale Mono", monospace;
+  font-family: monaco, "Andale Mono", monospace;
   text-indent: 0.65em;
   margin-bottom: 0.2em;
   color: #fafafa; }
@@ -111,7 +111,7 @@ h6 {
   color: #fafafa; }
 
 p {
-  font-family: consolas, monaco, "Andale Mono", monospace;
+  font-family: monaco, "Andale Mono", monospace;
   font-size: 1em;
   margin-bottom: 0.2em;
   color: #abb2bf; }
@@ -241,7 +241,7 @@ main {
   margin-bottom: 0.5em; }
 
 .milestone {
-  font-family: consolas, monaco, "Andale Mono", monospace;
+  font-family: monaco, "Andale Mono", monospace;
   font-size: 0.8em; }
 
 .history-item,
