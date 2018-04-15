@@ -5,8 +5,6 @@ $break-large: 701px
 //Fonts
 $sans-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif
 $serif-font-stack: monaco,"Andale Mono",monospace
-// ANOTHER OPTION "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace
-// OLD $serif-font-stack:"Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace
 
 //Colors
 $dark-background-color: #282C34
@@ -61,7 +59,6 @@ html
     -webkit-text-size-adjust: 100%
 
 body
-    background-color: $dark-background-color
     margin: 0
 
 article,
@@ -85,6 +82,14 @@ a
 img
     max-width: 100%
     border: 0
+
+
+/******************************
+/* GLOBAL STYLES
+/******************************/
+
+body
+    background-color: $dark-background-color
 
 // Sets page content width
 section *
@@ -123,7 +128,6 @@ h3
     font-family: $serif-font-stack
     text-indent: 0.65em
     margin-bottom: 3em
-    color: $light-text-color
     text-align: center
 
 h4
@@ -138,6 +142,7 @@ h5
     font-weight: bold
     font-size: 0.9em
     color: $light-text-color
+    border-bottom: 1px white solid
 
 h6
     font-family: $sans-font-stack
@@ -154,17 +159,12 @@ p
 a
     color: inherit
 
+    &:hover
+        text-decoration: underline $accent-color
+
 ul
     list-style: none
     color: $dark-text-color
-
-h6,
-h5
-        border-bottom: 1px white solid
-
-h5
-    + h6
-        border: none
 
 strong
     background-color: $accent-background-color
@@ -199,17 +199,17 @@ strong
 header
     position: relative
 
-#nav-button
-    margin: 0.2em
-    position: absolute
-    top: 0
-    right: 0
-
 
 
 /******************************
 /* NAVIGATION
 /******************************/
+
+#nav-button
+    margin: 0.2em
+    position: absolute
+    top: 0
+    right: 0
 
 nav
     display: none
@@ -233,12 +233,20 @@ nav
 
 
 
+/******** END OF GLOBAL STYLES ********/
+
+
+
 /******************************
 /* PAGES
 /******************************/
 
 .dark-page
     background-color: $dark-background-color
+
+    h3,
+    p
+        color: $main-text-color
 
 .light-page
     background-color: $light-body-color
@@ -286,46 +294,8 @@ nav
 
 
 /******************************
-/* PAGE: CONTACT ME
+/* PAGE: PORTFOLIO
 /******************************/
-
-#contact
-    padding: 150px 0
-
-.contact-text
-    color: $accent-color
-
-
-
-/******************************
-/* PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
-/******************************/
-
-#milestones-list
-    margin-top: 10px
-
-#milestones-title
-    color: $dark-text-color
-    background-color: $accent-background-color
-    font-weight: normal
-    padding: 0.25em 0.5em
-    margin-bottom: 0.5em
-
-.milestone
-    font-family: $serif-font-stack
-    font-size: 0.8em
-
-// .history-item,
-// .portfolio-item,
-// .references-item
-//     margin-bottom: 30px
-
-// .history-item li,
-// .portfolio-item li
-//     margin-left: 7px
-
-.history-item em
-    color: $accent-color
 
 #portfolio
     padding: 150px 0
@@ -348,8 +318,6 @@ nav
         .portfolio-item-details
             opacity: 1
 
-
-
 .portfolio-img
     display: block
     max-width: 380px
@@ -368,34 +336,34 @@ nav
     transform: translate(-50%, -50%)
     -ms-transform: translate(-50%, -50%)
 
-    p
-        color: $main-text-color
 
 
+/******************************
+/* PAGE: CONTACT ME
+/******************************/
 
-/***********************************************/
+#contact
+    padding: 150px 0
 
-
-
+.contact-text
+    color: $accent-color
 
 
 
 /******************************
-/* PAGE: SKILLS
+/* RETURN TO TOP BUTTON
 /******************************/
 
-.list-container
-    margin: 0 0 1em 0.4em
+.return-to-top-button
+    background-color: $banner-color
+    margin: 0 auto
+
 
 
 
 /******************************
 /* FOOTER
 /******************************/
-
-.return-to-top-button
-    background-color: $banner-color
-    margin: 0 auto
 
 #return-to-top-button-div
     background-color: $nav-color
@@ -506,22 +474,22 @@ footer
 
 
     /******************************
-    /* HEADING
+    /* PAGES
+    /******************************/
+
+    section
+        padding: 10px 20px
+
+
+
+    /******************************
+    /* PAGE: INTRODUCTION
     /******************************/
 
     #logo
         float: left
         width: 80px
         margin: 10px
-
-
-
-    /******************************
-    /* PAGES
-    /******************************/
-
-    section
-        padding: 10px 20px
 
 
 
@@ -536,43 +504,11 @@ footer
 
 
     /******************************
-    /* PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
+    /* RETURN TO TOP BUTTON
     /******************************/
 
-    .professional-button,
-    .academic-button
-        display: inline-block
-        position: relative
-        max-width: 40%
-
-    .professional-button
-        float: right
-        right: 51%
-
-    .academic-button
-        float: left
-        left: 51%
-
-    #milestones-list
-        margin-top: 60px
-        padding-bottom: 10px
-
-    // .history-item,
-    // .portfolio-item,
-    // .references-item,
-    // .history-item-details,
-    // .portfolio-item-details,
-    // .references-item-details
-    //     overflow: hidden
-
-    // .history-img,
-    // .portfolio-img,
-    // .references-img
-    //     clear: both
-    //     display: block
-    //
-
-
+    #return-to-top-button-div
+        display: none
 
     /******************************
     /* FOOTER
@@ -594,8 +530,7 @@ footer
         float: left
         margin: 0 1px
 
-    #return-to-top-button-div
-        display: none
+
 
 /******** End of @media screen and (min-width: $break-small) ********/
 
@@ -622,7 +557,7 @@ footer
 
 
     /******************************
-    /* HEADING
+    /* PAGE: INTRODUCTION
     /******************************/
 
     #introduction
@@ -631,50 +566,6 @@ footer
     #logo
         margin: 15px
         width: 120px
-
-
-
-    /******************************
-    /* PAGE: HISTORY, PROFESSIONAL, ACADEMIC, PORTFOLIO, and REFERENCES
-    /******************************/
-
-    .milestone
-        font-size: 1.8vw
-        background-color: $accent-background-color
-        color: $light-text-color
-        padding: 0 0 3px 10px
-        margin: 10px 0
-
-        &:first-of-type
-            margin-left: 30%
-
-        &:nth-of-type(2)
-            margin-left: 25%
-
-        &:nth-of-type(3)
-            margin-left: 20%
-
-        &:nth-of-type(4)
-            margin-left: 15%
-
-        &:nth-of-type(5)
-            margin-left: 10%
-
-        &:nth-of-type(6)
-            margin-left: 5%
-
-    // .history-item-details,
-    // .portfolio-item-details,
-    // .references-item-details
-    //     position: relative
-    //     left: 5%
-    //     max-width: 55%
-
-    // .history-img,
-    // .portfolio-img,
-    // .references-img
-        // max-width: 40%
-        // float: left
 
 
 
@@ -692,10 +583,6 @@ footer
 
 
 /******** End of @media screen and (min-width: $break-large) ********/
-
-@media screen and (min-width: 920px)
-    .milestone
-        font-size: 1.1em
 
 @media screen and (min-width: $content-max-width)
     #main-nav
