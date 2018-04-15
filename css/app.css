@@ -184,7 +184,8 @@ nav {
     display: block; }
     nav a:hover {
       border-bottom: 3px solid #22bcf0;
-      margin-bottom: -3px; }
+      margin-bottom: -3px;
+      text-decoration: none; }
 
 /******** END OF GLOBAL STYLES ********/
 /****************************** */
