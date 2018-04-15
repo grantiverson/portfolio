@@ -252,23 +252,28 @@ section {
 #about-txt {
   overflow: hidden; }
 
+/****************************** */
+/* PAGE: SKILLS */
+/******************************/
 .skills-list {
   display: flex;
-  flex-wrap: wrap; }
+  flex-direction: column;
+  margin: 0 auto; }
 
 .skills-items-container {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   padding: 15px;
   background-color: #fafafa;
-  box-shadow: 2px 4px 10px #aaa; }
+  box-shadow: 2px 4px 10px #aaa;
+  width: 80%; }
 
 .skills-item {
-  margin: 15px 15px 0;
+  margin: 5px 5px 0;
   float: left;
   text-align: center; }
 
 .skills-img {
-  height: 100px; }
+  height: 75px; }
 
 /****************************** */
 /* PAGE: PORTFOLIO */
@@ -419,6 +424,20 @@ footer p {
     text-indent: 1em;
     margin-bottom: 16px; }
   /****************************** */
+  /* PAGE: SKILLS */
+  /******************************/
+  .skills-list {
+    flex-flow: row wrap;
+    align-items: center; }
+  .skills-items-container {
+    margin: 0 15px 40px;
+    padding: 15px;
+    display: inline-block;
+    width: auto;
+    flex-grow: 1; }
+  .skills-item {
+    margin: 15px 15px 0; }
+  /****************************** */
   /* RETURN TO TOP BUTTON */
   /******************************/
   #return-to-top-button-div {
@@ -465,6 +484,17 @@ footer p {
   #logo {
     margin: 15px;
     width: 120px; }
+  /****************************** */
+  /* PAGE: SKILLS */
+  /******************************/
+  .skills-items-container {
+    margin: 0 15px 50px;
+    padding: 15px;
+    display: inline-block; }
+  .skills-item {
+    margin: 15px 15px 0; }
+  .skills-img {
+    height: 100px; }
   /****************************** */
   /* FOOTER */
   /******************************/
