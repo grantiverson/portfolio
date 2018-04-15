@@ -14,8 +14,7 @@ $light-body-color: #fafafa
 $banner-color: #3D4350
 $nav-color: #6e6e6e
 $accent-background-color: #22bcf0
-$active-nav-color: #22bcf0
-$hover-nav-color: #555
+$hover-nav-color: #22bcf0
 
 //Font Colors
 $main-text-color: #abb2bf
@@ -24,7 +23,7 @@ $dark-text-color: #302f2f
 $light-text-color: #fafafa
 
 //Other
-$content-max-width: 1180px
+$content-max-width: 1181px
 
 /******************************
 /* NORMALIZE CSS
@@ -97,7 +96,7 @@ section *
 /******************************/
 
 \:focus
-    outline-color: $active-nav-color
+    outline-color: $hover-nav-color
     outline-width: 3px
 
 /******************************
@@ -210,15 +209,10 @@ header
 
 /******************************
 /* NAVIGATION
-/*    #mini-nav is the nav menu for window resolutions below 480
-/*    #main-nav is the nav menu for window resolutions above 480
 /******************************/
 
-#main-nav,
-#mini-nav
-    display: none
-
 nav
+    display: none
     background-color: $nav-color
     font-size: 1.5em
     padding-bottom: 0.4em
@@ -233,23 +227,9 @@ nav
     a
         display: block
 
-
-
-/******************************
-/* mini-nav
-/*    #main-nav is the nav menu for window resolutions above 480
-/*    #mini-nav is the nav menu for window resolutions below 480
-/******************************/
-
-nav:nth-of-type(2) a
-    &.active
-        border-bottom: 3px solid $active-nav-color
-        margin-bottom: -3px
-
-    &:hover,
-    &:focus
-        border-bottom: 3px solid $hover-nav-color
-        margin-bottom: -3px
+        &:hover
+            border-bottom: 3px solid $hover-nav-color
+            margin-bottom: -3px
 
 
 
@@ -499,28 +479,17 @@ footer
     /* NAVIGATION
     /******************************/
 
-    #nav-button
+    #nav-button,
+    #mini-nav
         display: none
 
-
-
-    /******************************
-    /* main-nav
-    /*    #main-nav is the nav menu for window resolutions above 480
-    /*    #mini-nav is the nav menu for window resolutions below 480
-    /******************************/
-
-    #main-nav
+    nav
+        width: 470px
+        float: right
         font-size: 1em
         display: block
         padding: 0
         z-index: 1
-
-    a.active:not(:hover)
-        background-color: $active-nav-color
-        color: $light-text-color
-
-    nav
 
         ul
 
@@ -538,13 +507,11 @@ footer
                 a
                     padding: 7px 4px 4px
 
-                    &:hover,
-                    &:focus
+                    &:hover
                         background-color: $hover-nav-color !important
                         color: $light-text-color !important
-
-
-
+                        border-bottom: 0
+                        margin-bottom: 0
 
             ul
                 display: none
@@ -685,18 +652,6 @@ footer
 
 
     /******************************
-    /* main-nav
-    /*    #main-nav is the nav menu for window resolutions above 480
-    /*    #mini-nav is the nav menu for window resolutions below 480
-    /******************************/
-
-    #main-nav
-        width: $break-large - 15
-        float: right
-
-
-
-    /******************************
     /* HEADING
     /******************************/
 
@@ -771,3 +726,8 @@ footer
 @media screen and (min-width: 920px)
     .milestone
         font-size: 1.1em
+
+@media screen and (min-width: $content-max-width)
+    #main-nav
+        float: left
+        margin-left: 59.5%
