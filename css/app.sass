@@ -9,7 +9,8 @@ $serif-font-stack: monaco,"Andale Mono",monospace
 //Colors
 $dark-background-color: #282C34
 $light-body-color: #fafafa
-$banner-color: #3D4350
+$light2-body-color: #e0e8f0
+$lighter-dark-background-color: #3D4350
 $nav-color: #6e6e6e
 $accent-background-color: #22bcf0
 $hover-nav-color: #22bcf0
@@ -141,14 +142,11 @@ h5
     font-family: $sans-font-stack
     font-weight: bold
     font-size: 0.9em
-    color: $light-text-color
-    border-bottom: 1px white solid
 
 h6
     font-family: $sans-font-stack
     font-weight: 200
     margin-bottom: 0.2em
-    color: $light-text-color
 
 p
     font-family: $serif-font-stack
@@ -242,10 +240,20 @@ nav
 /* PAGES
 /******************************/
 
+section
+    padding: 150px 15px
+
 .dark-page
     background-color: $dark-background-color
 
     h3,
+    h5,
+    h6
+        color: $light-text-color
+
+    h5
+        border-bottom: 1px solid $light-text-color
+
     p
         color: $main-text-color
 
@@ -253,6 +261,27 @@ nav
     background-color: $light-body-color
 
     h3,
+    h5,
+    h6
+        color: $dark-text-color
+
+    h5
+        border-bottom: 1px solid $dark-text-color
+
+    p
+        color: $dark-text-color
+
+.light2-page
+    background-color: $light2-body-color
+
+    h3,
+    h5,
+    h6
+        color: $dark-text-color
+
+    h5
+        border-bottom: 1px solid $dark-text-color
+
     p
         color: $dark-text-color
 
@@ -289,6 +318,26 @@ nav
 
 #about-txt
     overflow: hidden
+
+.skills-list
+    margin: 150px auto
+    display: flex
+    flex-direction: column
+
+.skills-items-container
+    clear: both
+    margin-bottom: 50px
+    padding: 15px
+    background-color: $light-body-color
+    box-shadow: 2px 4px 10px #aaa
+
+.skills-item
+    margin: 15px 15px 0
+    float: left
+    text-align: center
+
+.skills-img
+    height: 100px
 
 
 
@@ -347,7 +396,7 @@ nav
 /******************************/
 
 .return-to-top-button
-    background-color: $banner-color
+    background-color: $lighter-dark-background-color
     margin: 0 auto
 
 
@@ -470,7 +519,7 @@ footer
     /******************************/
 
     section
-        padding: 150px 75px
+        padding: 150px 25px
 
 
 
@@ -545,6 +594,15 @@ footer
 
     h2
         font-size: 1.2em
+
+
+
+    /******************************
+    /* PAGES
+    /******************************/
+
+    section
+        padding: 150px 75px
 
 
 
