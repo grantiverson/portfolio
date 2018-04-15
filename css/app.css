@@ -194,9 +194,6 @@ nav:nth-of-type(2) a:hover, nav:nth-of-type(2) a:focus {
 /****************************** */
 /* PAGES */
 /******************************/
-main {
-  padding: 0 5%; }
-
 section {
   padding: 10px; }
 
@@ -275,11 +272,6 @@ section {
 /****************************** */
 /* FOOTER */
 /******************************/
-footer {
-  margin: 10px auto 20px;
-  padding: 0 5%;
-  max-width: 920px; }
-
 .return-to-top-button {
   background-color: #3D4350;
   margin: 0 auto; }
@@ -290,11 +282,23 @@ footer {
   #return-to-top-button-div a {
     color: #fafafa; }
 
+footer {
+  margin: 10px 0 20px;
+  width: 100%;
+  text-align: center; }
+
+#social-media-buttons {
+  margin: 20px auto 0; }
+
 footer a img {
-  float: right;
-  margin: 0;
-  display: inline;
-  height: 25px; }
+  margin: 0 5px;
+  height: 44px; }
+
+footer p {
+  text-align: center; }
+
+.vert-bar {
+  display: none; }
 
 /*########################################################################################################################################################################*/
 /*         **************************************** */
@@ -390,13 +394,10 @@ footer a img {
   /* PAGES */
   /******************************/
   section {
-    padding: 10px 20px;
-    clear: both; }
+    padding: 10px 20px; }
   /****************************** */
   /* PAGE: ABOUT */
   /******************************/
-  #about {
-    position: relative; }
   .indent {
     text-indent: 1em;
     margin-bottom: 16px; }
@@ -433,9 +434,15 @@ footer a img {
   /* FOOTER */
   /******************************/
   footer p {
-    font-size: 0.9em; }
+    font-size: 0.9em;
+    float: left; }
   footer a img {
-    height: 20px;
+    height: 44px; }
+  #footer-text {
+    display: inline-block; }
+  .vert-bar {
+    display: inline;
+    float: left;
     margin: 0 1px; }
   #return-to-top-button-div {
     display: none; } }
@@ -507,7 +514,15 @@ footer a img {
   .portfolio-img,
   .references-img {
     max-width: 40%;
-    float: left; } }
+    float: left; }
+  /****************************** */
+  /* FOOTER */
+  /******************************/
+  #social-media-buttons {
+    margin: 20px auto 0; }
+  footer a img {
+    margin: 0;
+    height: 25px; } }
 
 /******** End of @media screen and (min-width: $break-large) ********/
 @media screen and (min-width: 920px) {

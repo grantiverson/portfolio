@@ -245,9 +245,6 @@ nav:nth-of-type(2) a
 /* PAGES
 /******************************/
 
-main
-    padding: 0 5%
-
 section
     padding: 10px
 
@@ -343,11 +340,6 @@ section
 /* FOOTER
 /******************************/
 
-footer
-    margin: 10px auto 20px
-    padding: 0 5%
-    max-width: $page-width
-
 .return-to-top-button
     background-color: $banner-color
     margin: 0 auto
@@ -359,11 +351,24 @@ footer
     a
         color: $light-text-color
 
-footer a img
-    float: right
-    margin: 0
-    display: inline
-    height: 25px
+footer
+    margin: 10px 0 20px
+    width: 100%
+    text-align: center
+
+#social-media-buttons
+    margin: 20px auto 0
+
+footer
+    a img
+        margin: 0 5px
+        height: 44px
+
+    p
+        text-align: center
+
+.vert-bar
+    display: none
 
 
 
@@ -511,16 +516,12 @@ footer a img
 
     section
         padding: 10px 20px
-        clear: both
 
 
 
     /******************************
     /* PAGE: ABOUT
     /******************************/
-
-    #about
-        position: relative
 
     .indent
         text-indent: 1em
@@ -573,10 +574,18 @@ footer a img
     footer
         p
             font-size: 0.9em
+            float: left
 
         a img
-            height: 20px
-            margin: 0 1px
+            height: 44px
+
+    #footer-text
+        display: inline-block
+
+    .vert-bar
+        display: inline
+        float: left
+        margin: 0 1px
 
     #return-to-top-button-div
         display: none
@@ -681,6 +690,19 @@ footer a img
     .references-img
         max-width: 40%
         float: left
+
+
+
+    /******************************
+    /* FOOTER
+    /******************************/
+
+    #social-media-buttons
+        margin: 20px auto 0
+
+    footer a img
+        margin: 0
+        height: 25px
 
 
 
