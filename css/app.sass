@@ -46,7 +46,6 @@ ul,
 li,
 footer,
 header,
-banner,
 nav,
 section
     margin: 0
@@ -189,7 +188,6 @@ strong
 
 /* header that includes the banner */
 header
-    background-color: $banner-color
     position: relative
 
 
@@ -197,11 +195,7 @@ header
     margin: 0.2em
 
 /* banner that includes title and nav menus */
-#banner
-    padding: 0 0.2em
-    height: 149px
-
-#banner-img
+#logo
     float: right
     width: 120px
     margin: 5px 0
@@ -358,16 +352,6 @@ footer a img
 /*########################################################################################################################################################################*/
 
 @media screen and (min-width: $break-small)
-
-    /******************************
-    /* GENERAL
-    /******************************/
-
-    /* banner that includes title and nav menus */
-    #banner
-        padding: 0 5%
-
-
 
     /******************************
     /* TEXT
@@ -578,16 +562,6 @@ footer a img
 /*########################################################################################################################################################################*/
 
 @media screen and (min-width: $break-large)
-
-    /******************************
-    /* HEADING
-    /******************************/
-
-    #banner
-        max-width: $page-width
-        margin: 0 auto
-
-
 
     /******************************
     /* TEXT
