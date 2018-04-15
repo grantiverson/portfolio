@@ -21,4 +21,33 @@ $(document).ready(function() {
         }
     });
 
+    var fadeIn = $('.fade-item');
+
+    $(document).on('scroll', function() {
+        var currScrollPos = $(document).scrollTop();
+
+        fadeIn.each(function() {
+            var elemOffsetBottom = ($(this).offset().top - $(window).height() + 100);
+            if (currScrollPos < elemOffsetBottom) {
+                $(this).css('opacity', 0)
+            }
+            if (currScrollPos > elemOffsetBottom) {
+                $(this).css('opacity', (currScrollPos - elemOffsetBottom)/100)
+            };
+        })
+    })
+
+    var fadeOut = $('.fade-item');
+
+    $(document).on('scroll', function() {
+        var currScrollPos = $(document).scrollTop();
+
+        fadeOut.each(function() {
+            var elemOffsetTop = ($(this).offset().top - 100);
+            if (currScrollPos > elemOffsetTop) {
+                $(this).css('opacity', 1 - (currScrollPos - elemOffsetTop)/100)
+            }
+        })
+    })
+
 });

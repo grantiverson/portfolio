@@ -209,7 +209,8 @@ nav {
 #introduction {
   margin: auto;
   height: 100vh;
-  text-align: center; }
+  text-align: center;
+  padding: 0; }
 
 #introduction-content {
   margin-top: 30vh;
@@ -227,23 +228,16 @@ nav {
 /****************************** */
 /* PAGE: ABOUT */
 /******************************/
-#about {
-  padding: 150px 0; }
-
 #about-txt {
   overflow: hidden; }
 
 /****************************** */
 /* PAGE: PORTFOLIO */
 /******************************/
-#portfolio {
-  padding: 150px 0; }
-
 #portfolio-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  max-width: 800px; }
+  justify-content: center; }
 
 .portfolio-item {
   position: relative;
@@ -275,9 +269,6 @@ nav {
 /****************************** */
 /* PAGE: CONTACT ME */
 /******************************/
-#contact {
-  padding: 150px 0; }
-
 .contact-text {
   color: #22bcf0; }
 
@@ -374,7 +365,7 @@ footer p {
   /* PAGES */
   /******************************/
   section {
-    padding: 10px 20px; }
+    padding: 150px 75px; }
   /****************************** */
   /* PAGE: INTRODUCTION */
   /******************************/
