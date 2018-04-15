@@ -186,19 +186,12 @@ strong
 /* HEADING
 /******************************/
 
-/* header that includes the banner */
 header
     position: relative
 
-
 #nav-button
     margin: 0.2em
-
-/* banner that includes title and nav menus */
-#logo
     float: right
-    width: 120px
-    margin: 5px 0
 
 
 
@@ -257,6 +250,20 @@ main
 section,
 .page
     padding: 10px
+
+
+
+/******************************
+/* PAGE: INTRODUCTION
+/******************************/
+
+#introduction
+    margin: auto auto
+
+#logo
+    margin: 10px 5px 20px
+    float: left
+    width: 30px
 
 
 
@@ -414,11 +421,7 @@ footer a img
     #main-nav
         font-size: 1em
         display: block
-        clear: both
         padding: 0
-        margin:  20px 0 0 0
-        position: relative
-        top: 3px
         z-index: 1
 
     a.active:not(:hover)
@@ -468,6 +471,19 @@ footer a img
                     &:hover > a,
                     &:focus > a
                         color: $light-text-color
+
+
+
+
+
+    /******************************
+    /* HEADING
+    /******************************/
+
+    #logo
+        float: left
+        width: 80px
+        margin: 10px
 
 
 
@@ -572,6 +588,28 @@ footer a img
 
     h2
         font-size: 1.25em
+
+
+
+    /******************************
+    /* main-nav
+    /*    #main-nav is the nav menu for window resolutions above 480
+    /*    #mini-nav is the nav menu for window resolutions below 480
+    /******************************/
+
+    #main-nav
+        width: $break-large - 15
+        float: right
+
+
+
+    /******************************
+    /* HEADING
+    /******************************/
+
+    #logo
+        margin: 15px
+        width: 120px
 
 
 
