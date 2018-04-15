@@ -37,17 +37,17 @@ $(document).ready(function() {
         })
     })
 
-    var fadeOut = $('.fade-item');
-
-    $(document).on('scroll', function() {
-        var currScrollPos = $(document).scrollTop();
-
-        fadeOut.each(function() {
-            var elemOffsetTop = ($(this).offset().top - 100);
-            if (currScrollPos > elemOffsetTop) {
-                $(this).css('opacity', 1 - (currScrollPos - elemOffsetTop)/100)
-            }
-        })
-    })
+    // var fadeOut = $('.fade-item');
+    //
+    // $(document).on('scroll', function() {
+    //     var currScrollPos = $(document).scrollTop();
+    //
+    //     fadeOut.each(function() {
+    //         var elemOffsetTop = ($(this).offset().top - 100);
+    //         if (currScrollPos > elemOffsetTop) {
+    //             $(this).css('opacity', 1 - (currScrollPos - elemOffsetTop)/100)
+    //         }
+    //     })
+    // })
 
 });
