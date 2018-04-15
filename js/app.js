@@ -37,6 +37,20 @@ $(document).ready(function() {
         })
     })
 
+    $(window).resize(function() {
+        var currScrollPos = $(document).scrollTop();
+
+        fadeIn.each(function() {
+            var elemOffsetBottom = ($(this).offset().top - $(window).height() + 100);
+            if (currScrollPos < elemOffsetBottom) {
+                $(this).css('opacity', 0)
+            }
+            if (currScrollPos > elemOffsetBottom) {
+                $(this).css('opacity', (currScrollPos - elemOffsetBottom)/100)
+            };
+        })
+    });
+
     // var fadeOut = $('.fade-item');
     //
     // $(document).on('scroll', function() {
