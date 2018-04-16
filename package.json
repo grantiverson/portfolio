@@ -4,6 +4,7 @@
         "gulp-sass": "latest"
     },
     "dependencies": {
-        "eslint": "^4.19.1"
+        "eslint": "^4.19.1",
+        "gulp-eslint": "^4.0.2"
     }
 }
