@@ -2,5 +2,8 @@
     "devDependencies": {
         "gulp": "latest",
         "gulp-sass": "latest"
+    },
+    "dependencies": {
+        "eslint": "^4.19.1"
     }
 }
