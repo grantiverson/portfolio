@@ -3,14 +3,14 @@ $break-small: 481px
 $break-large: 701px
 
 //Fonts
-$sans-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif
-$serif-font-stack: monaco,"Andale Mono",monospace
+$sans-font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif
+$serif-font-stack: monaco, 'Andale Mono', monospace
 
 //Colors
-$dark-background-color: #282C34
+$dark-background-color: #282c34
 $light-body-color: #fafafa
 $light2-body-color: #e0e8f0
-$lighter-dark-background-color: #3D4350
+$lighter-dark-background-color: #3d4350
 $nav-color: #6e6e6e
 $accent-background-color: #22bcf0
 $hover-nav-color: #22bcf0
@@ -24,9 +24,9 @@ $light-text-color: #fafafa
 //Other
 $content-max-width: 1181px
 
-/******************************
-/* NORMALIZE CSS
-/******************************/
+//******************************
+//* NORMALIZE CSS
+//******************************/
 
 html,
 body,
@@ -47,20 +47,15 @@ footer,
 header,
 nav,
 section
-    margin: 0
-    padding: 0
-    border: 0
-    font-size: 100%
-    text-decoration: none
-    font: inherit
+  border: 0
+  font: inherit
+  font-size: 100%
+  margin: 0
+  padding: 0
+  text-decoration: none
 
 html
-    font-family: sans-serif
-    -ms-text-size-adjust: 100%
-    -webkit-text-size-adjust: 100%
-
-body
-    margin: 0
+  font-family: sans-serif
 
 article,
 aside,
@@ -75,609 +70,609 @@ menu,
 nav,
 section,
 summary
-    display: block
-
-a
-    background-color: transparent
+  display: block
 
 img
-    max-width: 100%
-    border: 0
+  max-width: 100%
 
 
-/******************************
-/* GLOBAL STYLES
-/******************************/
+//******************************
+//* GLOBAL STYLES
+//******************************/
 
 body
-    background-color: $dark-background-color
+  background-color: $dark-background-color
+  margin: 0
 
 // Sets page content width
 section *
-        margin: 0 auto
-        max-width: $content-max-width
+  margin: 0 auto
+  max-width: $content-max-width
 
-/******************************
-/* ACCESSABILITY
-/******************************/
+//******************************
+//* ACCESSABILITY
+//******************************/
 
 \:focus
-    outline-color: $hover-nav-color
-    outline-width: 3px
+  outline-color: $hover-nav-color
+  outline-width: 3px
 
-/******************************
-/* TEXT
-/******************************/
+//******************************
+//* TEXT
+//******************************/
 
 h1
-    margin: 0 0 0.2em
-    padding-top: 0.4em
-    font-family: $serif-font-stack
-    font-weight: 100
-    font-size: 1.2em
-    color: $accent-color
+  color: $accent-color
+  font-family: $serif-font-stack
+  font-size: 1.2em
+  font-weight: 100
+  margin: 0 0 .2em
+  padding-top: .4em
 
 h2
-    font-family: $serif-font-stack
-    font-weight: 100
-    font-size: 0.7em
-    color: $light-text-color
-    margin-left: 2em
+  color: $light-text-color
+  font-family: $serif-font-stack
+  font-size: .7em
+  font-weight: 100
+  margin-left: 2em
 
 h3
-    font-size: 1.6em
-    font-family: $serif-font-stack
-    text-indent: 0.65em
-    margin-bottom: 2.5em
-    text-align: center
+  font-family: $serif-font-stack
+  font-size: 1.6em
+  margin-bottom: 2.5em
+  text-align: center
+  text-indent: .65em
 
 h4
-    font-family: $sans-font-stack
-    font-weight: bold
-    font-size: 1em
-    margin-top: 0.2em
-    color: $accent-color
+  color: $accent-color
+  font-family: $sans-font-stack
+  font-size: 1em
+  font-weight: bold
+  margin-top: .2em
 
 h5
-    font-family: $sans-font-stack
-    font-weight: bold
-    font-size: 0.9em
+  font-family: $sans-font-stack
+  font-size: .9em
+  font-weight: bold
 
 h6
-    font-family: $sans-font-stack
-    font-weight: 200
-    margin-bottom: 0.2em
+  font-family: $sans-font-stack
+  font-weight: 200
+  margin-bottom: .2em
 
 p
-    font-family: $serif-font-stack
-    font-size: 1em
-    margin-bottom: 0.2em
-    color: $main-text-color
+  color: $main-text-color
+  font-family: $serif-font-stack
+  font-size: 1em
+  margin-bottom: .2em
 
 a
-    color: inherit
+  background-color: transparent
+  color: inherit
 
-    &:hover
-        text-decoration: underline $accent-color
+  &:hover
+    text-decoration: underline $accent-color
 
 ul
-    list-style: none
-    color: $dark-text-color
+  color: $dark-text-color
+  list-style: none
 
 strong
-    background-color: $accent-background-color
-    color: $dark-text-color
-    padding: 0 2px 1px 2px
-    border-radius: 3px
-    // box-shadow: 2px 1px 1px #aaa
+  background-color: $accent-background-color
+  border-radius: 3px
+  color: $dark-text-color
+  padding: 0 2px 1px
+  // box-shadow: 2px 1px 1px #aaa
 
 
 
-/******************************
-/* BUTTONS
-/******************************/
+//******************************
+//* BUTTONS
+//******************************/
 .button
-    display: block
-    margin: 0 auto
-    color: $dark-text-color
-    font-family: $sans-font-stack
-    font-weight: 200
-    text-align: center
-    font-size: 1.5em
-    padding: 0.3em 0.2em
-    margin-top: 0.2em
-    background-color: $accent-background-color
+  background-color: $accent-background-color
+  color: $dark-text-color
+  display: block
+  font-family: $sans-font-stack
+  font-size: 1.5em
+  font-weight: 200
+  margin: 0 auto
+  margin-top: .2em
+  padding: .3em .2em
+  text-align: center
 
 
 
-/******************************
-/* HEADING
-/******************************/
+//******************************
+//* HEADING
+//******************************/
 
 header
-    position: relative
+  position: relative
 
 
 
-/******************************
-/* NAVIGATION
-/******************************/
+//******************************
+//* NAVIGATION
+//******************************/
 
 #nav-button
-    margin: 0.2em
-    position: absolute
-    top: 0
-    right: 0
+  margin: .2em
+  position: absolute
+  right: 0
+  top: 0
 
 nav
-    display: none
-    font-size: 1.5em
-    padding-bottom: 0.4em
+  display: none
+  font-size: 1.5em
+  padding-bottom: .4em
 
-    ul
-        list-style-type: none
-        margin-left: 0
+  ul
+    list-style-type: none
+    margin-left: 0
 
-        li
-            padding: 0.4em 0.4em 0 0.4em
+    li
+      padding: .4em .4em 0
 
-            a
-                color: $main-text-color
-                display: block
+      a
+        color: $main-text-color
+        display: block
 
-                &:hover
-                    border-bottom: 3px solid $hover-nav-color
-                    margin-bottom: -3px
-                    text-decoration: none
-
-
-
-/******** END OF GLOBAL STYLES ********/
+        &:hover
+          border-bottom: 3px solid $hover-nav-color
+          margin-bottom: -3px
+          text-decoration: none
 
 
 
-/******************************
-/* PAGES
-/******************************/
+//******** END OF GLOBAL STYLES ********/
+
+
+
+//******************************
+//* PAGES
+//******************************/
 
 section
-    padding: 150px 15px
+  padding: 150px 15px
 
 .dark-page
-    background-color: $dark-background-color
+  background-color: $dark-background-color
 
-    h3,
-    h5,
-    h6
-        color: $light-text-color
+  h3,
+  h5,
+  h6
+    color: $light-text-color
 
-    h5
-        border-bottom: 1px solid $light-text-color
+  h5
+    border-bottom: 1px solid $light-text-color
 
-    p
-        color: $main-text-color
+  p
+    color: $main-text-color
 
 .light-page
-    background-color: $light-body-color
+  background-color: $light-body-color
 
-    h3,
-    h5,
-    h6
-        color: $dark-text-color
+  h3,
+  h5,
+  h6
+    color: $dark-text-color
 
-    h5
-        border-bottom: 1px solid $dark-text-color
+  h5
+    border-bottom: 1px solid $dark-text-color
 
-    p
-        color: $dark-text-color
+  p
+    color: $dark-text-color
 
 .light2-page
-    background-color: $light2-body-color
+  background-color: $light2-body-color
 
-    h3,
-    h5,
-    h6
-        color: $dark-text-color
+  h3,
+  h5,
+  h6
+    color: $dark-text-color
 
-    h5
-        border-bottom: 1px solid $dark-text-color
+  h5
+    border-bottom: 1px solid $dark-text-color
 
-    p
-        color: $dark-text-color
+  p
+    color: $dark-text-color
 
 
 
-/******************************
-/* PAGE: INTRODUCTION
-/******************************/
+//******************************
+//* PAGE: INTRODUCTION
+//******************************/
 
 #introduction
-    margin: auto
-    height: 100vh
-    text-align: center
-    padding: 0
+  height: 100vh
+  margin: auto
+  padding: 0
+  text-align: center
 
 #introduction-content
-    margin-top: 30vh
-    display: inline-block
+  display: inline-block
+  margin-top: 30vh
 
 #introduction-text
-    display: inline-block
-    text-align: left
+  display: inline-block
+  text-align: left
 
 #logo
-    margin: 10px 5px 20px
-    float: left
-    width: 30px
+  float: left
+  margin: 10px 5px 20px
+  width: 30px
 
 
 
-/******************************
-/* PAGE: ABOUT
-/******************************/
+//******************************
+//* PAGE: ABOUT
+//******************************/
 
 #about-txt
-    overflow: hidden
+  overflow: hidden
 
 
 
-/******************************
-/* PAGE: SKILLS
-/******************************/
+//******************************
+//* PAGE: SKILLS
+//******************************/
 
 .skills-list
-    display: flex
-    flex-direction: column
-    margin: 0 auto
+  display: flex
+  flex-direction: column
+  margin: 0 auto
 
 .skills-items-container
-    margin-bottom: 30px
-    padding: 15px
-    background-color: $light-body-color
-    box-shadow: 2px 4px 10px #aaa
-    width: 80%
+  background-color: $light-body-color
+  box-shadow: 2px 4px 10px #aaa
+  margin-bottom: 30px
+  padding: 15px
+  width: 80%
 
 .skills-item
-    margin: 5px 5px 0
-    float: left
-    text-align: center
+  float: left
+  margin: 5px 5px 0
+  text-align: center
 
 .skills-img
-    height: 75px
+  height: 75px
 
 
 
-/******************************
-/* PAGE: PROJECTS
-/******************************/
+//******************************
+//* PAGE: PROJECTS
+//******************************/
 
 #projects-container
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
 
 .projects-item
-    position: relative
-    margin: 5px
-    background-color: $dark-background-color
+  background-color: $dark-background-color
+  margin: 5px
+  position: relative
 
-    &:hover
-        .projects-img
-            opacity: 0.3
+  &:hover
+    .projects-img
+      opacity: .3
 
-        .projects-item-details
-            opacity: 1
+    .projects-item-details
+      opacity: 1
 
 .projects-img
-    display: block
-    max-width: 380px
-    width: auto
-    height: auto
-    transition: .5s ease
+  display: block
+  height: auto
+  max-width: 380px
+  transition: .5s ease
+  width: auto
 
 .projects-item-details
-    width: 100%
-    position: absolute
-    top: 50%
-    left: 50%
-    text-align: center
-    opacity: 0
-    transition: .5s ease
-    transform: translate(-50%, -50%)
-    -ms-transform: translate(-50%, -50%)
+  left: 50%
+  opacity: 0
+  position: absolute
+  text-align: center
+  top: 50%
+  transform: translate(-50%, -50%)
+  transition: .5s ease
+  width: 100%
 
 
 
-/******************************
-/* PAGE: CONTACT ME
-/******************************/
+//******************************
+//* PAGE: CONTACT ME
+//******************************/
 
 .contact-text
-    color: $accent-color
+  color: $accent-color
 
 
 
-/******************************
-/* RETURN TO TOP BUTTON
-/******************************/
+//******************************
+//* RETURN TO TOP BUTTON
+//******************************/
 
 .return-to-top-button
-    background-color: $lighter-dark-background-color
-    margin: 0 auto
+  background-color: $lighter-dark-background-color
+  margin: 0 auto
 
 
 
 
-/******************************
-/* FOOTER
-/******************************/
+//******************************
+//* FOOTER
+//******************************/
 
 #return-to-top-button-div
-    background-color: $nav-color
-    padding: 10px
+  background-color: $nav-color
+  padding: 10px
 
-    a
-        color: $light-text-color
-
-footer
-    margin: 10px 0 20px
-    width: 100%
-    text-align: center
+  a
+    color: $light-text-color
 
 #social-media-buttons
-    margin: 20px auto 0
+  margin: 20px auto 0
 
 footer
-    a img
-        margin: 0 5px
-        height: 44px
+  margin: 10px 0 20px
+  text-align: center
+  width: 100%
 
-    p
-        text-align: center
+  a
+    img
+      height: 44px
+      margin: 0 5px
+
+  p
+    text-align: center
 
 .vert-bar
-    display: none
+  display: none
 
 
 
-/*########################################################################################################################################################################*/
-/*         ****************************************
-/*         Screens with higher resolution than 480px
-/*         ****************************************/
-/*########################################################################################################################################################################*/
+//*########################################################################################################################################################################*/
+//*     ****************************************
+//*     Screens with higher resolution than 480px
+//*     ****************************************/
+//*########################################################################################################################################################################*/
 
 @media screen and (min-width: $break-small)
 
-    /******************************
-    /* TEXT
-    /******************************/
+  //******************************
+  //* TEXT
+  //******************************/
 
-    h1
-        font-size: 1.8em
+  h1
+    font-size: 1.8em
 
-    h2
-        font-size: 0.8em
-        margin-left: 2em
+  h2
+    font-size: .8em
+    margin-left: 2em
 
-    h3
-        font-size: 1.9em
+  h3
+    font-size: 1.9em
 
-    h4
-        font-size: 1.4em
+  h4
+    font-size: 1.4em
 
-    h5
-        font-size: 1.25em
+  h5
+    font-size: 1.25em
 
-    h6
-        font-size: 1em
+  h6
+    font-size: 1em
 
-    p
-        font-size: 1.1em
-
-
-
-    /******************************
-    /* BUTTONS
-    /******************************/
-
-    .button
-        display: block
-        margin-left: auto
-        margin-right: auto
-        font-size: 1em
-        padding: 10px 10px
-        width: 200px
+  p
+    font-size: 1.1em
 
 
 
-    /******************************
-    /* NAVIGATION
-    /******************************/
+  //******************************
+  //* BUTTONS
+  //******************************/
 
-    #nav-button,
-    #mini-nav
-        display: none
+  .button
+    display: block
+    font-size: 1em
+    margin-left: auto
+    margin-right: auto
+    padding: 10px
+    width: 200px
 
-    nav
-        width: 470px
-        float: right
-        font-size: 1em
-        display: block
+
+
+  //******************************
+  //* NAVIGATION
+  //******************************/
+
+  #nav-button,
+  #mini-nav
+    display: none
+
+  nav
+    display: block
+    float: right
+    font-size: 1em
+    padding: 0
+    width: 470px
+    z-index: 1
+
+    ul
+
+      li
+        display: inline-block
+        margin-right: -4px
         padding: 0
-        z-index: 1
+        text-align: center
+        width: 25%
 
-        ul
-
-            li
-                display: inline-block
-                margin-right: -4px
-                padding: 0
-                width: 25%
-                text-align: center
-
-                a
-                    padding: 7px 4px 4px
+        a
+          padding: 7px 4px 4px
 
 
 
-    /******************************
-    /* PAGES
-    /******************************/
+  //******************************
+  //* PAGES
+  //******************************/
 
-    section
-        padding: 150px 25px
-
-
-
-    /******************************
-    /* PAGE: INTRODUCTION
-    /******************************/
-
-    #logo
-        float: left
-        width: 80px
-        margin: 10px
+  section
+    padding: 150px 25px
 
 
 
-    /******************************
-    /* PAGE: ABOUT
-    /******************************/
+  //******************************
+  //* PAGE: INTRODUCTION
+  //******************************/
 
-    .indent
-        text-indent: 1em
-        margin-bottom: 16px
-
-
-
-    /******************************
-    /* PAGE: SKILLS
-    /******************************/
-
-    .skills-list
-        flex-flow: row wrap
-        align-items: center
-
-    .skills-items-container
-        margin: 0 15px 40px
-        padding: 15px
-        display: inline-block
-        width: auto
-        flex-grow: 1
-
-    .skills-item
-        margin: 15px 15px 0
+  #logo
+    float: left
+    margin: 10px
+    width: 80px
 
 
 
-    /******************************
-    /* RETURN TO TOP BUTTON
-    /******************************/
+  //******************************
+  //* PAGE: ABOUT
+  //******************************/
 
-    #return-to-top-button-div
-        display: none
-
-    /******************************
-    /* FOOTER
-    /******************************/
-
-    footer
-        p
-            font-size: 0.9em
-            float: left
-
-        a img
-            height: 44px
-
-    #footer-text
-        display: inline-block
-
-    .vert-bar
-        display: inline
-        float: left
-        margin: 0 1px
+  .indent
+    margin-bottom: 16px
+    text-indent: 1em
 
 
 
-/******** End of @media screen and (min-width: $break-small) ********/
+  //******************************
+  //* PAGE: SKILLS
+  //******************************/
+
+  .skills-list
+    align-items: center
+    flex-flow: row wrap
+
+  .skills-items-container
+    display: inline-block
+    flex-grow: 1
+    margin: 0 15px 40px
+    padding: 15px
+    width: auto
+
+  .skills-item
+    margin: 15px 15px 0
 
 
 
-/*########################################################################################################################################################################*/
-/*         *****************************************
-/*         Screens with higher resolution than 701 px
-/*         *****************************************/
-/*########################################################################################################################################################################*/
+  //******************************
+  //* RETURN TO TOP BUTTON
+  //******************************/
+
+  #return-to-top-button-div
+    display: none
+
+  //******************************
+  //* FOOTER
+  //******************************/
+
+  footer
+    p
+      float: left
+      font-size: .9em
+
+    a
+      img
+        height: 44px
+
+  #footer-text
+    display: inline-block
+
+  .vert-bar
+    display: inline
+    float: left
+    margin: 0 1px
+
+
+
+//******** End of @media screen and (min-width: $break-small) ********/
+
+
+
+//*########################################################################################################################################################################*/
+//*     *****************************************
+//*     Screens with higher resolution than 701 px
+//*     *****************************************/
+//*########################################################################################################################################################################*/
 
 @media screen and (min-width: $break-large)
 
-    /******************************
-    /* TEXT
-    /******************************/
+  //******************************
+  //* TEXT
+  //******************************/
 
-    h1
-        font-size: 2.7em
+  h1
+    font-size: 2.7em
 
-    h2
-        font-size: 1.2em
-
-
-
-    /******************************
-    /* PAGES
-    /******************************/
-
-    section
-        padding: 150px 75px
+  h2
+    font-size: 1.2em
 
 
 
-    /******************************
-    /* PAGE: INTRODUCTION
-    /******************************/
+  //******************************
+  //* PAGES
+  //******************************/
 
-    #introduction
-        width: 570px
-
-    #logo
-        margin: 15px
-        width: 120px
+  section
+    padding: 150px 75px
 
 
 
-    /******************************
-    /* PAGE: SKILLS
-    /******************************/
+  //******************************
+  //* PAGE: INTRODUCTION
+  //******************************/
 
-    .skills-items-container
-        margin: 0 15px 50px
-        padding: 15px
-        display: inline-block
+  #introduction
+    width: 570px
 
-    .skills-item
-        margin: 15px 15px 0
-
-    .skills-img
-        height: 100px
+  #logo
+    margin: 15px
+    width: 120px
 
 
 
-    /******************************
-    /* FOOTER
-    /******************************/
+  //******************************
+  //* PAGE: SKILLS
+  //******************************/
 
-    #social-media-buttons
-        margin: 20px auto 0
+  .skills-items-container
+    display: inline-block
+    margin: 0 15px 50px
+    padding: 15px
 
-    footer a img
-        margin: 0
+  .skills-item
+    margin: 15px 15px 0
+
+  .skills-img
+    height: 100px
+
+
+
+  //******************************
+  //* FOOTER
+  //******************************/
+
+  #social-media-buttons
+    margin: 20px auto 0
+
+  footer
+    a
+      img
         height: 25px
+        margin: 0
 
 
 
-/******** End of @media screen and (min-width: $break-large) ********/
+//******** End of @media screen and (min-width: $break-large) ********/
 
 @media screen and (min-width: $content-max-width)
-    #main-nav
-        float: left
-        margin-left: 59.5%
+  #main-nav
+    float: left
+    margin-left: 59.5%
