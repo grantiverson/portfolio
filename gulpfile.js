@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     eslint = require('gulp-eslint');
 
-var sassSources = ['css/*.sass'],
+var sassSources = ['css/*.sass'];
     // jsSources = ['js/*.js'];
 
 gulp.task('sass', function() {
