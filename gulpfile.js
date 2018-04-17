@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+let gulp = require('gulp'),
     gutil = require('gulp-util'),
     sass = require('gulp-sass'),
     coffee = require('gulp-coffee'),
@@ -8,9 +8,10 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     babel = require('gulp-babel'),
     sourcemaps = require('gulp-sourcemaps'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    imageminPngquant = require('imagemin-pngquant');
 
-var coffeeSources = ['build/js/hello.coffee'],
+let coffeeSources = ['build/js/hello.coffee'],
     scriptsSources = ['build/js/*.js'],
     stylesSources = ['build/css/*.sass'],
     htmlSources = ['build/*.html'],
@@ -23,10 +24,20 @@ gulp.task('copy-html', function() {
     .pipe(connect.reload())
 });
 
-gulp.task('default', () =>
-  gulp.src('imagesSources')
-    .pipe(imagemin())
-    .pipe(gulp.dest(outputDir + '/img')))
+// gulp.task('default', function() {
+//   gulp.src(imagesSources)
+//     .pipe(imagemin())
+//     .pipe(gulp.dest(outputDir + '/img'))
+// });
+
+gulp.task('default', function() {
+  return gulp.src(imagesSources)
+    .pipe(imagemin({
+      progressive: true,
+      use: [pngquant()]
+    }))
+    .pipe(gulp.dest(outputDir + '/img'));
+});
 
 gulp.task('copy-images', function() {
   gulp.src(imagesSources)
@@ -83,7 +94,7 @@ gulp.task('scripts-dist', function() {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(outputDir + '/js'))
     .pipe(connect.reload())
-})
+});
 
 gulp.task('watch', function() {
   gulp.watch(htmlSources, ['html']);
@@ -100,7 +111,7 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('lint', () => {
+gulp.task('lint', function() {
   // ESLint ignores files with "node_modules" paths.
   // So, it's best to have gulp ignore the directory as well.
   // Also, Be sure to return the stream from the task;
