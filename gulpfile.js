@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     uglify = require('gulp-uglify'),
     eslint = require('gulp-eslint'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    babel = require('gulp-babel');
 
 var coffeeSources = ['build/js/hello.coffee'],
     scriptsSources = ['build/js/*.js'],
@@ -47,6 +48,7 @@ gulp.task('coffee', function() {
 
 gulp.task('scripts', function() {
   gulp.src(scriptsSources)
+    .pipe(babel())
     .pipe(concat('app.js'))
     .pipe(gulp.dest(outputDir + '/js'))
     .pipe(connect.reload())
@@ -54,8 +56,9 @@ gulp.task('scripts', function() {
 
 gulp.task('scripts-dist', function() {
   gulp.src(scriptsSources)
-    .pipe(uglify())
+    .pipe(babel())
     .pipe(concat('app.js'))
+    .pipe(uglify())
     .pipe(gulp.dest(outputDir + '/js'))
     .pipe(connect.reload())
 })
