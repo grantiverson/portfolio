@@ -30,7 +30,7 @@ gulp.task('copy-work-dir', function() {
 
 gulp.task('sass', function() {
   gulp.src(sassSources)
-    .pipe(sass({style: 'compressed'}))
+    .pipe(sass({outputStyle: 'compressed'}))
       .on('error', gutil.log)
     .pipe(gulp.dest(outputDir + '/css'))
     .pipe(connect.reload())
