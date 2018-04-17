@@ -6,18 +6,24 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat');
 
-var coffeeSources = ['js/hello.coffee'],
-    jsSources = ['js/*.js'],
-    sassSources = ['css/*.sass'],
-    htmlSources = ['*.html'],
-    imgSources = ['img/*'],
+var coffeeSources = ['build/js/hello.coffee'],
+    jsSources = ['build/js/*.js'],
+    sassSources = ['build/css/*.sass'],
+    htmlSources = ['build/*.html'],
+    imgSources = ['build/img/*'],
     outputDir = 'dist';
 
-gulp.task('copy', function() {
+gulp.task('copy-html', function() {
   gulp.src(htmlSources)
     .pipe(gulp.dest(outputDir))
+});
+
+gulp.task('copy-img', function() {
   gulp.src(imgSources)
     .pipe(gulp.dest(outputDir + '/img'))
+});
+
+gulp.task('copy-work-dir', function() {
   gulp.src('work/**/*')
     .pipe(gulp.dest(outputDir + '/work'))
 });
@@ -82,4 +88,4 @@ gulp.task('html', function() {
 //     .pipe(eslint.failAfterError());
 // });
 
-gulp.task('default', ['html', 'coffee', 'js', 'sass', 'connect', 'watch', 'copy']);
+gulp.task('default', ['html', 'coffee', 'js', 'sass', 'connect', 'watch', 'copy-html', 'copy-img', 'copy-work-dir']);
