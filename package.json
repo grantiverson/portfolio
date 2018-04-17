@@ -8,6 +8,7 @@
     "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-install": "2.1.0",
+        "eslint-config-jquery": "^1.0.1",
         "gulp": "latest",
         "gulp-coffee": "^3.0.2",
         "gulp-concat": "^2.6.1",

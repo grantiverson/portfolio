@@ -4,6 +4,7 @@ module.exports = {
         "es6": true
     },
     "extends": "eslint:recommended",
+    "extends": "jquery",
     "rules": {
         "accessor-pairs": "error",
         "array-bracket-newline": "error",
