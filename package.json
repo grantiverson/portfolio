@@ -1,9 +1,13 @@
 {
     "dependencies": {
         "eslint": "^4.19.1",
-        "gulp-eslint": "^4.0.2"
+        "gulp-babel": "^7.0.1",
+        "gulp-eslint": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.4"
     },
     "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-install": "2.1.0",
         "gulp": "latest",
         "gulp-coffee": "^3.0.2",
         "gulp-concat": "^2.6.1",

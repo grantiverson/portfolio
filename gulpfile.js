@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     eslint = require('gulp-eslint'),
     concat = require('gulp-concat'),
-    babel = require('gulp-babel');
+    babel = require('gulp-babel'),
+    sourcemaps = require('gulp-sourcemaps');
 
 var coffeeSources = ['build/js/hello.coffee'],
     scriptsSources = ['build/js/*.js'],
@@ -33,8 +34,10 @@ gulp.task('copy-work-dir', function() {
 
 gulp.task('styles', function() {
   gulp.src(stylesSources)
+    .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}))
       .on('error', gutil.log)
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(outputDir + '/css'))
     .pipe(connect.reload())
 });
@@ -57,8 +60,10 @@ gulp.task('scripts', function() {
 gulp.task('scripts-dist', function() {
   gulp.src(scriptsSources)
     .pipe(babel())
+    .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
     .pipe(uglify())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(outputDir + '/js'))
     .pipe(connect.reload())
 })
@@ -107,7 +112,6 @@ gulp.task('default', [
   'copy-html',
   'copy-images',
   'styles',
-  'lint',
   'scripts',
   'coffee',
   'connect',
