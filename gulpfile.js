@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     eslint = require('gulp-eslint'),
     concat = require('gulp-concat'),
     babel = require('gulp-babel'),
-    sourcemaps = require('gulp-sourcemaps');
+    sourcemaps = require('gulp-sourcemaps'),
+    imagemin = require('gulp-imagemin');
 
 var coffeeSources = ['build/js/hello.coffee'],
     scriptsSources = ['build/js/*.js'],
@@ -22,8 +23,24 @@ gulp.task('copy-html', function() {
     .pipe(connect.reload())
 });
 
+gulp.task('default', () =>
+  gulp.src('imagesSources')
+    .pipe(imagemin())
+    .pipe(gulp.dest(outputDir + '/img')))
+
 gulp.task('copy-images', function() {
   gulp.src(imagesSources)
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.svgo({
+        plugins: [
+          {removeViewBox: true},
+          {cleanupIDs: false}
+        ]
+      })
+    ]))
     .pipe(gulp.dest(outputDir + '/img'))
 });
 
