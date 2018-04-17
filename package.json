@@ -1,10 +1,15 @@
 {
-    "devDependencies": {
-        "gulp": "latest",
-        "gulp-sass": "latest"
-    },
     "dependencies": {
         "eslint": "^4.19.1",
         "gulp-eslint": "^4.0.2"
+    },
+    "devDependencies": {
+        "gulp": "latest",
+        "gulp-coffee": "^3.0.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-connect": "^5.5.0",
+        "gulp-sass": "latest",
+        "gulp-uglify": "^3.0.0",
+        "gulp-until": "latest"
     }
 }

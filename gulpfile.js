@@ -1,38 +1,85 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     sass = require('gulp-sass'),
-    eslint = require('gulp-eslint');
+    coffee = require('gulp-coffee'),
+    connect = require('gulp-connect'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat');
 
-var sassSources = ['css/*.sass'];
-    // jsSources = ['js/*.js'];
+var coffeeSources = ['js/hello.coffee'],
+    jsSources = ['js/*.js'],
+    sassSources = ['css/*.sass'],
+    htmlSources = ['*.html'],
+    imgSources = ['img/*'],
+    outputDir = 'dist';
+
+gulp.task('copy', function() {
+  gulp.src(htmlSources)
+    .pipe(gulp.dest(outputDir))
+  gulp.src(imgSources)
+    .pipe(gulp.dest(outputDir + '/img'))
+  gulp.src('work/**/*')
+    .pipe(gulp.dest(outputDir + '/work'))
+});
 
 gulp.task('sass', function() {
-    gulp.src(sassSources)
-    .pipe(sass({style: 'expanded'}))
-        .on('error', gutil.log)
-    .pipe(gulp.dest('css'))
+  gulp.src(sassSources)
+    .pipe(sass({style: 'compressed'}))
+      .on('error', gutil.log)
+    .pipe(gulp.dest(outputDir + '/css'))
+    .pipe(connect.reload())
+});
+
+gulp.task('coffee', function() {
+  gulp.src(coffeeSources)
+    .pipe(coffee({bare: true})
+      .on('error', gutil.log))
+    .pipe(gulp.dest(outputDir + '/js'))
+});
+
+gulp.task('js', function() {
+  gulp.src(jsSources)
+    .pipe(uglify())
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest(outputDir + '/js'))
+    .pipe(connect.reload())
 });
 
 gulp.task('watch', function() {
-    gulp.watch(sassSources, ['sass']);
-    // gulp.watch(jsSources, ['lint']);
+  gulp.watch(coffeeSources, ['coffee']);
+  gulp.watch(jsSources, ['js']);
+  // gulp.watch(jsSources, ['lint']);
+  gulp.watch(sassSources, ['sass']);
+  gulp.watch(htmlSources, ['html']);
+});
+
+gulp.task('connect', function() {
+  connect.server({
+    root: '.',
+    livereload: true
+  });
+});
+
+gulp.task('html', function() {
+  gulp.src(htmlSources)
+    .pipe(connect.reload())
 });
 
 // gulp.task('lint', () => {
-//     // ESLint ignores files with "node_modules" paths.
-//     // So, it's best to have gulp ignore the directory as well.
-//     // Also, Be sure to return the stream from the task;
-//     // Otherwise, the task may end before the stream has finished.
-//     return gulp.src(['**/*.js','!node_modules/**'])
-//         // eslint() attaches the lint output to the "eslint" property
-//         // of the file object so it can be used by other modules.
-//         .pipe(eslint())
-//         // eslint.format() outputs the lint results to the console.
-//         // Alternatively use eslint.formatEach() (see Docs).
-//         .pipe(eslint.format())
-//         // To have the process exit with an error code (1) on
-//         // lint error, return the stream and pipe to failAfterError last.
-//         .pipe(eslint.failAfterError());
+//   // ESLint ignores files with "node_modules" paths.
+//   // So, it's best to have gulp ignore the directory as well.
+//   // Also, Be sure to return the stream from the task;
+//   // Otherwise, the task may end before the stream has finished.
+//   return gulp.src(['**/*.js','!node_modules/**'])
+//     // eslint() attaches the lint output to the "eslint" property
+//     // of the file object so it can be used by other modules.
+//     .pipe(eslint())
+//     // eslint.format() outputs the lint results to the console.
+//     // Alternatively use eslint.formatEach() (see Docs).
+//     .pipe(eslint.format())
+//     // To have the process exit with an error code (1) on
+//     // lint error, return the stream and pipe to failAfterError last.
+//     .pipe(eslint.failAfterError());
 // });
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['html', 'coffee', 'js', 'sass', 'connect', 'watch', 'copy']);
