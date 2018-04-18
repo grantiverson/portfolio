@@ -25,18 +25,16 @@ Planet.prototype = Object.create(Thing.prototype);
 Planet.prototype.update = function() {
   this.x = cos(earthDegree / this.degree) * this.orbitWidth + 300;
   this.y = -1 * sin(earthDegree / this.degree) * this.orbitHeight + 300;
+
+  if (this === moon) {
+    this.x += earth.x - 300;
+    this.y += earth.y - 300;  }
 };
 
 Planet.prototype.draw = function() {
   this.update();
   fill(this.planetColor[0], this.planetColor[1], this.planetColor[2]);
   ellipse(this.x, this.y, this.planetRadius, this.planetRadius);
-};
-
-Planet.prototype.recenter = function() {
-  this.draw();
-  this.x += earth.x - 300;
-  this.y += earth.y - 300;
 };
 
 var RingedPlanet = function(planetColor, planetRadius, x, y) {
@@ -74,7 +72,7 @@ var drawThings = function() {
   mercury.draw();
   venus.draw();
   earth.draw();
-  moon.recenter();
+  moon.draw();
   mars.draw();
   jupiter.draw();
   saturn.draw();
@@ -83,21 +81,22 @@ var drawThings = function() {
 };
 
 // var planetName = new Planet(earthDegreeDivisor, planetColor, orbitHeight, planetRadius);
-var mercury = new Planet(.24, [167, 166, 171], 10, 3.5);
-var venus = new Planet(.625, [204, 181, 88], 12, 6);
-var earth = new Planet(1, [99, 54, 224], 15, 6);
-var moon = new Planet(.077, [255, 255, 255], 3.5, 2);
-var mars = new Planet(1.9, [230, 18, 18], 17, 5);
-var jupiter = new Planet(12, [186, 121, 52], 25, 15);
-var saturn = new RingedPlanet(29, [214, 180, 92], 30, 10);
-var uranus = new Planet(84, [17, 169, 240], 37, 8);
-var neptune = new Planet(165, [12, 31, 156], 45, 7);
+var mercury = new Planet(.24, [167, 166, 171], 10, 5);
+var venus = new Planet(.625, [204, 181, 88], 12, 8);
+var earth = new Planet(1, [99, 54, 224], 15, 8);
+var moon = new Planet(.077, [255, 255, 255], 3.5, 3);
+var mars = new Planet(1.9, [230, 18, 18], 17, 7);
+var jupiter = new Planet(12, [186, 121, 52], 25, 20);
+var saturn = new RingedPlanet(29, [214, 180, 92], 30, 13);
+var uranus = new Planet(84, [17, 169, 240], 37, 12);
+var neptune = new Planet(165, [12, 31, 156], 45, 10);
 
 // Position of earth in radians
 // All other planets' positions are relative to this one
-var earthDegree = random(1000);
+var earthDegree = 0;
+// random(1000);
 // controls the speed of planetary orbit
-var speedMultiplier = .05;
+var speedMultiplier = .02;
 
 var starX = [10];
 var starY = [10];
@@ -122,7 +121,7 @@ var draw = function() {
 
 // sun
     fill(255, 132, 0);
-    ellipse(300,300,35,35);
+    ellipse(300,300,50,50);
 
 // orbit elipses
     noFill();
@@ -142,7 +141,7 @@ var draw = function() {
 
 // top half of the sun (allows planets to go "behind")
     fill(255, 132, 0);
-    arc(300, 300, 35, 35, PI, 2 * PI);
+    arc(300, 300, 50, 50, PI, 2 * PI);
 
     earthDegree += speedMultiplier;
 
