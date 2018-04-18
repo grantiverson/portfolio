@@ -56,7 +56,7 @@ gulp.task('copy-images', function() {
 });
 
 gulp.task('copy-work-dir', function() {
-  gulp.src('work/**/*')
+  gulp.src('build/work/**/*')
     .pipe(gulp.dest(outputDir + '/work'))
 });
 
@@ -97,7 +97,7 @@ gulp.task('scripts-dist', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(htmlSources, ['html']);
+  gulp.watch(htmlSources, ['copy-html']);
   gulp.watch(stylesSources, ['styles']);
   gulp.watch(coffeeSources, ['coffee']);
   gulp.watch(scriptsSources, ['scripts']);
@@ -133,7 +133,8 @@ gulp.task('dist', [
   'copy-images',
   'styles',
   'lint',
-  'scripts-dist'
+  'scripts-dist',
+  'copy-work-dir'
 ])
 
 gulp.task('default', [
