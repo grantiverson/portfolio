@@ -93,10 +93,9 @@ var neptune = new Planet(165, [12, 31, 156], 45, 10);
 
 // Position of earth in radians
 // All other planets' positions are relative to this one
-var earthDegree = 0;
-// random(1000);
+var earthDegree = random(1000);
 // controls the speed of planetary orbit
-var speedMultiplier = .02;
+var speedMultiplier = .03;
 
 var starX = [10];
 var starY = [10];
