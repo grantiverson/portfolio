@@ -85,7 +85,7 @@ var drawPoints = function() {
 var printText = function() {
   fill(255, 0, 0);
   textSize(15);
-  text(pointsToPlot + " points", 520, 20); // displays numOfPoints in the top right corner of the window
+  text(pointsToPlot + " points", 500, 580); // displays numOfPoints in the top right corner of the window
 
   textAlign(CENTER);
   textSize(40);
