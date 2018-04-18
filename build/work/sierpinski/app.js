@@ -32,9 +32,7 @@ var drawTriangle = function(resize) {
     noFill();
     triangle(vert1.x,vert1.y,vert2.x,vert2.y,vert3.x,vert3.y);
 
-    if (!resize) {
-      generatePoints();
-    }
+    generatePoints();
     drawPoints();
     printText();
 
@@ -99,27 +97,27 @@ var printText = function() {
 
 }
 
-// mouseDragged = function () {
-//     if (mouseX < vert1.x + 25 && mouseX > vert1.x - 25 && mouseY < vert1.y + 25 && mouseY > vert1.y - 25)
-//     {
-//         vert1.x = mouseX;
-//         vert1.y = mouseY;
-//
-//         drawTriangle(true);
-//     } else if (mouseX < vert2.x + 25 && mouseX > vert2.x - 25 && mouseY < vert2.y + 25 && mouseY > vert2.y - 25)
-//     {
-//         vert2.x = mouseX;
-//         vert2.y = mouseY;
-//
-//         drawTriangle(true);
-//     } else if (mouseX < vert3.x + 25 && mouseX > vert3.x - 25 && mouseY < vert3.y + 25 && mouseY > vert3.y - 25)
-//     {
-//         vert3.x = mouseX;
-//         vert3.y = mouseY;
-//
-//         drawTriangle(true);
-//     };
-// };
+mouseDragged = function () {
+    if (mouseX < vert1.x + 25 && mouseX > vert1.x - 25 && mouseY < vert1.y + 25 && mouseY > vert1.y - 25)
+    {
+        vert1.x = mouseX;
+        vert1.y = mouseY;
+
+        drawTriangle();
+    } else if (mouseX < vert2.x + 25 && mouseX > vert2.x - 25 && mouseY < vert2.y + 25 && mouseY > vert2.y - 25)
+    {
+        vert2.x = mouseX;
+        vert2.y = mouseY;
+
+        drawTriangle();
+    } else if (mouseX < vert3.x + 25 && mouseX > vert3.x - 25 && mouseY < vert3.y + 25 && mouseY > vert3.y - 25)
+    {
+        vert3.x = mouseX;
+        vert3.y = mouseY;
+
+        drawTriangle();
+    };
+};
 
 // 3 vertices of the traingle
 var vert1 = new Vertex(300, 100);
