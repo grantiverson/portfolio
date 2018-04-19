@@ -32,7 +32,7 @@ $(document).ready(function() {
                 $(this).css('opacity', 0)
             }
             if (currScrollPos > elemOffsetBottom) {
-                $(this).css('opacity', (currScrollPos - elemOffsetBottom)/400)
+                $(this).css('opacity', (currScrollPos - elemOffsetBottom)/100)
             };
         })
     })
@@ -41,7 +41,7 @@ $(document).ready(function() {
         var currScrollPos = $(document).scrollTop();
 
         fadeIn.each(function() {
-            var elemOffsetBottom = ($(this).offset().top - $(window).height() + 100);
+            var elemOffsetBottom = ($(this).offset().top - $(window).height());
             if (currScrollPos < elemOffsetBottom) {
                 $(this).css('opacity', 0)
             }
