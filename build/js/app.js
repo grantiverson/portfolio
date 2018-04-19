@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
     /* Makes nav-button work - clicking it opens/closes the #mini-nav menu */
-    $("#nav-button").click(function() {
-        $("#mini-nav").slideToggle()
+    $('#nav-button').click(function() {
+        $('#mini-nav').slideToggle()
     });
 
     /* Closes #mini-nav if the browser window is resized */
     $(window).resize(function() {
-        $("#mini-nav").hide();
+        $('#mini-nav').hide();
     });
 
     /* Animation slides page to clicked link */
@@ -23,14 +23,31 @@ $(document).ready(function() {
 
     // Decides what to do when clicking on a link
     $('#projects-selector a').click(function() {
-        var clickedHref = $(this).attr('href');    // Stores the href of clicked link in clickedHref
-        event.preventDefault();                    // don't go to the link in the HTML
+        var clickedSelector = '#' + $(this).attr('id');                       // Stores # + id of clicked link in clickedSelector
+        var clickedClass = $(this).attr('href');                              // Stores the href of clicked link in clickedClass
+        $('#projects-selector a.active').removeClass('active');               // remove the class .active from the link
+        $('#projects-selector ' + clickedSelector).addClass('active').blur(); // add the class .active from the link
+        event.preventDefault();                                               // don't go to follow the link
+
         $('#projects-container').fadeOut('', function() {
-            $('.all').hide();            // hide the .page you were on
-            $(clickedHref).show();                 // show the .page you are going to
+            $('.all-projects').not(clickedClass).hide();      // hide the unwanted projects
+            $(clickedClass).show();                            // shows the wanted projects
             $('#projects-container').fadeIn();
         });
+
+        // $('.all-projects').not(clickedClass).fadeTo('slow', .1);
+        // $(clickedClass).fadeTo('slow', 1);
     });
+    // // Decides what to do when clicking on a link
+    // $('#projects-selector a').click(function() {
+    //     var clickedHref = $(this).attr('href');    // Stores the href of clicked link in clickedHref
+    //     event.preventDefault();                    // don't go to the link in the HTML
+    //     $('#projects-container').fadeOut('', function() {
+    //         $('.all-projects').hide();            // hide the .page you were on
+    //         $(clickedHref).show();                 // show the .page you are going to
+    //         $('#projects-container').fadeIn();
+    //     });
+    // });
 
     var fadeIn = $('.fade-item');
 
