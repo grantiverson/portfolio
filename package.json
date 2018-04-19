@@ -3,6 +3,7 @@
         "eslint": "^4.19.1",
         "gulp-babel": "^7.0.1",
         "gulp-eslint": "^4.0.2",
+        "gulp-pngquant": "^1.0.12",
         "gulp-sourcemaps": "^2.6.4",
         "imagemin-pngquant": "^5.1.0"
     },
@@ -10,12 +11,12 @@
         "babel-core": "^6.26.0",
         "babel-install": "2.1.0",
         "eslint-config-jquery": "^1.0.1",
-        "gulp": "latest",
+        "gulp": "^3.9.1",
         "gulp-coffee": "^3.0.2",
         "gulp-concat": "^2.6.1",
         "gulp-connect": "^5.5.0",
         "gulp-imagemin": "^4.1.0",
-        "gulp-sass": "latest",
+        "gulp-sass": "^4.0.1",
         "gulp-uglify": "^3.0.0",
         "gulp-until": "latest"
     }
