@@ -21,6 +21,17 @@ $(document).ready(function() {
         }
     });
 
+    // Decides what to do when clicking on a link
+    $('#projects-selector a').click(function() {
+        var clickedHref = $(this).attr('href');    // Stores the href of clicked link in clickedHref
+        event.preventDefault();                    // don't go to the link in the HTML
+        $('#projects-container').fadeOut('', function() {
+            $('.all').hide();            // hide the .page you were on
+            $(clickedHref).show();                 // show the .page you are going to
+            $('#projects-container').fadeIn();
+        });
+    });
+
     var fadeIn = $('.fade-item');
 
     $(document).on('scroll', function() {
