@@ -210,6 +210,7 @@ nav
   ul
     list-style-type: none
     margin-left: 0
+    padding: 20px
 
     li
       padding: .4em .4em 0
@@ -348,6 +349,50 @@ section
   display: flex
   flex-wrap: wrap
   justify-content: center
+
+// #projects-selector
+//   display: block
+//   font-size: 1em
+//   margin-bottom: 10px
+//   padding: 0
+//
+//   ul
+//     overflow: hidden
+//     text-align: center
+//
+//     li
+//       display: inline-block
+//       padding: 0
+//       width: 100px
+//
+//       a
+//         color: $main-text-color
+//         display: block
+//         padding: 7px 4px 4px
+//
+//         &:hover
+//           border-bottom: 3px solid $hover-nav-color
+//           margin-bottom: -3px
+//           text-decoration: none
+
+#projects-selector
+
+  ul
+    padding-bottom: 10px
+    text-align: center
+
+    li
+      display: inline-block
+
+      a
+        color: $main-text-color
+        display: block
+        padding: 1em 1em 0
+
+        &:hover
+          border-bottom: 3px solid $hover-nav-color
+          margin-bottom: -3px
+          text-decoration: none
 
 .projects-item
   background-color: $dark-background-color
@@ -558,11 +603,12 @@ footer
   //* PAGE: PROJECTS
   //******************************/
 
-  .projects-item
-    margin: 5px
 
   .projects-img
-    max-width: 380px
+    max-width: 300px
+
+  .projects-item
+    margin: 0
 
 
 
