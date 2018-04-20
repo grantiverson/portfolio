@@ -32,15 +32,7 @@ $(document).ready(function() {
         $('#projects-container').fadeOut('', function() {
             $('.all-projects').not(clickedClass).hide();      // hide the unwanted projects
             $(clickedClass).show();                            // shows the wanted projects
-            $(clickedClass).fadeTo(0, 1);
             $('#projects-container').fadeIn();
-        });
-
-        $('#skills-container').fadeOut('', function() {
-            $('.all-projects').not(clickedClass).hide();      // hide the unwanted projects
-            $(clickedClass).show();                            // shows the wanted projects
-            $(clickedClass).fadeTo(0, 1);
-            $('#skills-container').fadeIn();
         });
 
         // $('.all-projects').not(clickedClass).fadeTo('slow', .1);
