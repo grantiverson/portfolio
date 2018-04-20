@@ -3,8 +3,8 @@ $break-small: 481px
 $break-large: 701px
 
 //Fonts
-$sans-font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif
-$serif-font-stack: monaco, 'Andale Mono', monospace
+$sans-font-stack:  Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif
+$mono-font-stack: monaco, 'Andale Mono', monospace
 
 //Colors
 $dark-background-color: #282c34
@@ -55,7 +55,7 @@ section
   text-decoration: none
 
 html
-  font-family: sans-serif
+  font-family: sans-mono
 
 article,
 aside,
@@ -103,7 +103,7 @@ section *
 
 h1
   color: $accent-color
-  font-family: $serif-font-stack
+  font-family: $mono-font-stack
   font-size: 1.2em
   font-weight: 100
   margin: 0 0 .2em
@@ -111,17 +111,17 @@ h1
 
 h2
   color: $light-text-color
-  font-family: $serif-font-stack
+  font-family: $mono-font-stack
   font-size: .7em
   font-weight: 100
   margin-left: 2em
 
 h3
-  font-family: $serif-font-stack
+  font-family: $sans-font-stack
   font-size: 1.6em
+  font-weight: bold
   margin-bottom: 2.5em
   text-align: center
-  text-indent: .65em
 
 h4
   color: $accent-color
@@ -142,7 +142,7 @@ h6
 
 p
   color: $main-text-color
-  font-family: $serif-font-stack
+  font-family: $mono-font-stack
   font-size: 1em
   margin-bottom: .2em
 
@@ -156,6 +156,7 @@ a
 ul
   color: $dark-text-color
   list-style: none
+  font-family: $sans-font-stack
 
 strong
   background-color: $accent-background-color
@@ -175,7 +176,7 @@ strong
   display: block
   font-family: $sans-font-stack
   font-size: 1.5em
-  font-weight: 400
+  font-weight: 600
   margin: 0 auto
   margin-top: .2em
   padding: .3em .2em
