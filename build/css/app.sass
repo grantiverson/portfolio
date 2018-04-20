@@ -1,27 +1,30 @@
-//Responsive Design
+// Responsive Design
 $break-small: 481px
 $break-large: 701px
 
-//Fonts
+// Fonts
 $sans-font-stack:  Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif
 $mono-font-stack: monaco, 'Andale Mono', monospace
 
-//Colors
+// Colors
 $dark-background-color: #282c34
-$light-body-color: #fafafa
-$light2-body-color: #e0e8f0
-$lighter-dark-background-color: #3d4350
+$dark2-background-color: #3d4350
+$light-background-color: #fafafa
+$light2-background-color: #e0e8f0
 $nav-color: #6e6e6e
 $accent-background-color: #22bcf0
 $hover-nav-color: #22bcf0
 
-//Font Colors
+// Drop shadow colors
+$dark-background-shadow-color: #000
+
+// Font Colors
 $main-text-color: #abb2bf
 $accent-color: #22bcf0
 $dark-text-color: #302f2f
 $light-text-color: #fafafa
 
-//Other
+// Other
 $content-max-width: 1181px
 
 //******************************
@@ -85,9 +88,9 @@ body
   margin: 0
 
 // Sets page content width
-section *
-  margin: 0 auto
-  max-width: $content-max-width
+// section *
+//   margin: 0 auto
+//   max-width: $content-max-width
 
 //******************************
 //* ACCESSABILITY
@@ -253,7 +256,7 @@ section
     color: $main-text-color
 
 .light-page
-  background-color: $light-body-color
+  background-color: $light-background-color
 
   h3,
   h5,
@@ -267,7 +270,7 @@ section
     color: $dark-text-color
 
 .light2-page
-  background-color: $light2-body-color
+  background-color: $light2-background-color
 
   h3,
   h5,
@@ -317,32 +320,6 @@ section
 
 
 //******************************
-//* PAGE: SKILLS
-//******************************/
-
-.skills-list
-  display: flex
-  flex-direction: column
-  margin: 30px auto 0
-
-.skills-items-container
-  background-color: $light-body-color
-  box-shadow: 2px 4px 10px #aaa
-  margin-bottom: 30px
-  padding: 15px
-  width: 80%
-
-.skills-item
-  float: left
-  margin: 5px 5px 0
-  text-align: center
-
-.skills-img
-  height: 75px
-
-
-
-//******************************
 //* PAGE: PROJECTS
 //******************************/
 
@@ -376,8 +353,10 @@ section
   text-decoration: none
 
 .projects-item
-  background-color: $dark-background-color
-  margin: 5px 0
+  background-color: $dark2-background-color
+  box-shadow: 2px 4px 10px $dark-background-shadow-color
+  margin-bottom: 10px
+  padding: 10px
   position: relative
 
   &:hover
@@ -403,6 +382,29 @@ section
   transform: translate(-50%, -50%)
   transition: .5s ease
   width: 90%
+
+#skills-container
+  display: flex
+  flex-direction: column
+  margin: 30px auto 0
+
+.skills-items-container
+  background-color: $dark2-background-color
+  box-shadow: 2px 4px 10px $dark-background-shadow-color
+  margin-bottom: 10px
+  overflow: hidden
+  padding: 15px
+  // width: 80%
+  display: inline-block
+
+.skills-item
+  float: left
+  margin: 5px 5px 0
+  text-align: center
+
+.skills-img
+  height: 75px
+
 
 
 
@@ -561,26 +563,6 @@ footer
 
 
   //******************************
-  //* PAGE: SKILLS
-  //******************************/
-
-  .skills-list
-    align-items: center
-    flex-flow: row wrap
-
-  .skills-items-container
-    display: inline-block
-    flex-grow: 1
-    margin: 0 15px 40px
-    padding: 15px
-    width: auto
-
-  .skills-item
-    margin: 15px 15px 0
-
-
-
-  //******************************
   //* PAGE: PROJECTS
   //******************************/
 
@@ -589,7 +571,7 @@ footer
     max-width: 335px
 
   .projects-item
-    margin: 0
+    margin: 0 5px 10px
 
   .projects-item-details
     h4
@@ -600,6 +582,21 @@ footer
 
     p
       font-size: .9em
+
+  #skills-container
+    align-items: center
+    flex-flow: row wrap
+
+  .skills-items-container
+    display: inline-block
+    flex-grow: 1
+    margin: 0 5px 10px
+    padding: 15px
+    width: auto
+
+  .skills-item
+    margin: 15px 15px 0
+
 
 
 
@@ -637,7 +634,7 @@ footer
 
 
 
-//*########################################################################################################################################################################*/
+//*#######################################################################################################################################################################*/
 //*     *****************************************
 //*     Screens with higher resolution than 701 px
 //*     *****************************************/
