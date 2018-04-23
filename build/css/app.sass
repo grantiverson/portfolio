@@ -20,6 +20,7 @@ $main-text-color: #abb2bf
 $accent-color: #22bcf0
 $dark-text-color: #302f2f
 $light-text-color: #fafafa
+$css-text-color: #98c379
 
 //Other
 $content-max-width: 1181px
@@ -104,7 +105,8 @@ section *
 h1
   color: $accent-color
   font-family: $mono-font-stack
-  font-size: 1.2em
+  font-size: 7vw
+  // font-size: 1.2em
   font-weight: 100
   margin: 0 0 .2em
   padding-top: .4em
@@ -112,14 +114,14 @@ h1
 h2
   color: $light-text-color
   font-family: $mono-font-stack
-  font-size: .7em
+  font-size: 3.1vw
+  // font-size: .7em
   font-weight: 100
   margin-left: 2em
 
 h3
   font-family: $sans-font-stack
-  font-size: 1.6em
-  font-weight: bold
+  font-size: 2.5em
   margin-bottom: 2.5em
   text-align: center
 
@@ -127,13 +129,13 @@ h4
   color: $accent-color
   font-family: $sans-font-stack
   font-size: 1em
-  font-weight: bold
+  // font-weight: bold
   margin-top: .2em
 
 h5
   font-family: $sans-font-stack
-  font-size: .9em
-  font-weight: bold
+  font-size: 1.9em
+  padding-bottom: 2px
 
 h6
   font-family: $sans-font-stack
@@ -155,8 +157,8 @@ a
 
 ul
   color: $dark-text-color
-  list-style: none
   font-family: $sans-font-stack
+  list-style: none
 
 strong
   background-color: $accent-background-color
@@ -164,6 +166,12 @@ strong
   color: $dark-text-color
   padding: 0 2px 1px
   // box-shadow: 2px 1px 1px #aaa
+
+.light-text-span
+  color: $light-text-color
+
+.css-value-text-span
+  color: $css-text-color
 
 
 
@@ -176,11 +184,15 @@ strong
   display: block
   font-family: $sans-font-stack
   font-size: 1.5em
-  font-weight: 600
+  font-weight: 400
   margin: 0 auto
   margin-top: .2em
   padding: .3em .2em
   text-align: center
+
+.contact-button
+  &:hover
+    text-decoration: underline $dark-background-color
 
 
 
@@ -303,7 +315,7 @@ section
 #logo
   float: left
   margin: 10px 5px 20px
-  width: 30px
+  width: 17vw
 
 
 
@@ -364,6 +376,7 @@ section
         color: $main-text-color
         display: block
         padding: 7px 4px 4px
+        font-size: 1.2em
 
         &:hover
           border-bottom: 3px solid $hover-nav-color
@@ -403,6 +416,14 @@ section
   transform: translate(-50%, -50%)
   transition: .5s ease
   width: 90%
+
+  h4
+    font-size: 1.7em
+
+  h5
+    font-size: 1.4em
+
+
 
 
 
@@ -470,7 +491,7 @@ footer
     margin-left: 2em
 
   h3
-    font-size: 1.9em
+    font-size: 3em
 
   h4
     font-size: 1.4em
@@ -492,7 +513,7 @@ footer
 
   .button
     display: block
-    font-size: 1em
+    font-size: 1.2em
     margin-left: auto
     margin-right: auto
     padding: 10px
@@ -511,7 +532,7 @@ footer
   nav
     display: block
     float: right
-    font-size: 1em
+    font-size: 1.2em
     padding: 0
     width: 470px
     z-index: 1
@@ -593,10 +614,10 @@ footer
 
   .projects-item-details
     h4
-      font-size: 1.2em
+      font-size: 1.5em
 
     h5
-      font-size: 1.0em
+      font-size: 1.2em
 
     p
       font-size: .9em
@@ -653,7 +674,7 @@ footer
     font-size: 2.7em
 
   h2
-    font-size: 1.2em
+    font-size: 1.1em
 
 
 
