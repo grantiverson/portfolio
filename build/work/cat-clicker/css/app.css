@@ -1,0 +1,58 @@
+#sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #dda;
+    overflow-x: hidden;
+    padding-top: 120px;
+}
+
+#sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 1.6em;
+    color: #55d;
+    display: block;
+    text-align: right;
+    font-family: 'Palatino';
+}
+
+#sidebar a:hover {
+    color: #aaf;
+    text-decoration: underline;
+}
+
+#main {
+    justify-content: center;
+    margin-left: 160px;
+}
+
+.cats {
+    margin: 15px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+}
+
+h1 {
+    margin-left: 160px;
+    text-align: center;
+    font-family: Impact;
+}
+
+h2 {
+    font-family: 'Palatino';
+    text-align: center;
+    font-weight: lighter;
+}
+
+p {
+    font-family: 'Palatino';
+    text-align: center;
+}

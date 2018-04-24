@@ -397,9 +397,11 @@ section
   background-color: $dark-background-color
   margin: 5px 0
   position: relative
+  overflow: hidden
 
   &:hover
-    .projects-img
+    .projects-img,
+    .projects-skills-img
       opacity: .1
 
     .projects-item-details
@@ -428,7 +430,16 @@ section
   h5
     font-size: 1.4em
 
+.projects-skills-img-container
+  position: absolute
+  bottom: 0
+  right: 7px
 
+
+.projects-skills-img
+  filter: drop-shadow(1px 2px 4px #000)
+  height: 20px
+  transition: .5s ease
 
 
 
