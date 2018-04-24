@@ -364,19 +364,24 @@ section
   justify-content: center
 
 #projects-selector
+  display: block
+  font-size: 1.2em
+  padding-bottom: 20px
+  width: 355px
+  z-index: 1
 
   ul
-    padding-bottom: 20px
-    text-align: center
 
     li
       display: inline-block
+      padding: 0
+      text-align: center
+      width: 115px
 
       a
         color: $main-text-color
         display: block
-        padding: 7px 4px 4px
-        font-size: 1.2em
+        padding: 7px 0 4px
 
         &:hover
           border-bottom: 3px solid $hover-nav-color
@@ -604,7 +609,6 @@ footer
   //******************************
   //* PAGE: PROJECTS
   //******************************/
-
 
   .projects-img
     max-width: 335px
