@@ -56,3 +56,30 @@ p {
     font-family: 'Palatino';
     text-align: center;
 }
+
+#admin {
+    width: 260px;
+    margin: 0 auto;
+}
+
+#admin-console {
+    display: none;
+    background-color: #ffc;
+    padding: 15px;
+}
+
+#admin-console p {
+    margin-top: 0;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+}
+
+button,
+#button-container {
+    width: 110px;
+    display: block;
+    margin: 0 auto;
+}

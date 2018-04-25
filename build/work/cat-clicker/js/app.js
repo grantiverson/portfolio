@@ -1,70 +1,143 @@
-const Animal = function() {
-    this.clickCounter = 0;
-}
-const Cat = function(num, name) {
-    Animal.call(this);
-    this.num = num;
-    this.name = name;
-};
+(function() {
 
-Cat.prototype = Object.create(Animal.prototype);
-
-// creates HTML for cat-name and cat-image src attribute
-Cat.prototype.createHTML = function() {
-    document.getElementById('cat-name').textContent = this.name;
-    document.getElementById('cat-image').src=`images/cat${this.num}.jpg`;
-    thisCat = this;
-    this.updateCounterHTML();
-    this.addClickListener(thisCat);
-};
-
-// adds listener to clicked image and runs counterUp function
-Cat.prototype.addClickListener = function(thisCat) {
-    // removes all event listeners on image
-    // source: https://stackoverflow.com/questions/19469881/remove-all-event-listeners-of-specific-type/29930689
-    var el = document.getElementById('cat-image'),
-    elClone = el.cloneNode(true);
-    el.parentNode.replaceChild(elClone, el);
-
-    document.getElementById('cat-image').addEventListener('click', function() {
-        thisCat.counterUp();
-    });
-};
-
-// increments counter variable
-Cat.prototype.counterUp = function() {
-    this.clickCounter += 1;
-    this.updateCounterHTML();
-};
-
-// updates cat-counter-text in HTML
-Cat.prototype.updateCounterHTML = function() {
-    document.getElementById('cat-counter-text').innerHTML = this.clickCounter;
-};
-
-// instantiations of cat objects
-let cat1 = new Cat(1, 'Cocoa');
-let cat2 = new Cat(2, 'Xerxes');
-let cat3 = new Cat(3, 'Solomon');
-let cat4 = new Cat(4, 'Myrrh');
-let cat5 = new Cat(5, 'Lily');
-let cat6 = new Cat(6, 'Gino');
-
-// array of cat objects
-const cats = [cat1, cat2, cat3, cat4, cat5, cat6];
-
-
-// creates a tags in HTML, populates them with the cats' names, creates an event listener for each, appends the elements to the sidebar
-const loadCats = function() {
-    for (let i = 0; i < cats.length; i++) {
-        let elem = document.createElement('a');
-        elem.innerHTML = cats[i].name;
-        elem.addEventListener('click', function() {
-            cats[i].createHTML();
-        });
-
-        document.getElementById('sidebar').appendChild(elem);
+    let model = {
+        thisCat: null,
+        cats: [
+            {
+                name : 'Cocoa',
+                clickCounter : 0,
+                imgSrc : 'images/cat1.jpg'
+            },
+            {
+                name : 'Xerxes',
+                clickCounter : 0,
+                imgSrc : 'images/cat2.jpg'
+            },
+            {
+                name : 'Solomon',
+                clickCounter : 0,
+                imgSrc : 'images/cat3.jpg'
+            },
+            {
+                name : 'Myrrh',
+                clickCounter : 0,
+                imgSrc : 'images/cat4.jpg'
+            },
+            {
+                name : 'Lily',
+                clickCounter : 0,
+                imgSrc : 'images/cat5.jpg'
+            }
+        ]
     };
 
-    cat1.createHTML();
-}();
+
+    let octopus = {
+        thisCat: null,
+
+        init: function() {
+            model.thisCat = model.cats[0];
+
+            sidebarView.init();
+            mainView.init();
+        },
+
+        getCat: function() {
+            return model.thisCat;
+        },
+
+        getCats: function() {
+            return model.cats;
+        },
+
+        selectCat: function(cat) {
+            model.thisCat = cat;
+        },
+
+        counterUp: function() {
+            model.thisCat.clickCounter ++;
+            mainView.render();
+        },
+
+        openAdmin: function() {
+            document.getElementById('admin-console').style.display = 'block';
+        },
+
+        cancelAdmin: function() {
+            document.getElementById('admin-console').style.display = 'none';
+        },
+
+        submitAdmin: function() {
+            document.getElementById('admin-console').style.display = 'none';
+            model.thisCat.name = document.getElementById('name-input').value;
+            model.thisCat.imgSrc = document.getElementById('img-src-input').value;
+            model.thisCat.clickCounter = document.getElementById('click-counter-input').value;
+
+            mainView.render();
+        }
+    };
+
+    let mainView = {
+        init: function() {
+            this.catNameElem = document.getElementById('cat-name');
+            this.catImgElem = document.getElementById('cat-image');
+            this.catCounterElem = document.getElementById('cat-counter-text');
+
+            document.getElementById('cat-image').addEventListener('click', function() {
+                octopus.counterUp();
+            });
+
+            this.render();
+        },
+
+        render: function() {
+            let cat = octopus.getCat();
+            document.getElementById('cat-counter-text').textContent = cat.clickCounter;
+            document.getElementById('cat-name').textContent = cat.name;
+            document.getElementById('cat-image').src = cat.imgSrc;
+
+            document.getElementById('name-input').value = cat.name;
+            document.getElementById('img-src-input').value = cat.imgSrc;
+            document.getElementById('click-counter-input').value = cat.clickCounter;
+        }
+    };
+
+    let sidebarView = {
+        init: function() {
+            this.sidebar = document.getElementById('sidebar');
+
+            this.render();
+        },
+
+        render: function() {
+            let cats = octopus.getCats();
+            document.getElementById('sidebar').innerHTML = '';
+
+            // creates a tags in HTML, populates them with the cats' names, creates an event listener for each, appends the elements to the sidebar
+            for (let i = 0; i < cats.length; i++) {
+                let elem = document.createElement('a');
+                elem.innerHTML = cats[i].name;
+                elem.addEventListener('click', function() {
+                    octopus.selectCat(cats[i]);
+                    mainView.render();
+                });
+
+                document.getElementById('sidebar').appendChild(elem);
+            };
+
+            document.getElementById('admin-button').addEventListener('click', function() {
+                octopus.openAdmin();
+            });
+            document.getElementById('cancel-input').addEventListener('click', function() {
+                octopus.openAdmin();
+            });
+            document.getElementById('submit-input').addEventListener('click', function(event) {
+                event.preventDefault();
+                octopus.submitAdmin();
+            });
+        }
+    };
+
+
+    octopus.init();
+})();
