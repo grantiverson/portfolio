@@ -8,7 +8,7 @@
         "imagemin-pngquant": "^5.1.0"
     },
     "devDependencies": {
-        "babel-core": "^6.26.0",
+        "babel-core": "^6.26.3",
         "babel-install": "2.1.0",
         "eslint-config-jquery": "^1.0.1",
         "gulp": "^3.9.1",
