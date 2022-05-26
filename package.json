@@ -11,7 +11,7 @@
         "babel-core": "^6.26.3",
         "babel-install": "2.1.0",
         "eslint-config-jquery": "^3.0.0",
-        "gulp": "^3.9.1",
+        "gulp": "^4.0.2",
         "gulp-coffee": "^3.0.2",
         "gulp-concat": "^2.6.1",
         "gulp-connect": "^5.5.0",
