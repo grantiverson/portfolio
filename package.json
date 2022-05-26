@@ -3,7 +3,7 @@
         "eslint": "^4.19.1",
         "gulp-babel": "^7.0.1",
         "gulp-eslint": "^4.0.2",
-        "gulp-pngquant": "^1.0.12",
+        "gulp-pngquant": "^1.0.13",
         "gulp-sourcemaps": "^2.6.4",
         "imagemin-pngquant": "^5.1.0"
     },
