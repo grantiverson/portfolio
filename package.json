@@ -5,7 +5,7 @@
         "gulp-eslint": "^6.0.0",
         "gulp-pngquant": "^1.0.13",
         "gulp-sourcemaps": "^2.6.4",
-        "imagemin-pngquant": "^5.1.0"
+        "imagemin-pngquant": "^9.0.2"
     },
     "devDependencies": {
         "babel-core": "^6.26.3",
