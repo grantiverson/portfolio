@@ -2,7 +2,7 @@
     "dependencies": {
         "eslint": "^4.19.1",
         "gulp-babel": "^7.0.1",
-        "gulp-eslint": "^4.0.2",
+        "gulp-eslint": "^6.0.0",
         "gulp-pngquant": "^1.0.13",
         "gulp-sourcemaps": "^2.6.4",
         "imagemin-pngquant": "^5.1.0"
