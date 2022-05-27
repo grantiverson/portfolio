@@ -12,7 +12,7 @@
         "babel-install": "2.1.0",
         "eslint-config-jquery": "^3.0.0",
         "gulp": "^4.0.2",
-        "gulp-coffee": "^3.0.2",
+        "gulp-coffee": "^3.0.3",
         "gulp-concat": "^2.6.1",
         "gulp-connect": "^5.5.0",
         "gulp-imagemin": "^8.0.0",
